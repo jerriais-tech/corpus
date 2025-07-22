@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+       <html xmlns="http://www.w3.org/1999/xhtml"
+             xml:lang="en">
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/datecl.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:10 GMT -->
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Geraint Jennings."></meta><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"></meta>
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC:Creator" content="Geraint Jennings" />
+<meta name="DC:Title" content="Des neunm&#233;thos et des dates" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+
+<title>
+Des neunm&#233;thos et des dates
+</title>
+
+<!-- Made with executable version 5.5 Release 0 Build 22 -->
+
+<style type="text/css">
+
+body{
+	font-family: Geneva,Arial;
+	background-color: #FFFFFF;
+	color: #000000;
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: small;
+}
+
+p{
+	text-align: justify;
+	margin: 0px;
+	font-size: small;
+}
+
+table,tr,td,div,span{
+	font-size: small;
+}
+
+input.GapBox{
+
+}
+
+span.CorrectAnswer{
+	font-weight: bold;
+}
+
+div.Titles{
+	padding-top: 10px;
+	text-align: center;
+	margin-bottom: 4px;
+	color: #008000;
+}
+
+.ExerciseTitle{
+	font-size: large;
+	color: #008000;
+}
+
+.ExerciseSubtitle{
+	color: #008000;
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+	line-height: 2.0;
+	text-align: justify;
+}
+
+.FeedbackText{
+
+}
+
+div.Feedback {
+	background-color: #FFFFFF;
+	left: 1px;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: #008000;
+	position: absolute;
+	display: none;
+	font-size: small;
+}
+
+
+.WordListStyle{
+	text-align: center;
+	font-weight: bold;
+	color: #000000;
+}
+
+
+
+div.ExerciseDiv{
+	color: #000000;
+}
+
+div.StdDiv{
+	background-color: #ffffff;
+	text-align: center;
+	font-size: smaller;
+	color: #000000;
+	padding: 8px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: #000000;
+	margin: 1px;
+}
+
+.FunctionButton {
+	background-color: #ffffff;
+	color: #000000;
+	text-align: center;
+	border-style: solid;
+	border-color: #ffffff;
+	border-width: 2px;
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+div.NavButtonBar{
+	background-color: #009933;
+	text-align: center;
+	margin: 2px 0px 2px 0px;
+	clear: both;
+	font-size: small;
+}
+
+div.NavButtonBar button {
+	border-style: solid;
+	border-color: #009933;
+	background-color: #009933;
+	border-width: 2px;
+	padding: 2px 2px 2px 2px;
+	color: #ffffff;
+	cursor: pointer;	
+}
+
+a{
+	color: #0000ff;
+}
+
+a: visited{
+	color: #0000cc;
+}
+
+a:hover{
+	color: #0000ff;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+<!--
+
+// BrowserCheck Object
+
+function BrowserCheck() {
+	var b = navigator.appName;
+	this.mac = (navigator.appVersion.indexOf('Mac') != -1);
+	if (b=="Netscape") this.b = 'ns';
+	else if (b=="Microsoft Internet Explorer") this.b = 'ie';
+	else this.b = b;
+	this.ns = (this.b == 'ns');
+	this.ie = (this.b == 'ie');
+	this.version = navigator.appVersion;
+	if (this.b == 'ie'){
+		var x = this.version.indexOf('MSIE ') + 5;
+		var vnum = '';
+
+		while ((this.version.charAt(x) > -1)&&(this.version.charAt(x) < 10)){
+			vnum += this.version.charAt(x);
+			x++;
+		}
+		this.v = parseInt(vnum);
+	}
+	else{
+		this.v = parseInt(this.version);
+	}
+	if (this.ns&&(this.v == 5)){
+		this.v = 6;
+	}
+	this.min = (this.v > 5);
+}
+
+is = new BrowserCheck();
+
+if ((is.min == false)||(is.ie5mac)){
+	alert('Your browser can\'t handle this page. You need NS6+ or IE6+ on Windows, or NS6+ on Mac.');
+}
+
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	if (is.ns) this.W = window.innerWidth;
+	if (is.ie) this.W = document.body.clientWidth;
+	if (is.ns) this.H = window.innerHeight;
+	if (is.ie) this.H = document.body.clientHeight;
+}
+
+var pg = null;
+
+function SuppressBackspace(e){ 
+	if (InGap == true){
+		return;
+	}
+	 if (is.ns) {
+		thisKey = e.keyCode;
+	}
+	else {
+		thisKey = window.event.keyCode;
+	}
+
+var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+	}
+
+	if (Suppress == true){
+		if (is.ie){
+			window.event.returnValue = false;	
+			window.event.cancelBubble = true;
+		}
+		else{
+			e.preventDefault();
+		}
+	}
+}
+
+var NavLightColor = '#7fcc99';
+var NavShadeColor = '#004c19';
+var NavBarColor = '#009933';
+var FuncLightColor = '#ffffff';
+var FuncShadeColor = '#7f7f7f';
+var ExBGColor = '#ffffff';
+
+function NavBtnOver(Btn){
+	Btn.style.padding = '1px 3px 3px 1px';
+	Btn.style.borderLeftColor = NavLightColor;
+	Btn.style.borderTopColor = NavLightColor;
+	Btn.style.borderRightColor = NavShadeColor;
+	Btn.style.borderBottomColor = NavShadeColor;
+}
+
+function NavBtnOut(Btn){
+	Btn.style.borderColor = NavBarColor;
+	Btn.style.padding = '2px 2px 2px 2px';
+}
+
+function NavBtnDown(Btn){
+	Btn.style.borderLeftColor = NavShadeColor;
+	Btn.style.borderTopColor = NavShadeColor;
+	Btn.style.borderRightColor = NavLightColor;
+	Btn.style.borderBottomColor = NavLightColor;
+	Btn.style.padding = '3px 1px 1px 3px';
+}
+
+function FuncBtnOver(Btn){
+	Btn.style.padding = '2px 7px 4px 5px';
+	Btn.style.borderLeftColor = FuncLightColor;
+	Btn.style.borderTopColor = FuncLightColor;
+	Btn.style.borderRightColor = FuncShadeColor;
+	Btn.style.borderBottomColor = FuncShadeColor;
+}
+
+function FuncBtnOut(Btn){
+	Btn.style.borderColor = '#ffffff';
+	Btn.style.padding = '3px 6px 3px 6px';
+}
+
+function FuncBtnDown(Btn){
+	Btn.style.borderLeftColor = FuncShadeColor;
+	Btn.style.borderTopColor = FuncShadeColor;
+	Btn.style.borderRightColor = FuncLightColor;
+	Btn.style.borderBottomColor = FuncLightColor;
+	Btn.style.padding = '4px 5px 2px 7px';
+}
+
+var topZ = 100;
+
+var Feedback = '';
+var Correct = 'Oui! Bein fait';
+var Incorrect = 'Ous avez tchiques r&#234;ponses tchi n\'sont pon bouonnes'; 
+var GiveHint = 'La pr&#233;chaine lettre a \'t&#233; ajou&#244;t&#233;e &#224; la r&#234;ponse';
+var CaseSensitive = false;
+var YourScoreIs = 'Vos m&#232;rques:';
+var BuiltCloze = '';
+var FirstShow = true;
+var ReadingURL = '%5bReadingURL%5d.html';
+var TempReading = '';
+var StartTime = (new Date()).toLocaleString();
+var HPNStartTime = (new Date()).getTime();
+var Finished = false;
+var SubmissionTimeout = 30000;
+var Score = 0;
+
+
+
+var ClozeOpener = '<div class="ExerciseText">';
+ClozeOpener += '<form name="Cloze" onsubmit="return false"><p>';
+
+var ClozeCloser = '</p></form></div>';
+
+var Buttons = '<button id="[strCheckButtonId]" class="FunctionButton" onfocus="FuncBtnOver(this)" onmouseover="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="CheckAnswers()">Contr&#244;le</button>';
+
+
+Buttons += '<button class="FunctionButton" onfocus="FuncBtnOver(this)" onmouseover="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="ShowHint()">A&#238;dgiz-m&#233;!</button>';
+
+
+var GapCode = '<input type="text" class="GapBox" id="[strGapName]" size="[strGapSize]" onfocus="TrackFocus([strItemNum])" onblur="LeaveGap()" value="[strValue]" />';
+
+var ClueButton = '';
+
+
+
+function WriteFeedback(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+//Calculate and set its left setting
+	topZ++;
+	FDiv.style.zIndex = topZ;
+
+//Position the feedback div
+	pg = new PageDim();
+	FDiv.style.left = Math.floor(pg.W/3) + 'px';
+	FDiv.style.width = Math.floor(pg.W/3) + 'px';
+//Set the top again in case the window has been resized
+	if (is.ns){
+		FDiv.style.top = Math.floor(pg.H/3) + window.pageYOffset + 'px';
+	}
+	else{
+		FDiv.style.top = Math.floor(pg.H/3) + document.body.scrollTop + 'px';
+	}
+	FDiv.style.display = 'block';
+	document.getElementById('FeedbackOKButton').focus();
+
+
+
+	InGap = false;
+}
+
+function HideFeedback(){
+	document.getElementById('FeedbackContent').innerHTML = '';
+	document.getElementById('FeedbackDiv').style.display='none';
+	if (document.getElementById('GapCode' + CurrentWord) != null){
+		document.getElementById('GapCode' + CurrentWord).focus();
+	}
+	else{
+		FocusAButton();
+	}
+	if (Finished == true){
+		Finish();
+	}
+}
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+function WriteToInstructions(Feedback) {
+	Feedback = '<span class="FeedbackText">' + Feedback + '</span>';
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+function WriteScore(Feedback) {
+	Feedback = '<span class="FeedbackText">' + Feedback + '</span>';
+	document.getElementById('ScoreDiv').innerHTML = Feedback;
+
+}
+
+
+
+I = new Array();
+
+I[0] = new Array();
+I[0][1] = new Array();
+I[0][1][0] = new Array();
+I[0][1][0][0]='souaixante';
+I[0][1][1] = new Array();
+I[0][1][1][0]='souoxante';
+I[0][2]='';
+
+I[1] = new Array();
+I[1][1] = new Array();
+I[1][1][0] = new Array();
+I[1][1][0][0]='v\u00EEngt-quat\'';
+I[1][1][1] = new Array();
+I[1][1][1][0]='v\u00EEngt-quatre';
+I[1][2]='';
+
+I[2] = new Array();
+I[2][1] = new Array();
+I[2][1][0] = new Array();
+I[2][1][0][0]='sept';
+I[2][2]='';
+
+I[3] = new Array();
+I[3][1] = new Array();
+I[3][1][0] = new Array();
+I[3][1][0][0]='ch\u00EEnquante-deux';
+I[3][2]='';
+
+I[4] = new Array();
+I[4][1] = new Array();
+I[4][1][0] = new Array();
+I[4][1][0][0]='douze';
+I[4][2]='';
+
+I[5] = new Array();
+I[5][1] = new Array();
+I[5][1][0] = new Array();
+I[5][1][0][0]='chent';
+I[5][2]='';
+
+
+Text = new Array();
+Text[0]='I\'y\' a ';
+Text[1]=' minnutes dans eune heuthe<br /><br />I\'y\' a ';
+Text[2]=' heuthes dans eune journ\u00E9e<br /><br />I\'y\' a ';
+Text[3]=' jours dans eune s\'maine<br /><br />I\'y\' a ';
+Text[4]=' s\'maines dans eune ann\u00E9e<br /><br />I\'y\' a ';
+Text[5]=' mais dans eune ann\u00E9e<br /><br />I\'y\' a ';
+Text[6]=' ans dans un si\u00E8cl\'ye<br />';
+
+
+State = new Array();
+
+function StartUp(){
+//IE bug avoidance -- remove bottom navbar
+	if (is.ie){
+		if (document.getElementById('BottomNavBar') != null){
+			document.getElementById('TheBody').removeChild(document.getElementById('BottomNavBar'));
+		}
+	}
+
+	if (is.ie){
+		document.attachEvent('onkeydown',SuppressBackspace);
+		window.attachEvent('onkeydown',SuppressBackspace);
+	}
+	else if (is.ns){
+		window.addEventListener('keypress',SuppressBackspace,false);
+	}
+
+
+
+
+
+	var i = 0;
+
+
+	MixWords = new Array();
+	for (i=0; i<I.length; i++){
+		MixWords[i] = I[i][1][0][0];
+	}
+	MixWords.sort();
+	var Words = '&nbsp;&nbsp;&nbsp;';
+	for (i=0; i<MixWords.length; i++){
+		Words += MixWords[i] + '&nbsp;&nbsp; &nbsp;';		
+	}
+
+	document.getElementById('WordList').innerHTML = Words;
+
+
+	State.length = 0;
+	for (i=0; i<I.length; i++){
+		State[i] = new Array();
+		State[i][0] = 0; // clue asked for or not
+		State[i][1] = 0; // hints asked for, or penalties for checking a wrong answer
+		State[i][2] = 0; // length of answer matched
+		State[i][3] = 0; // score for this item
+		State[i][4] = 0; // already answered correctly 
+		State[i][5] = ''; // answer entered in text box (right or not)
+	}
+	BuildExercise();
+	DisplayExercise();
+
+
+}
+
+function BuildExercise(){
+	var OutString = '';
+	var ClozeStuff = '';
+	var Btn = '';
+
+	for (var i=0; i<I.length; i++){
+
+//Add the text
+		ClozeStuff += Text[i];
+
+//Create and add the gap
+//If it's already right, then add it in bold:
+		if (State[i][4] == 1){
+			ClozeStuff += '<span class="CorrectAnswer">' + State[i][5] + '</span>';
+		}
+		
+		else{
+			GapLen = I[i][1][0][0].length;
+			if (GapLen < 3){GapLen = 3;}
+			Gap = ReplaceStuff('[strGapSize]', GapLen, GapCode);
+			Gap = ReplaceStuff('[strGapName]', 'Gap' + i + '', Gap);
+			Gap = ReplaceStuff('[strItemNum]', i + '', Gap);
+			Gap = ReplaceStuff('[strValue]', State[i][5], Gap);
+			ClozeStuff += Gap;	
+
+//Create and add the clue button
+			if (I[i][2].length > 0){
+				Btn = ReplaceStuff('[strItemNum]', i + '', ClueButton);
+				ClozeStuff += Btn;
+			}
+		}
+	}
+
+//Add the last bit
+	if (Text.length > I.length){
+		ClozeStuff += Text[Text.length-1];
+	}
+
+//Put the final pieces together
+	OutString = ReplaceStuff('[strCheckButtonId]', 'CheckButton1', Buttons) + ClozeOpener + ClozeStuff + ClozeCloser + ReplaceStuff('[strCheckButtonId]', 'CheckButton2', Buttons);
+	BuiltCloze = OutString;
+}
+
+function DisplayExercise(){
+	document.getElementById('MainDiv').innerHTML = BuiltCloze;
+
+}
+
+function ShowClue(ItemNum){
+//alert(ItemNum);
+	State[ItemNum][0] = 1;
+	WriteFeedback(I[ItemNum][2]);
+}
+
+function SaveCurrentAnswers(){
+	for (var i=0; i<I.length; i++){
+		State[i][5] = GetGapValue(i);
+	}
+}
+
+function RestoreCurrentAnswers(){
+	for (var i=0; i<I.length; i++){
+		SetGapValue(i, State[i][5]);
+	}
+}
+
+var CurrentWord = 0;
+
+function ReplaceStuff(Token, Replacement, InString){
+	var i = InString.indexOf(Token);
+	var FirstBit = '';
+	var LastBit = '';
+	while (i>-1){
+		FirstBit = InString.substring(0, i);
+		LastBit = InString.substring(i + Token.length, InString.length);	
+		InString = FirstBit + Replacement + LastBit;
+		i = InString.indexOf(Token);
+	}
+	return InString;
+}
+
+function TrimString(InString){
+        var x = 0
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+function CheckAnswers(){
+
+	SaveCurrentAnswers();
+	var AllCorrect = 1;
+
+//Check each answer
+	for (var i = 0; i< I.length; i++){
+
+		if (State[i][4] != 1){
+//If it's right, calculate its score
+			if (CheckAnswer(i, true) > -1){
+				var TotalChars = GetGapValue(i).length;
+				State[i][3] = (TotalChars-State[i][1])/TotalChars;
+				if (State[i][0] > 0){State[i][3] = State[i][3]/2;}
+				if (State[i][3]<0){State[i][3] = 0;}
+				State[i][4] = 1;
+			}
+			else{
+//Otherwise, add zero to the array and increment the hints for this item, as a penalty
+				State[i][1]++;
+				State[i][3] = 0;
+
+//then set the flag
+				AllCorrect = 0;
+			}
+		}
+	}
+
+//Calculate the total score
+	var TotalScore = 0;
+	for (i=0; i<State.length; i++){
+		TotalScore += State[i][3];
+	}
+	TotalScore = Math.floor((TotalScore * 100)/I.length);
+
+//Compile the output
+	Output = '';
+
+	if (AllCorrect == 1){
+		Output = Correct + '<br />';
+	}
+
+	Output += YourScoreIs + ' ' + TotalScore + '%.<br />';
+	if (AllCorrect == 0){
+		Output += '<br />' + Incorrect;
+	}
+	BuildExercise();
+	WriteFeedback(Output);
+	setTimeout('WriteToInstructions(Output)', 50);
+
+
+	if (AllCorrect==1){
+		Score = TotalScore;
+
+
+
+		setTimeout('DisplayExercise()', 50);
+		Finished = true;
+		setTimeout('Finish()', SubmissionTimeout);
+		return;
+	}
+
+	setTimeout('DisplayExercise()', 50);
+	RestoreCurrentAnswers();
+}
+
+var InGap = false;
+
+function TrackFocus(BoxNumber){
+	CurrentWord = BoxNumber;
+	InGap = true;
+}
+
+function LeaveGap(){
+	InGap = false;
+}
+
+function CheckBeginning(Guess, Answer){
+	var OutString = '';
+	var i = 0;
+	var UpperGuess = '';
+	var UpperAnswer = '';
+
+	if (CaseSensitive == false) {
+		UpperGuess = Guess.toUpperCase();
+		UpperAnswer = Answer.toUpperCase();
+	}
+	else {
+		UpperGuess = Guess;
+		UpperAnswer = Answer;
+	}
+
+
+	while (UpperGuess.charAt(i) == UpperAnswer.charAt(i)) {
+		OutString += Guess.charAt(i);
+		i++;
+	}
+	OutString += Answer.charAt(i);
+	return OutString;
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+function GetGapValue(GNum){
+	var RetVal = '';
+	if ((GNum<0)||(GNum>=I.length)){return RetVal;}
+	if (eval('document.Cloze.Gap' + GNum) != null){
+		RetVal = eval('document.Cloze.Gap' + GNum).value;
+		RetVal = TrimString(RetVal);
+	}
+	else{
+		RetVal = State[GNum][5];
+	}
+	return RetVal;
+}
+
+function SetGapValue(GNum, Val){
+	if ((GNum<0)||(GNum>=I.length)){return;}
+	if (eval('document.Cloze.Gap' + GNum) != null){
+		eval('document.Cloze.Gap' + GNum).value = Val;
+	}
+}
+
+function FindCurrent() {
+	var x = 0;
+	FoundCurrent = -1;
+
+//Test the current word:
+//If it's state is not set to already correct, check the word.
+	if (State[CurrentWord][4] != 1){
+		if (CheckAnswer(CurrentWord, false) < 0){
+			return CurrentWord;
+		}
+	}
+	
+	x=CurrentWord + 1;
+	while (x<I.length){
+		if (State[x][4] != 1){
+			if (CheckAnswer(x, false) < 0){
+				return x;
+			}
+		}
+	x++;	
+	}
+
+	x = 0;
+	while (x<CurrentWord){
+		if (State[x][4] != 1){
+			if (CheckAnswer(x, false) < 0){
+				return x;
+			}
+		}
+	x++;	
+	}
+	return FoundCurrent;
+}
+
+function CheckAnswer(GapNum, MarkAnswer){
+	var Guess = GetGapValue(GapNum);
+	var UpperGuess = '';
+	var UpperAnswer = '';
+	if (CaseSensitive == false){
+		UpperGuess = Guess.toUpperCase();
+	}
+	else{
+		UpperGuess = Guess;
+	}
+	var Match = -1;
+	for (var i = 0; i<I[GapNum][1].length; i++){
+		if (CaseSensitive == false){
+			UpperAnswer = I[GapNum][1][i][0].toUpperCase();
+		}
+		else{
+			UpperAnswer = I[GapNum][1][i][0];
+		}
+		if (TrimString(UpperGuess) == UpperAnswer){
+			Match = i;
+			if (MarkAnswer == true){
+				State[GapNum][4] = 1;
+			}
+			State[GapNum][5] = Guess;
+		}
+	}
+	return Match;
+}
+
+function GetHint(GapNum){
+	Guess = GetGapValue(GapNum);
+
+	if (CheckAnswer(GapNum, false) > -1){return ''}
+	RightBits = new Array();
+	for (var i=0; i<I[GapNum][1].length; i++){
+		RightBits[i] = CheckBeginning(Guess, I[GapNum][1][i][0]);
+	}
+	var RightOne = FindLongest(RightBits);
+	var Result = I[GapNum][1][RightOne][0].substring(0,RightBits[RightOne].length);
+//Add another char if the last one is a space
+	if (Result.charAt(Result.length-1) == ' '){
+		Result = I[GapNum][1][RightOne][0].substring(0,RightBits[RightOne].length+1);
+	}
+	return Result;
+}
+
+function ShowHint(){
+	var CurrGap = FindCurrent();
+	if (CurrGap < 0){return;}
+
+	var HintString = GetHint(CurrGap);
+
+	if (HintString.length > 0){
+		SetGapValue(CurrGap, HintString);
+		State[CurrGap][1] = State[CurrGap][1] + 1;
+	}
+	WriteFeedback(GiveHint);
+}
+
+
+
+
+
+
+function Finish(){
+//If there's a form, fill it out and submit it
+	if (document.store != null){
+		Frm = document.store;
+		Frm.starttime.value = HPNStartTime;
+		Frm.endtime.value = (new Date()).getTime();
+		Frm.mark.value = Score;
+		Frm.submit();
+	}
+}
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+<!--<body>Fool those dumb ad-inserting ISPs</body>-->
+
+<body onload="StartUp()" id="TheBody">
+
+<!-- BeginTopNavButtons -->
+
+
+<div class="NavButtonBar">
+
+
+<button onfocus="NavBtnOver(this)" onblur="NavBtnOut(this)"  onmouseover="NavBtnOver(this)" onmouseout="NavBtnOut(this)" onmousedown="NavBtnDown(this)" onmouseup="NavBtnOver(this)" onclick="history.back(); return false;">Arri&#233;the</button>
+
+
+
+<button onfocus="NavBtnOver(this)" onblur="NavBtnOut(this)"  onmouseover="NavBtnOver(this)" onmouseout="NavBtnOut(this)" onmousedown="NavBtnDown(this)" onmouseup="NavBtnOver(this)" onclick="location='quizmnu.html'; return false;"> R'tou au cont'nu </button>
+
+
+
+
+</div>
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<span class="ExerciseTitle">Des neunm&#233;thos et des dates</span><br />
+	<span class="ExerciseSubtitle"></span><br />
+</div>
+
+
+
+<div id="InstructionsDiv" class="StdDiv">
+	<p id="Instructions">&#202;crivez les mots tchi manquent dans l's espaces et clyiquez sus "Contr&#244;le". Clyiquez sus "A&#238;dgiz-m&#233;!" s'ou voulez d'l'a&#238;gue.</p>
+</div>
+
+
+
+
+<div id="WordsDiv" class="StdDiv">
+<span id="WordList" class="WordListStyle">&nbsp;</span>
+</div>
+
+
+	<div id="MainDiv" class="StdDiv">
+&nbsp;
+	</div>
+
+
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FunctionButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="HideFeedback(); return false;">&nbsp;Ch\'est bein&nbsp;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+<div class="NavButtonBar" id="BottomNavBar">
+
+
+<button onfocus="NavBtnOver(this)" onblur="NavBtnOut(this)"  onmouseover="NavBtnOver(this)" onmouseout="NavBtnOut(this)" onmousedown="NavBtnDown(this)" onmouseup="NavBtnOver(this)" onclick="history.back(); return false;">Arri&#233;the</button>
+
+
+
+<button onfocus="NavBtnOver(this)" onblur="NavBtnOut(this)"  onmouseover="NavBtnOver(this)" onmouseout="NavBtnOut(this)" onmousedown="NavBtnDown(this)" onmouseup="NavBtnOver(this)" onclick="location='quizmnu.html'; return false;"> R'tou au cont'nu </button>
+
+
+
+
+</div>
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/datecl.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:10 GMT -->
+</html>

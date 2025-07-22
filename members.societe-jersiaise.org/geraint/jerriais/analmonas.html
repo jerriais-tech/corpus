@@ -1,0 +1,501 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/analmonas.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+<HEAD>
+<TITLE>L'Almonas d&eacute ch't'ann&eacute;e en J&egrave;rriais</TITLE>
+<META  name="keywords" content="Jèrriais, language, langue,  Geraint Jennings">
+<META  name="description" content=" Javascript calendar in J&egrave;rriais - calendrier javascript en J&egrave;rriais">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+/*
+
+Copyright (C) Olav Hellesø-Knutsen 1997-1998. All rights reserved.
+
+This code may be copied for non-commercial use. Redistribution prohibited.
+
+Please do not remove this copyright-information.
+
+Questions goes to: olav@arakno.no - http://www.arakno.no/
+
+http://home.sol.no/~nbk/olav/
+
+
+
+June 16, 1998
+
+Known bugs/features:
+
+- It's not possible to have two calenders on the same page
+
+- The browser have to accept cookies (and IE2.0 and NN2.0++ do!)
+
+*/
+
+
+
+
+
+ // Set this variabel to 1 if you want to be able to click through the month
+
+ // If the variabel is anything else than 1 (e.g. 0), you will only be able to see the current month
+
+var usesaved = 1; // valid variables = 1 or 0 
+
+
+
+// Change the day- and month abbreviation for your own language
+
+var dn = new Array('D&icirc;n','Lun','Mar','M&ecirc;c','Jeu','Ven','San'); 
+
+var ma = new Array('Janvyi','F&eacute;vri','Mar','Avri','Mai','Ju&icirc;n','Juilet','Ao&ucirc;t','Septembre','Octobre','Novembre','D&eacute;zembre');
+
+
+
+// If daylink is anyting else than 1, you're missing the link for each day
+
+// The format for the links in a month explains best by example:
+
+// 19980104.html = Year:1998, month:01, day:4
+
+// 20011202.html = Year:2001, month:12, day:2
+
+var daylink = 0; // valid variables = 1 or 0 
+
+
+
+// Change this to your favourite font types and size for all the text
+
+var fontface = 'Verdana, Arial, Helvetica';
+
+var fontsize = '2'; 
+
+
+
+// Special characters for left and right arrow
+
+var leftarr = '&#171;';
+
+var rightarr = '&#187;';
+
+
+
+
+
+
+
+// *******************************************
+
+// Don't change the code below this point
+
+// *******************************************
+
+
+
+
+
+
+
+
+
+var nyDato = new Date();
+
+var currmaaned = new Date();
+
+var calcook;
+
+var globaar, globmaaned, globdag;
+
+
+
+
+
+function makeCalender(aar,maaned,dag){
+
+var il = makeCalender.arguments.length;
+
+var spart;
+
+if(usesaved==1){
+
+   spart=GetCookie('calender');
+
+	 if(spart!=null&&spart!='0'){
+
+		 var rekke = spart.split('&');
+
+		 nyDato.setYear(rekke[0])
+
+		 nyDato.setMonth(rekke[1]);
+
+		 nyDato.setDate(rekke[2]);
+
+    }
+
+	else{
+
+	if(il==3){
+
+		 nyDato.setYear(aar)
+
+		 nyDato.setMonth(maaned);
+
+		 nyDato.setDate(dag);
+
+		}
+
+	}
+
+}
+
+	aar = nyDato.getFullYear(); //getYear  =  76 hvis årstallet er før 2000 etter år 2000 returneres 2001
+
+	maaned = nyDato.getMonth();
+
+	dag = nyDato.getDate();
+
+	var diw = nyDato.getDay(); //getDay   = day of week 0-6
+
+	
+
+globaar = aar;
+
+globmaaned = maaned;
+
+globdag = dag;
+
+var calender, cal;
+
+var as1, as2, ae;
+
+if(daylink==1){
+
+  var as1 = '<A HREF="';
+
+  var as2 = '">';
+
+  var ae = '</A>';
+
+}
+
+
+
+if(aar<2000)aar+=1900;  // Year 2000 problem in JavaScript
+
+cal = dn[diw+1] + ' ' + aar + ' ' +maaned+' '+dag;
+
+var ts = '<TABLE BORDER="1" CELLSPACING="0" CELLPADDING="0">\n';
+
+var te = '</TABLE>';
+
+var rs = '<TR>';
+
+var re = '</TR>\n';
+
+var cs = '<TD ALIGN="CENTER" WIDTH="14%"><FONT FACE="' + fontface + '" SIZE="' + fontsize +'">';
+
+var ce = '</FONT></TD>\n';
+
+
+
+cal = ts + rs;
+
+if(usesaved==1)cal += '<TD ALIGN="CENTER" BGCOLOR="#C0C0C0"><FONT  FACE="' + fontface + '" SIZE="' + fontsize;
+
+if(usesaved==1)cal += '"><A HREF="javascript:go(1);">'+leftarr+'</A></FONT></TD>';
+
+if(usesaved==1)cal += '<TD COLSPAN="5"';
+
+else cal+='<TD COLSPAN="7"';
+
+cal += ' ALIGN="CENTER" BGCOLOR="#C0C0C0"><FONT  FACE="' + fontface;
+
+cal += '" SIZE="' + fontsize +'">' + ma[maaned] +', ' + aar + ce;
+
+if(usesaved==1)cal += '<TD ALIGN="CENTER" BGCOLOR="#C0C0C0"><A HREF="javascript:go(2);">'+rightarr+'</A></TD>';
+
+cal += re+rs+cs;
+
+for(i=0;i<6;i++)cal += dn[i] + ce + cs;
+
+cal += dn[6] + ce + re;
+
+var tmp;
+
+nyDato.setDate(1);
+
+nyDato.setMonth(maaned);
+
+var midl;
+
+var diu = nyDato.getDay();
+
+cal+=rs;
+
+t = nyDato.getMonth();
+
+
+
+for(i=0;i<diu;i++){cal += cs +'&nbsp;' + ce;}
+
+var fresh = new Date();
+
+var bs = '<b>';
+
+var be = '</b>';
+
+fresh = fresh.getDate();
+
+for(i=1;i<32;i++){
+
+  gd=nyDato.getDate();
+
+  gm=nyDato.getMonth();
+
+  gy=nyDato.getFullYear();
+
+  if(gy<2000)gy+=1900;
+
+  if((gd>1||(gd==1&&i==1))&&gm==maaned){
+
+      diw = nyDato.getDay();
+
+	  if(diw==0)cal+=rs;  // Hvis første dag i uken
+
+	  if(diw!=7){ 			 // Hvis ikke siste dag i uken
+
+	    tmp1 = gm;
+
+		tmp2 = gd;
+
+		if(tmp1<10)tmp1 = '0' + tmp1;
+
+		if(tmp2<10)tmp2 = '0' + tmp2;
+
+	    if(daylink==1){
+
+		  if(fresh==gd&&globmaaned==currmaaned.getMonth())cal += cs + bs + as1 + gy + tmp1 + tmp2 + '.html' + as2 + gd + ae + be + ce;
+
+		  else cal += cs + as1 + gy + tmp1 + tmp2 + '.html' + as2 + gd + ae + ce;
+
+		}
+
+		else{
+
+		  if(fresh==gd&&globmaaned==currmaaned.getMonth())cal += cs + bs + tmp2 + be + ce;
+
+		  else cal += cs + tmp2 + ce;
+
+		}
+
+	  }
+
+	  if(diw==7)cal+=re;  // Hvis siste dag i uken
+
+  }
+
+  nyDato.setDate(gd+1);
+
+}
+
+
+
+if(diw<6){
+
+  for(i=diw;i<6;i++){
+
+    if(i<7)cal += cs +'&nbsp;'+ce;
+
+	if(i==6)cal += re;
+
+  }
+
+}
+
+
+
+cal += te;
+
+calender = cal;
+
+return calender;
+
+}
+
+
+
+function go(hva){
+
+  if(hva==1)SaveCookie(globaar,globmaaned-1,globdag);
+
+  else SaveCookie(globaar,globmaaned+1,globdag);
+
+  document.location=document.location;
+
+}
+
+
+
+
+
+
+
+// *************************************** Start cookie  ******************************
+
+// *************************************** Start cookie  ******************************
+
+// If visit before: get saved data
+
+
+
+
+
+function getCookieVal(offset) 
+
+   {
+
+   var endstr = document.cookie.indexOf (";", offset);
+
+   if (endstr == -1)
+
+      endstr = document.cookie.length;
+
+   return unescape(document.cookie.substring(offset, endstr));
+
+   }
+
+
+
+function GetCookie(name){
+
+   var arg = name + "=";
+
+   var alen = arg.length;
+
+   var clen = document.cookie.length;
+
+   var i = 0;
+
+   while (i < clen) 
+
+      {
+
+      var j = i + alen;
+
+      if (document.cookie.substring(i, j) == arg)
+
+         return getCookieVal (j);
+
+      i = document.cookie.indexOf(" ", i) + 1;
+
+      if (i == 0) 
+
+         break; 
+
+      }
+
+  return null;
+
+}
+
+
+
+function SetCookie(name, value){
+
+   var argv = SetCookie.arguments;
+
+   var argc = SetCookie.arguments.length;
+
+   var expires = (2 < argc) ? argv[2] : null;
+
+   var path = (3 < argc) ? argv[3] : null;
+
+   var domain = (4 < argc) ? argv[4] : null;
+
+   var secure = (5 < argc) ? argv[5] : false;
+
+   document.cookie = name + "=" + escape (value) +
+
+        ((expires == null) ? "" : ("; expires="+expires.toGMTString())) +
+
+     ((path == null) ? "" : ("; path=" + path)) +
+
+     ((domain == null) ? "" : ("; domain=" + domain)) +
+
+        ((secure == true) ? "; secure" : "");
+
+   }
+
+
+
+
+
+function SaveCookie(aarvar,maanedvar,dagvar){
+
+   var expdate = new Date();
+
+   expdate.setTime(expdate.getTime() +  (60 * 60*1000*3)); 
+
+   SetCookie("calender", aarvar+'&'+maanedvar+'&'+dagvar, expdate, "http://members.societe-jersiaise.org/", null, false);
+
+}
+
+
+
+
+
+function clearCookie(){
+
+  var tid = new Date();
+
+  tid.setTime(tid.getTime()+(60*60))
+
+   SetCookie("calender", 0, tid, "http://members.societe-jersiaise.org/", null, false);
+
+   history.go(0);
+
+}
+
+//-->
+
+</SCRIPT>
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+<center><font color="#215e21"><h2>L'Almonas d&eacute ch't'ann&eacute;e en J&egrave;rriais</h2></font></center><p>
+&nbsp;<p>
+
+<CENTER>
+
+<script language="JavaScript">
+
+ document.write(makeCalender());
+
+
+</script><BR>
+
+
+
+Clyiquez pouor &egrave;rv'n&icirc;n au <A HREF="javascript:clearCookie()">jour d'aniet</A>
+
+&nbsp;<p>
+&nbsp;<p>
+&nbsp;<p>
+
+<A HREF="smaine.html">L'Ann&eacute;e et la S'maine en J&egrave;rriais</A>
+</CENTER>
+
+
+
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/analmonas.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+</HTML>

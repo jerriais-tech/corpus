@@ -1,0 +1,99 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/dviersjs.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:04 GMT -->
+<HEAD>
+<TITLE>Tchille heuthe qu'il est ach'teu?</TITLE>
+<META  name="keywords" content="Jèrriais, language, langue, javascript text clock, horloge">
+<META  name="description" content=" Javascript text clock in J&egrave;rriais - horloge javascript en J&egrave;rriais">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Chu script a 'té êcrit auve l'aîgue dé -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function number(x) {
+if (x==1) return "eune"; if (x==2) return "deux"; if (x==3) return "trais";
+if (x==4) return "quat'"; if (x==5) return "ch&icirc;ntch'"; if (x==6) return "si&ecirc;x";
+if (x==7) return "sept"; if (x==8) return "huit"; if (x==9) return "neuf";
+if (x==10) return "dgi&ecirc;x"; if (x==11) return "onze"; if (x==12) return "douze";
+return x; //default
+}
+function ishtime(h,m) {
+h = number(h)
+
+if ((m<=3 || m>58) && (h=="eune")) return h+" heuthe";
+if ((m<=3 || m>58) && (h!="eune")) return h+" heuthes";
+if ((m<=7) && (h=="eune"))  return h+" heuthe ch&icirc;nq ";
+if ((m<=7) && (h!="eune"))  return h+" heuthes ch&icirc;nq ";
+if ((m<=12) && (h=="eune")) return h+" heuthe dgix ";
+if ((m<=12) && (h!="eune")) return h+" heuthes dgix ";
+if ((m<=17) && (h=="eune")) return h+" heuthe un quart ";
+if ((m<=17) && (h!="eune")) return h+" heuthes un quart ";
+if ((m<=23) && (h=="eune")) return h+" heuthe v&icirc;ngt ";
+if ((m<=23) && (h!="eune")) return h+" heuthes v&icirc;ngt ";
+if ((m<=28) && (h=="eune")) return h+" heuthe v&icirc;ngt ch&icirc;nq ";
+if ((m<=28) && (h!="eune")) return h+" heuthes v&icirc;ngt ch&icirc;nq ";
+if ((m<=33) && (h=="eune")) return h+" heuthe et d'mie ";
+if ((m<=33) && (h!="eune")) return h+" heuthes et d'mie ";
+if ((m<=38) && (h=="eune")) return "v&icirc;ngt ch&icirc;n minnutes d&eacute; "+h;
+if ((m<=38) && (h!="eune")) return "v&icirc;ngt ch&icirc;n minnutes d&eacute; "+h;
+if ((m<=43) && (h=="eune")) return "v&icirc;ngt minnutes d&eacute; "+h;
+if ((m<=43) && (h!="eune")) return "v&icirc;ngt minnutes d&eacute; "+h;
+if ((m<=48) && (h=="eune")) return "un quart d&eacute; "+h;
+if ((m<=48) && (h!="eune")) return "un quart d&eacute; "+h;
+if ((m<=53) && (h=="eune")) return "dgi&ecirc;x minnutes d&eacute; "+h;
+if ((m<=53) && (h!="eune")) return "dgi&ecirc;x minnutes d&eacute; "+h;
+if ((m<=58) && (h=="eune")) return "ch&icirc;n minnutes d&eacute; "+h;
+if ((m<=58) && (h!="eune")) return "ch&icirc;n minnutes d&eacute; "+h;
+return hm; // never reached?
+}
+function daytime(h) {
+if (!h || h>21) return " du s&eacute;"
+if (h<12) return " du mat&icirc;n";
+if (h<=17) return " d&eacute; l'arl&eacute;v&eacute;e";
+return " du s&eacute;"; // default
+}
+function ish(h,m) {
+if (!h && !m) { // if no time supplied, use the system time
+time = new Date()
+h = time.getHours()
+m = time.getMinutes()
+}
+z = daytime(h);
+h = h % 12 // fix to 12 hour clock
+if (m>57 && time.getSeconds()>30) m++; // round seconds
+if (m>60) m=0 // round up minutes
+if (m>33) h++ // round up hours
+if (h>12)  h = 1 // the clock turns round..
+if (h==0) h = 12
+return "Il est d'vi&egrave;rs "+ishtime(h,m)+z+"."
+}
+// End -->
+</script>
+</HEAD>
+
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+<center><font color="#215e21"><h2>Tchille heuthe qu'il est ach'teu?</h2></font></center>
+
+&nbsp;<p>
+
+<center><H2>
+<script language="JavaScript">
+<!--HIDE FROM OLD BROWSERS--
+document.writeln(ish().fontcolor("black"),"<P>")
+<!--DONE-->
+</script>
+</H2></center>
+
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/dviersjs.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:04 GMT -->
+</HTML>

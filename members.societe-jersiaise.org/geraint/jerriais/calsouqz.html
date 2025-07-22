@@ -1,0 +1,322 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/calsouqz.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:51 GMT -->
+<HEAD><META NAME="Author" CONTENT="Produced using Hot Potatoes by Half-Baked Software, registered to Geraint Jennings.">
+<META  name="keywords" content="Jèrriais, educational materials, tests, quiz, CALL, computer assisted language learning, language, langue, coins, numismatics">
+<TITLE>Caltchulez les sou</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+CorrectAnswers = new Array();
+
+CorrectAnswers[0]=10;
+CorrectAnswers[1]=6;
+CorrectAnswers[2]=4;
+CorrectAnswers[3]=9;
+CorrectAnswers[4]=5;
+CorrectAnswers[5]=3;
+CorrectAnswers[6]=1;
+CorrectAnswers[7]=2;
+CorrectAnswers[8]=7;
+CorrectAnswers[9]=8;
+
+
+macrightchar=':-)';
+macwrongchar='X';
+winrightchar=':-)';
+winwrongchar='X';
+
+
+var platform = 'win'
+if (navigator.appVersion.indexOf('Mac') != -1) {platform = 'mac'}
+if (platform == 'mac') {
+	rightchar = unescape(macrightchar)
+	wrongchar = unescape(macwrongchar)
+}
+else {
+	rightchar = unescape(winrightchar)
+	wrongchar = unescape(winwrongchar)
+}
+
+function CheckAnswer(){
+
+	var i = 0;
+	var TotalCorrect = 0;
+	var x = 0;
+	var Score = 0;
+
+	for (i=0; i<CorrectAnswers.length; i++){
+		if (document.QuizForm.elements[i*2].selectedIndex == CorrectAnswers[i]){
+			document.QuizForm.elements[(i*2)+1].value = rightchar;
+			TotalCorrect++;
+		}
+		else{
+			document.QuizForm.elements[(i*2)+1].value = wrongchar;
+		}
+	}
+	Score = Math.floor((TotalCorrect*100)/CorrectAnswers.length);
+	document.CheckForm.ScoreBox.value = Score + '%';
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="#">
+
+<CENTER>
+<H2>Caltchulez les sou</H2>
+<B><I>La caltchul&acirc;tion d'<a href="sousvoc.html">sou</a> en J&egrave;rriais</I></B>
+</CENTER>
+
+<P>
+<BLOCKQUOTE><FONT COLOR="#BA050A"><B>
+Caltchulez l&eacute; neunm&eacute;tho
+</B></FONT COLOR></BLOCKQUOTE>
+<P>
+<FORM NAME="QuizForm">
+
+<CENTER>
+<TABLE BORDER=0 CELLPADDING=5>
+
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="5p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="2p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="0">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="1" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="50p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="5p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="2">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="3" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="10p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="2p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="4">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="5" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="1p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="5p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="50p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="6">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="7" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="10p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="8">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="9" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="50p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="10">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="11" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="10p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="50p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="5p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="12">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="13" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="1p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="20p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="14">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="15" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="50p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="10p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="10p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="16">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="17" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD><FONT COLOR="#BA050A"><B><img src="10p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="5p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">+</FONT>&nbsp;<img src="2p.jpg">&nbsp;<FONT SIZE=12 COLOR="blue">=</FONT>&nbsp;</B></FONT COLOR></TD>
+<TD><B><SELECT NAME="18">
+<OPTION>Combein? 
+<OPTION>souaixante-ch&icirc;nq
+<OPTION>quarante'tch'ieune
+<OPTION>n&eacute;nante
+<OPTION>trente-deux
+<OPTION>ch&icirc;nquante
+<OPTION>septante-ch&icirc;nq
+<OPTION>septante
+<OPTION>dgi&ecirc;x-sept
+<OPTION>ch&icirc;nquante-six
+<OPTION>v&icirc;ngt-sept
+</SELECT></B></TD>
+<TD>
+
+<INPUT TYPE="TEXT" NAME="19" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+
+</TABLE>
+</CENTER>
+</FORM>
+
+<P>
+<FORM NAME="CheckForm">
+<CENTER>
+Vos points: <INPUT TYPE=TEXT NAME="ScoreBox" SIZE=4 MAXLENGTH=4><P>
+<INPUT TYPE="button" VALUE="Contr&ocirc;le" onClick="CheckAnswer()">
+</CENTER>
+</FORM>
+
+<P>
+<CENTER><FORM NAME="NavigationButtons">
+<INPUT TYPE="button" VALUE="Avant" onClick="self.location='quizmnu.html'"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="self.location='quizmnu.html'"><INPUT TYPE="button" VALUE="Arri&eacute;the" onClick="history.back()">
+</FORM></CENTER>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/calsouqz.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:51 GMT -->
+</HTML>

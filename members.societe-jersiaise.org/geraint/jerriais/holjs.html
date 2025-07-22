@@ -1,0 +1,150 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/holjs.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+<HEAD>
+<TITLE>Aniet et ach'teu</TITLE>
+<META  name="keywords" content="Jèrriais, language, langue, horloge javascript clock">
+<META  name="description" content=" Javascript clock in J&egrave;rriais - horloge javascript en J&egrave;rriais">
+
+
+
+<script language="JavaScript">
+
+<!-- begin
+
+var id;
+
+function stop() {
+
+	clearTimeout(id); }
+
+function gogo() {
+
+// variables declaration
+
+	var dt=new Date();
+
+	var mm,dd,yy,h,m,s;
+
+	var date="  ",time="      ";
+
+// find out date(mm,dd,yy) and time(h,m,s)
+
+	mm=dt.getMonth()+1;
+
+	dd=dt.getDate();
+
+	yy=dt.getFullYear();
+
+	h=dt.getHours();
+
+	m=dt.getMinutes();
+
+	s=dt.getSeconds();
+
+// show it separated
+
+	document.ok.month.value=mm;
+
+	document.ok.day.value=dd;
+
+	document.ok.year.value=yy;
+
+	document.ok.hours.value=h;
+
+	document.ok.minutes.value=m;
+
+	document.ok.seconds.value=s;
+
+// show it together
+
+	if(mm==1) date+="Janvyi";
+
+	if(mm==2) date+="Févri";
+
+	if(mm==3) date+="Mar";
+
+	if(mm==4) date+="Avri";
+
+	if(mm==5) date+="Mai";
+
+	if(mm==6) date+="Juî;n";
+
+	if(mm==7) date+="Juilet";
+
+	if(mm==8) date+="Août";
+
+	if(mm==9) date+="Septembre";
+
+	if(mm==10) date+="Octobre";
+
+	if(mm==11) date+="Novembre";
+
+	if(mm==12) date+="Dézembre";
+
+	date+=" "+dd+", "+(yy);
+
+	time+=h+":"+m+":"+s;
+
+	document.ok.date.value=date;
+
+	document.ok.time.value=time;
+
+// run again in 999 ms
+
+	id=setTimeout("gogo()",999); }
+
+// end -->
+
+</script>
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21" onload="gogo()" onunload="stop()">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+<center><font color="#215e21"><h2>Aniet et ach'teu</h2></font></center><p>
+&nbsp;<p>
+
+<center>
+
+<form name="ok">
+
+<table border="0" cellpading="3" cellspacing="4" width="70%">
+
+<tr><th colspan="3">Aniet</th><th colspan="3">Ach'teu</th></tr>
+
+<tr align="center"><td colspan="3"><input type="text" name="date" size="20"></td><td colspan="3"><input type="text" name="time" size="20"></td></tr>
+
+<tr align="center"><td>Mais</td><td>Jour</td><td>Ann&eacute;e</td><td>Heuthes</td><td>Minnutes</td><td>S'gondes</td></tr>
+
+<tr align="center"><td><input type="text" name="month" size="4"></td><td><input type="text" name="day" size="4"></td><td><input type="text" name="year" size="4"></td>
+
+                   <td><input type="text" name="hours" size="4"></td><td><input type="text" name="minutes" size="4"></td><td><input type="text" name="seconds" size="4"></td></tr>
+
+</table>
+
+</form>
+
+</center>
+&nbsp;<p>
+Viyiz &eacute;tout:<p>
+<UL>
+<li><a href="heuthvoc.html">Tchille heuthe qu'il est?</a><p>
+<LI><A HREF="deskjer.html">Almonas d'aniet en J&egrave;rriais</A><p>
+<LI><A HREF="almojer.html">Almonas en J&egrave;rriais</A><p>
+<li><a href="heuthesq.html">Tchille heuthe est-i'?</a> - un quiz<p>
+<li><a href="dviersjs.html">Tchille heuthe est-i' ach'teu?</a> - auve javascript<p>
+</UL>
+&nbsp;<p>
+
+<CENTER><FONT SIZE=1> M&egrave;rcie bein des fais &agrave; <A HREF="http://www.sanet.sk/~ms/js/" target="_top">Michal Sramka</A> pouor l&eacute; javascript</FONT></CENTER>
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/holjs.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+</HTML>

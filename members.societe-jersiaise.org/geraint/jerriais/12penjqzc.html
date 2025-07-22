@@ -1,0 +1,804 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/12penjqzc.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:10:11 GMT -->
+<HEAD><META NAME="Author" CONTENT="Created with Hot Potatoes by Half-Baked Software, registered to Geraint Jennings.">
+<TITLE>Un quiz auve des neunm&eacute;thos</TITLE>
+<SCRIPT language="JavaScript">
+
+var min
+var sec
+var ShowReadingAgain = 'Mouontrez la lectuthe acouo eune fais'
+var platform = 'win'
+if (navigator.appVersion.indexOf('Mac') != -1) {platform = 'mac'}
+
+macrightchar = ':-)'
+macwrongchar = 'X'
+winrightchar = ':-)'
+winwrongchar = 'X'
+
+
+DoneStatus = new Array();
+DoneStatus[1] = '0';
+DoneStatus[2] = '0';
+DoneStatus[3] = '0';
+DoneStatus[4] = '0';
+DoneStatus[5] = '0';
+DoneStatus[6] = '0';
+DoneStatus[7] = '0';
+DoneStatus[8] = '0';
+DoneStatus[9] = '0';
+DoneStatus[10] = '0';
+
+
+Responses = new Array();
+Responses[1]='';
+Responses[2]='';
+Responses[3]='';
+Responses[4]='';
+Responses[6]='';
+Responses[7]='';
+Responses[8]='';
+Responses[9]='';
+Responses[11]='';
+Responses[12]='';
+Responses[13]='';
+Responses[14]='';
+Responses[16]='';
+Responses[17]='';
+Responses[18]='';
+Responses[19]='';
+Responses[21]='';
+Responses[22]='';
+Responses[23]='';
+Responses[24]='';
+Responses[26]='';
+Responses[27]='';
+Responses[28]='';
+Responses[29]='';
+Responses[31]='';
+Responses[32]='';
+Responses[33]='';
+Responses[34]='';
+Responses[36]='';
+Responses[37]='';
+Responses[38]='';
+Responses[39]='';
+Responses[41]='';
+Responses[42]='';
+Responses[43]='';
+Responses[44]='';
+Responses[46]='';
+Responses[47]='';
+Responses[48]='';
+Responses[49]='';
+
+
+IndicatorName = new Array();
+IndicatorName[1] = 'document.QuizForm.Q1A';
+IndicatorName[2] = 'document.QuizForm.Q1B';
+IndicatorName[3] = 'document.QuizForm.Q1C';
+IndicatorName[4] = 'document.QuizForm.Q1D';
+IndicatorName[6] = 'document.QuizForm.Q2A';
+IndicatorName[7] = 'document.QuizForm.Q2B';
+IndicatorName[8] = 'document.QuizForm.Q2C';
+IndicatorName[9] = 'document.QuizForm.Q2D';
+IndicatorName[11] = 'document.QuizForm.Q3A';
+IndicatorName[12] = 'document.QuizForm.Q3B';
+IndicatorName[13] = 'document.QuizForm.Q3C';
+IndicatorName[14] = 'document.QuizForm.Q3D';
+IndicatorName[16] = 'document.QuizForm.Q4A';
+IndicatorName[17] = 'document.QuizForm.Q4B';
+IndicatorName[18] = 'document.QuizForm.Q4C';
+IndicatorName[19] = 'document.QuizForm.Q4D';
+IndicatorName[21] = 'document.QuizForm.Q5A';
+IndicatorName[22] = 'document.QuizForm.Q5B';
+IndicatorName[23] = 'document.QuizForm.Q5C';
+IndicatorName[24] = 'document.QuizForm.Q5D';
+IndicatorName[26] = 'document.QuizForm.Q6A';
+IndicatorName[27] = 'document.QuizForm.Q6B';
+IndicatorName[28] = 'document.QuizForm.Q6C';
+IndicatorName[29] = 'document.QuizForm.Q6D';
+IndicatorName[31] = 'document.QuizForm.Q7A';
+IndicatorName[32] = 'document.QuizForm.Q7B';
+IndicatorName[33] = 'document.QuizForm.Q7C';
+IndicatorName[34] = 'document.QuizForm.Q7D';
+IndicatorName[36] = 'document.QuizForm.Q8A';
+IndicatorName[37] = 'document.QuizForm.Q8B';
+IndicatorName[38] = 'document.QuizForm.Q8C';
+IndicatorName[39] = 'document.QuizForm.Q8D';
+IndicatorName[41] = 'document.QuizForm.Q9A';
+IndicatorName[42] = 'document.QuizForm.Q9B';
+IndicatorName[43] = 'document.QuizForm.Q9C';
+IndicatorName[44] = 'document.QuizForm.Q9D';
+IndicatorName[46] = 'document.QuizForm.Q10A';
+IndicatorName[47] = 'document.QuizForm.Q10B';
+IndicatorName[48] = 'document.QuizForm.Q10C';
+IndicatorName[49] = 'document.QuizForm.Q10D';
+
+
+var Score = 0;
+var Tries = 0;
+var Percent = 0;
+var YourScore = 'Vos points:';
+var DefaultRight = 'Ch\'est bein!';
+var DefaultWrong = 'Nannîn!';
+
+function DownTime(mm,ss){
+	min = mm;
+	sec = ss;
+
+	if (sec==0) {
+		sec = 60;
+		min--;
+	}
+
+	sec--;
+	if (sec<10){
+		sec="0" + sec;
+	}
+
+	parent.TimerFrame.document.TimerForm.face.value= min+":"+sec;
+	if ((min==0) && (sec==0)){
+		TimesUp()
+	}
+	else{
+		setTimeout('DownTime(min,sec)',1000)
+	}
+}
+
+function SetUp(){
+	if (parent.TimerFrame != null) {
+		Stuff='<INPUT TYPE="Button"';
+		Stuff+=' NAME="StartIt" VALUE="C\'menchiz à liéthe" onClick="parent.CodeFrame.StartReading()">';
+		WriteToReading('Clyiquez sus l\'bouton pouor vaie la lectuthe');
+		WriteToTimer(Stuff);
+	}
+}
+
+function StartReading(){
+	Stuff='Lé temps tchi reste:';
+	Stuff+=' <FONT SIZE="3"><INPUT TYPE="text" NAME="face" SIZE="6" VALUE="1:00"></FONT>';
+	WriteToTimer(Stuff);
+	parent.ReadingFrame.location.href='12penjqzr.html';
+	timeoutID=setTimeout('DownTime(1,0)',1000);
+}
+
+function TimesUp() {
+	if (ShowReadingAgain.length > 0) {
+		Stuff='<INPUT TYPE="Hidden" NAME="ThisAvoidsNavigator3Bug">';
+		Stuff+='<INPUT TYPE="Button" NAME="StartIt" VALUE="Mouontrez la lectuthe acouo eune fais" onClick="parent.CodeFrame.StartReading()">';
+		WriteToTimer(Stuff);
+	}
+	WriteToReading('Ch\'est finni!');
+}
+
+function WriteToReading(Stuff) {
+	parent.ReadingFrame.document.clear();
+	parent.ReadingFrame.document.open();
+	parent.ReadingFrame.document.writeln ("<HTML>");
+	parent.ReadingFrame.document.writeln ("<BODY  BACKGROUND=\"\" BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\">");
+	parent.ReadingFrame.document.writeln ("<CENTER><TABLE BORDER=\"0\" CELLPADDING=\"5\" CELLSPACING=\"1\" WIDTH=\"85%\">");
+	parent.ReadingFrame.document.writeln ("<TR><TD BGCOLOR=\"#339933\" ALIGN=\"CENTER\">") 
+	parent.ReadingFrame.document.writeln ("<FONT FACE=\"Geneva,Arial\" SIZE=\"2\">");
+	parent.ReadingFrame.document.writeln (Stuff);
+	parent.ReadingFrame.document.writeln ("</FONT></TD></TR></TABLE></CENTER></BODY></HTML>");
+	parent.ReadingFrame.document.close();
+}
+
+function WriteToTimer(Stuff){
+	parent.TimerFrame.document.clear();
+	parent.TimerFrame.document.open();
+	parent.TimerFrame.document.writeln ("<HTML>");
+	parent.TimerFrame.document.writeln ("<BODY  BACKGROUND=\"\" BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\">");
+	parent.TimerFrame.document.writeln ("<CENTER><TABLE BORDER=\"0\" CELLPADDING=\"5\" CELLSPACING=\"1\" WIDTH=\"85%\">");
+	parent.TimerFrame.document.writeln ("<FORM NAME=\"TimerForm\"><TR><TD BGCOLOR=\"#339933\" ALIGN=\"CENTER\">") 
+	parent.TimerFrame.document.writeln ("<FONT FACE=\"Geneva,Arial\" SIZE=\"2\">");
+	parent.TimerFrame.document.writeln (Stuff);
+	parent.TimerFrame.document.writeln ("</FONT></TD></TR></FORM></TABLE></CENTER></BODY></HTML>");
+	parent.TimerFrame.document.close();
+}
+
+if (platform == 'mac') {
+	rightchar = unescape(macrightchar)
+	wrongchar = unescape(macwrongchar)
+}
+else {
+	rightchar = unescape(winrightchar)
+	wrongchar = unescape(winwrongchar)
+}
+
+function CheckAnswer(QNum, AnsNum, Correct) {
+whichfb = (5*(QNum-1) + AnsNum)
+
+ if (Correct == 1) {
+	if (DoneStatus[QNum] != '1'){
+		Tries = Tries + 1;
+		DoneStatus[QNum] = '1';
+		Score = Score + 1;}
+	if (eval(IndicatorName[whichfb]) != null){
+		eval(IndicatorName[whichfb]).value = rightchar}
+	Feedback = Responses[whichfb]
+	if (Feedback == '') {Feedback = DefaultRight}
+	Percent = Math.floor(Score*100/Tries) + '%';
+	Feedback = Feedback + '<BR>' + YourScore + ' ' + Percent + '.';
+
+
+
+	var i = 0;
+	var AllDone = true;
+	for (i=1; i<DoneStatus.length; i++){
+		if (DoneStatus[i] == '0'){
+			AllDone = false;
+		}
+	}
+	if (AllDone == true){
+		Feedback += '<BR>';
+	}
+
+	WriteFeedback(Feedback);
+	}
+
+ else {
+	if (DoneStatus[QNum] != '1'){
+		Tries = Tries + 1;}
+	if (eval(IndicatorName[whichfb]) != null){
+		eval(IndicatorName[whichfb]).value = wrongchar}
+	Feedback = Responses[whichfb]
+	if (Feedback == '') {Feedback = DefaultWrong}
+	WriteFeedback(Feedback)
+ }
+}
+
+function WriteFeedback(Feedback) {
+	parent.FeedbackFrame.document.clear();
+	parent.FeedbackFrame.document.open();
+	parent.FeedbackFrame.document.writeln ("<HTML>");
+	parent.FeedbackFrame.document.writeln ("<BODY  BACKGROUND=\"\" BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\">");
+	parent.FeedbackFrame.document.writeln ("<CENTER><TABLE BORDER=\"0\" CELLPADDING=\"5\" CELLSPACING=\"1\" WIDTH=\"85%\">");
+	parent.FeedbackFrame.document.writeln ("<TR><TD BGCOLOR=\"#339933\" ALIGN=\"CENTER\">") 
+	parent.FeedbackFrame.document.writeln ("<FONT FACE=\"Geneva,Arial\" SIZE=\"2\">");
+	parent.FeedbackFrame.document.writeln (Feedback);
+	parent.FeedbackFrame.document.writeln ("</FONT></TD></TR></TABLE></CENTER></BODY></HTML>");
+	parent.FeedbackFrame.document.close();
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY BACKGROUND="#" BGCOLOR="#FFFFFF" TEXT="#000000" onLoad="SetUp()">
+
+<CENTER>
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="1" WIDTH="85%">
+
+<TR><FORM>
+<TD>
+<FONT FACE="Geneva,Arial" SIZE="2"><INPUT TYPE="button" VALUE="Aîdgiz-mé!" onClick="parent.FeedbackFrame.location='12penjqzw.html#help'"><BR></FONT>
+</TD></FORM>
+</TR>
+
+
+<TR><TD ALIGN="CENTER"><FONT SIZE="+1" FACE="Geneva,Arial" COLOR="#0000CC">Un quiz auve des neunm&eacute;thos</FONT></TD></TR>
+<TR><TD ALIGN="CENTER"><FONT SIZE="-1" FACE="Geneva,Arial" COLOR="#0000CC">Pouv'ous trouvez les bouonnes r&ecirc;ponses?<BR>&nbsp;</FONT></TD></TR>
+
+<TR><TD BGCOLOR="#339933" ALIGN="CENTER">
+
+<FORM NAME="QuizForm">
+<TABLE BORDER="0" CELLPADDING="1" CELLSPACING="2" WIDTH="95%">
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">1</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; P&acirc;ra&icirc;sses en J&egrave;rri<BR>
++ l&eacute; nombre d&eacute; couleurs dans la couleu Française<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q1A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(1,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">ch&icirc;nquante</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q1B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(1,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">ch&icirc;nq</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q1C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(1,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt-ch&icirc;nq</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q1D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(1,4,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">tch&icirc;nze</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">2</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; jours dans eune s'maine<BR>
+X l&eacute; nombre d&eacute; d&eacute;s sus les deux mains<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q2A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(2,1,1)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">septante</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q2B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(2,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">ch&icirc;nquante</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q2C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(2,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">quarante</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q2D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(2,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">n&eacute;nante</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">3</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; p&eacute;n&icirc;ns dans un louis<BR>
+- l&eacute; nombre d&eacute; mais dans un an<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q3A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(3,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">n&eacute;nante-deux</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q3B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(3,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">ch&icirc;nquante-six</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q3C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(3,3,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">huiptante-huit</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q3D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(3,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">chent douze</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">4</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; plian&egrave;tes dans l'syst&egrave;me solaithe<BR>
++ l&eacute; nombre d&eacute; Conn&ecirc;tabl'yes<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q4A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(4,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt-ch&icirc;nq</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q4B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(4,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">dgi&ecirc;x-neuf</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q4C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(4,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">dgi&ecirc;x-huit</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q4D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(4,4,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt-tch'ieune</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">5</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; s'gondes dans eune minnute<BR>
+- l&eacute; nombre d&eacute; voleurs &agrave; Ali Baba<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q5A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(5,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">trente-quatre</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q5B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(5,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">quarante-ch&icirc;nq</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q5C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(5,3,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q5D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(5,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">dgix</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">6</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d'ort&eacute;s sus les deux pids<BR>
++ l&eacute; nombre d&eacute; joueurs dans eune &ecirc;tchipe d&eacute; football<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q6A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(6,1,1)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt-tch'ieune</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q6B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(6,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">douze</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q6C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(6,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">seize</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q6D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(6,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">dgi&ecirc;x-sept</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">7</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; sa&icirc;sons<BR>
+X l&eacute; nombre d'heuthes dans un jour<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q7A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(7,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">septante-huit</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q7B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(7,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">huiptante-deux</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q7C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(7,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">chent v&icirc;ngt</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q7D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(7,4,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">n&eacute;nante-six</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">8</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; reues sus eune bike<BR>
+X eune douzaine au boulandgi<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q8A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(8,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">trente-trais</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q8B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(8,2,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt-six</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q8C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(8,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">dgi&ecirc;x-neuf</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q8D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(8,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">tch&icirc;nze</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">9</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; cartes dans un patchet<BR>
+- la l&icirc;nmite d&eacute; vitesse en J&egrave;rri<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q9A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(9,1,1)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">douze</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q9B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(9,2,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">v&icirc;ngt</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q9C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(9,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">neuf</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q9D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(9,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">dgi&ecirc;x-huit</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" BGCOLOR="#339933" ALIGN="RIGHT"><FONT SIZE="+1" FACE="Geneva,Arial">10</FONT></TD><TD COLSPAN="3" VALIGN="TOP" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">L&eacute; nombre d&eacute; jours d&eacute; Nou&eacute;<BR>
+X l&eacute; nombre d&eacute; faches sus eune bo&ecirc;te<BR>
+=?<BR>
+</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q10A"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" A " OnClick="CheckAnswer(10,1,0)"></TD>
+<TD WIDTH="100%" BGCOLOR="#339933"><FONT SIZE="-1" FACE="Geneva,Arial">quarante-huit</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q10B"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" B " OnClick="CheckAnswer(10,2,1)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">septante-deux</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q10C"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" C " OnClick="CheckAnswer(10,3,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">huiptante-quatre</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="TEXT" VALUE=" " SIZE="3" NAME="Q10D"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"><INPUT TYPE="BUTTON" VALUE=" D " OnClick="CheckAnswer(10,4,0)"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial">souaixante-six</FONT></TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD VALIGN="TOP" BGCOLOR="#339933"></TD>
+<TD WIDTH="100%"><FONT SIZE="-1" FACE="Geneva,Arial"></FONT></TD>
+</TR>
+
+
+
+<TR>
+<TD COLSPAN="4"><HR WIDTH="100%" HEIGHT="5">
+</TD>
+</TR>
+
+</TABLE>
+</FORM>
+</TD></TR>
+
+<TR><FORM NAME="NavButtons2">
+<TD BGCOLOR="#009933" ALIGN="CENTER">
+
+<FONT FACE="Geneva,Arial" SIZE="2"><INPUT TYPE="button" VALUE="Arriéthe" onClick="parent.history.back()"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="parent.location='quizmnu.html'"></FONT></TD>
+</FORM></TR>
+
+</TABLE>
+</CENTER>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/12penjqzc.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:10:12 GMT -->
+</HTML>
+
+
+

@@ -1,0 +1,401 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/geocad.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:53 GMT -->
+<HEAD><META NAME="Author" CONTENT="Created with Hot Potatoes by Half-Baked Software, registered to Geraint Jennings.">
+<TITLE>O&ugrave;'est qu'est.....?</TITLE>
+<META  name="keywords" content="Jèrriais, parishes, paroisses, parish crests, heraldry, language, langue, Channel Islands">
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+CorrectAnswers = new Array();
+
+CorrectAnswers[0]=1;
+CorrectAnswers[1]=9;
+CorrectAnswers[2]=2;
+CorrectAnswers[3]=8;
+CorrectAnswers[4]=3;
+CorrectAnswers[5]=6;
+CorrectAnswers[6]=5;
+CorrectAnswers[7]=4;
+CorrectAnswers[8]=7;
+CorrectAnswers[9]=10;
+CorrectAnswers[10]=11;
+CorrectAnswers[11]=12;
+
+
+macrightchar=':-)';
+macwrongchar='X';
+winrightchar=':-)';
+winwrongchar='X';
+
+
+var platform = 'win'
+if (navigator.appVersion.indexOf('Mac') != -1) {platform = 'mac'}
+if (platform == 'mac') {
+	rightchar = unescape(macrightchar)
+	wrongchar = unescape(macwrongchar)
+}
+else {
+	rightchar = unescape(winrightchar)
+	wrongchar = unescape(winwrongchar)
+}
+
+function CheckAnswer(){
+
+	var i = 0;
+	var TotalCorrect = 0;
+	var x = 0;
+	var Score = 0;
+
+	for (i=0; i<CorrectAnswers.length; i++){
+		if (document.QuizForm.elements[i*2].selectedIndex == CorrectAnswers[i]){
+			document.QuizForm.elements[(i*2)+1].value = rightchar;
+			TotalCorrect++;
+		}
+		else{
+			document.QuizForm.elements[(i*2)+1].value = wrongchar;
+		}
+	}
+	Score = Math.floor((TotalCorrect*100)/CorrectAnswers.length);
+	document.CheckForm.ScoreBox.value = Score + '%';
+}
+
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="#" BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<CENTER>
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="1" WIDTH="85%">
+
+<TR><FORM NAME="NavButtons1">
+<TD BGCOLOR="#009933" ALIGN="CENTER"><FONT FACE="Geneva,Arial" SIZE="2"><INPUT TYPE="button" VALUE="Arri&eacute;the" onClick="history.back()"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="location='quizmnu.html'"></FONT></TD>
+</FORM></TR>
+
+<TR><TD ALIGN="CENTER"><h2><FONT FACE="Geneva,Arial" COLOR="#0000CC">O&ugrave;'est qu'est.....?</FONT></h2></TD></TR>
+<TR><TD ALIGN="CENTER"><FONT SIZE="-1" FACE="Geneva,Arial" COLOR="#0000CC">Trouvez la P&acirc;ra&icirc;sse<BR>&nbsp;</FONT></TD></TR>
+
+<TR><TD ALIGN="CENTER"><IMG align=middle src="jerri.gif"  WIDTH=596 HEIGHT=390 border=0 alt="J&egrave;rri et ses P&acirc;ra&icirc;sses"></TD></TR>
+
+<TR><TD ALIGN="LEFT"><FONT SIZE="-1" FACE="Geneva,Arial" COLOR="#0000CC">O&ugrave;'est qu'i' sont, ches lieux?</FONT><BR>&nbsp;</TD></TR>
+
+
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="#339933">
+<FORM NAME="QuizForm">
+
+<CENTER>
+<TABLE BORDER=0 CELLPADDING="5" CELLSPACING="1">
+
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">l&eacute; Ch&acirc;t&eacute; L&icirc;zab&eacute;</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="0">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="1" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">L&eacute; Creux du Vis</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="2">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="3" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">Bouonne Niet</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="4">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="5" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">L'&Ecirc;ta</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="6">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="7" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">La Rocque</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="8">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="9" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">l'A&eacute;roport</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="10">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="11" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">La Mouaie</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="12">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="13" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">Hamptonne</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="14">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="15" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">l&eacute; Vi&egrave;r Ch&acirc;t&eacute;</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="16">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="17" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">la M&ecirc;nag'gie</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="18">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="19" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">Rocque B&egrave;r</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="20">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="21" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial">La Crouaix d'Bouais</FONT></TD>
+<TD VALIGN=TOP><FONT FACE="Geneva,Arial"><SELECT NAME="22">
+<OPTION>Tchi P&acirc;ra&icirc;sse? 
+<OPTION>St. H&eacute;lyi
+<OPTION>St. Jean
+<OPTION>Grouville
+<OPTION>St. Louothains
+<OPTION>St. Br&eacute;lade
+<OPTION>St. Pi&egrave;rre
+<OPTION>St. Mart&icirc;n
+<OPTION>St. Ou&euml;n
+<OPTION>Ste. Mathie
+<OPTION>La Trinnet&eacute;
+<OPTION>St. Cli&eacute;ment
+<OPTION>St. Sa&ucirc;veux
+</SELECT></FONT></TD>
+<TD VALIGN=TOP>
+
+<INPUT TYPE="TEXT" NAME="23" SIZE=3 MAXLENGTH=3>
+
+</TD>
+</TR>
+
+
+</TABLE>
+</CENTER>
+</FORM>
+
+</TD>
+</TR>
+
+<TR><FORM NAME="CheckForm">
+<TD BGCOLOR="#339933" ALIGN="CENTER">
+<FONT FACE="Geneva,Arial"><INPUT TYPE="button" VALUE="Contr&ocirc;le" onClick="CheckAnswer()"> Vos points: <INPUT TYPE=TEXT NAME="ScoreBox" SIZE="4" MAXLENGTH="4"></FONT></TD>
+</FORM></TR>
+
+<TR><FORM NAME="NavButtons2">
+<TD BGCOLOR="#009933" ALIGN="CENTER"><FONT FACE="Geneva,Arial" SIZE="2"><INPUT TYPE="button" VALUE="Arri&eacute;the" onClick="history.back()"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="location='quizmnu.html'"></FONT></TD>
+</FORM></TR>
+</TABLE>
+</CENTER>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/geocad.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:53 GMT -->
+</HTML>

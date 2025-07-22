@@ -1,0 +1,194 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/papi.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:55 GMT -->
+<HEAD>
+<TITLE>L&eacute; rotchi, l&eacute; papi et les ch&icirc;sieaux - Stone, paper, scissors</TITLE>
+<META  name="keywords" content="Jèrriais, Jersey language, langue jersiaise">
+<META  name="description" content="J&egrave;rriais: la langue d'J&egrave;rri.">
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+<FORM>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+<!-- Hide script from old browsers
+
+// Go the globals
+var Players_Choice;
+var Computers_Choice;
+
+//pre load image onto user computer
+var imageArray = new Array(3);
+for (var i=0 ; i<3 ; i++)
+imageArray[i] = new Image();
+imageArray[0].src="rotchi.jpg";
+imageArray[1].src="chisieaux.jpg";
+imageArray[2].src="papi.jpg";
+
+function playGame(Choice) {
+
+//Wouldn't work unless I did this
+Players_Choice=Choice;
+
+// change players image
+document.user_image.src = imageArray[Players_Choice-1].src;
+
+//Have comp's choice Change Intermitently (Animate)
+intervalID1 = setInterval('SwitchImage();',100);
+setTimeout('results(intervalID1);',900);
+}
+
+function SwitchImage(){
+Computers_Choice=(Math.round(Math.random()*2)+1);
+document.comp_image.src = imageArray[Computers_Choice-1].src;
+}
+
+function results(intervalID1) {
+
+//Firstly, Stop the animation
+clearInterval(intervalID1);
+
+//Player won
+if ( 	(Players_Choice ==  1 && Computers_Choice == 2) ||
+	(Players_Choice ==  2 && Computers_Choice == 3) ||
+	(Players_Choice ==  3 && Computers_Choice == 1)){
+win.value++;
+alert ('Ous avez gângni!'); }
+
+// Its a draw
+else if ( Players_Choice ==  Computers_Choice ){
+tie.value++;
+alert ('Êgaux'); }
+
+// Player Lost
+else {
+loss.value++;
+alert ('Ous avez pèrdu!'); }
+}
+
+function clear_score() {
+
+// wipe score board
+loss.value=0
+win.value=0
+tie.value=0
+}
+//  End -->
+</script>
+</form>
+
+<center><font color="#215e21"><h2>L&eacute; rotchi, l&eacute; papi et les ch&icirc;sieaux</h2></font></center><p>
+
+
+<center>
+<table  width="50%" border="0" cellspacing="0" cellpadding="6">
+	<tr>
+		<td  align="center">
+			<a href="javascript:;" onClick=playGame(1);><img border=0 src="rotchi.jpg" width="92" height="120" alt="Rotchi"></a>   
+		</td>
+		<td  align="center">
+			<a href="javascript:;" onClick=playGame(2);><img border=0 src="chisieaux.jpg" width="92" height="120"  alt="Ch&icirc;sieaux"></a>   
+		</td>
+		<td align="center">
+			<a href="javascript:;" onClick=playGame(3);><img border=0 src="papi.jpg" width="92" height="120"  alt="Papi"></a>
+		</td>
+	</tr>
+	<tr>
+		<td >
+			<i><center><font size="5">Rotchi</font></center></i>
+		</td>
+		<td >
+			<i><center><font size="5">Ch&icirc;sieaux</font></center></i>
+		</td>
+		<td >
+			<i><center><font size="5">Papi</font></center></i>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;<p>
+
+
+
+
+   
+
+
+
+<table width="260" border="0" cellspacing="0" cellpadding="0">
+
+	<tr>
+		<td width=50%>
+			<center><img border=0 NAME="user_image" src="rotchi.jpg" ></center>
+		</td>
+		<td  width=50%>
+			<center><img border=0 NAME="comp_image" src="papi.jpg" ></center>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width=50%>
+			<b><center>Ous avez choua&icirc;si</center></b>
+		</td>
+		<td  width=50%>
+			<b><center>L&eacute; compiuteu a choua&icirc;si</center></b>
+		</td>
+	</tr>
+</table>
+
+
+<p>
+  <INPUT TYPE="text" SIZE=2 MAXLENGTH=3 NAME="win" WIN.VALUE="0">  G&acirc;ngni &nbsp; 
+  <INPUT TYPE="text" SIZE=2 MAXLENGTH=3 NAME="loss" LOSS.VALUE="0">  P&egrave;rdu &nbsp; 
+  <INPUT TYPE="text" SIZE=2 MAXLENGTH=3 NAME="tie" TIE.VALUE="0">  &Ecirc;gaux &nbsp; 
+</p>
+<p> <input type=button value="&Egrave;rqu&eacute;menchiz" onClick="clear_score()"></p>
+
+</center>
+<b>Les r&egrave;gl'yes</b>:<p>
+<ul>
+<li>L&eacute; rotchi d&ecirc;truit les ch&icirc;sieaux<br>
+
+<li>L&eacute; papi paque l&eacute; rotchi<br>
+
+<li>Les ch&icirc;sieaux copent l&eacute; papi<p>
+</ul>
+
+Ou choua&icirc;sissiz l&eacute; rotchi, l&eacute; papi, ou les ch&icirc;sieaux en clyiquant sus iun des portraits, et l&eacute; compiuteu s'en va faithe d&eacute; m&ecirc;me.
+
+&nbsp;<p>
+&nbsp;<p>
+
+<p><center>
+<font size="1">JavaScript d&eacute; siez <a href="http://javascriptsource.com/">The JavaScript Source</a></font>
+</center><p>
+
+&nbsp;<p>
+<FONT SIZE=2>
+<I>Viyiz &eacute;tout:</I><p>
+<UL>
+<LI><A HREF="cartes.html">Ch&egrave;rchiz la Danme</A> - Hunt the Lady<p>
+<li><a href="vingttchieune.html">V&icirc;ngt-tch'ieune</a><p>
+
+
+
+</UL>
+</FONT>
+
+
+
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/papi.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:55 GMT -->
+</HTML>

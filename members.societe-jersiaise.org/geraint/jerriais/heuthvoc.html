@@ -1,0 +1,567 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/heuthvoc.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+<HEAD>
+<TITLE>Tchille heuthe qu'il est?</TITLE>
+<META  name="keywords" content="Jèrriais, what's the time, quelle heure est-il, telling the time, language, langue, jersiais, langue jersiaise, minority languages, philology, philologie, dialectology, dialectologie, linguistique, Channel Islands, îles anglo-normandes, langues d'oïl, langues régionales, Normandy, Normandie">
+<META  name="description" content="J&egrave;rriais: la langue d'J&egrave;rri.">
+<meta charset="utf-8" />
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+<div id="clock">
+	<div id="Od" style="position:absolute;top:0px;left:0px">
+		<div style="position:relative">
+		</div>
+	</div>
+	<div id="Of" style="position:absolute;top:0px;left:0px">
+		<div style="position:relative">
+		</div>
+	</div>
+	<div id="Oh" style="position:absolute;top:0px;left:0px">
+		<div style="position:relative">
+		</div>
+	</div>
+	<div id="Om" style="position:absolute;top:0px;left:0px">
+		<div style="position:relative">
+		</div>
+	</div>
+	<div id="Os" style="position:absolute;top:0px;left:0px">
+		<div style="position:relative">
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+(function(){
+	"use strict";
+	
+function $(sel)
+{
+	return document.getElementById(sel);
+}
+	
+function $$(sel)
+{
+	if (typeof document.getElementsByClassName === 'undefined')
+	{
+		return document.getElementsByName(sel);
+	}
+	
+	return document.getElementsByClassName(sel);
+}
+
+
+var	dCol = '215e21', //date colour.
+	sCol = 'ff0000', //seconds colour.
+	mCol = '000000', //minutes colour.
+	hCol = '000000', //hours colour.
+	fCol = '6BB12C', //face color
+	ClockHeight = 40,
+	ClockWidth = 40,
+	ClockFromMouseY = 0,
+	ClockFromMouseX = 100,
+	d = ["Dînmanche","Lundi","Mardi","Mêcrédi","Jeudi","Vendrédi","Sanm'di"],
+	m = ["Janvyi", "Févri", "Mar", "Avri", "Mai", "Juîn", "Juilet", "Août", "Septembre", "Octobre", "Novembre", "Dézembre"],
+	date = new Date(),
+	day = date.getDate(),
+	year = date.getYear() + 1900;
+var	TodaysDate = " " + d[date.getDay()] + " " + day + " " + m[date.getMonth()] + " " + year;
+var	D = TodaysDate.split('');
+var	H = '...';
+	H = H.split('');
+var	M = '....';
+	M = M.split('');
+var	S = '.....';
+	S = S.split('');
+var	Face = '1 2 3 4 5 6 7 8 9 10 11 12',
+	font = 'Helvetica, Arial, sans-serif',
+	size = 1,
+	speed = 0.6;
+	Face = Face.split(' ');
+var	n = Face.length;
+var	a = size * 10;
+var	ymouse = 0,
+	xmouse = 0,
+	scrll = 0,
+	props = '<span style="font-family:' + font + ';font-size:' + size + 'em; color:#' + fCol + '">',
+	props2 = '<span style="font-family:' + font + ';font-size:' + size + 'em; color:#' + dCol + '">';
+var	Split = 360 / n;
+var	Dsplit = 360 / D.length;
+var	HandHeight = ClockHeight / 4.5; 
+var	HandWidth = ClockWidth / 4.5;
+var	HandY = -7,
+	HandX = -2.5,
+	step = 0.06,
+	currStep = 0,
+	y = [],
+	x = [],
+	Y = [],
+	X = [],
+	Dy = [],
+	Dx = [],
+	DY = [],
+	DX = [];
+
+var	i;
+	
+for (i = 0; i < n; i++) 
+{
+	y[i] = 0;
+	x[i] = 0;
+	Y[i] = 0;
+	X[i] = 0;
+}
+
+for (i = 0; i < D.length; i++) 
+{
+	Dy[i] = 0;
+	Dx[i] = 0;
+	DY[i] = 0;
+	DX[i] = 0;
+}
+
+var	wrapper = $('clock');
+var	html = '';
+
+
+// Date wrapper
+html = '';
+for (i = 0; i < D.length; i++)
+{
+	html += '<div class="Date" name="Date" style="position:absolute;top:0px;left:0;height:' + a + ';width:' + a + ';text-align:center">' + props2 + D[i] + '</span></div>';
+}
+$('Od').children[0].innerHTML = html;
+
+// Face wrapper
+html = '';
+for (i = 0; i < n; i++) 
+{
+	html += '<div class="Face" name="Face" style="position:absolute;top:0px;left:0;height:' + a + ';width:' + a + ';text-align:center">' + props + Face[i] + '</span></div>';
+}
+$('Of').children[0].innerHTML = html;
+
+// Hours wrapper
+html = '';
+for (i = 0; i < H.length; i++)
+{
+	html += '<div class="Hours" name="Hours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:' + hCol + ';text-align:center;font-weight:bold">' + H[i] + '</div>';
+} 
+$('Oh').children[0].innerHTML = html;
+
+// Minute wrapper
+html = '';
+for (i = 0; i < M.length; i++)
+{
+	html += '<div class="Minutes" name="Minutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:' + mCol + ';text-align:center;font-weight:bold">' + M[i] + '</div>';
+} 
+$('Om').children[0].innerHTML = html;
+
+// Seconds wrapper
+html = '';
+for (i = 0; i < S.length; i++)
+{
+	html += '<div class="Seconds" name="Seconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:' + sCol + ';text-align:center;font-weight:bold">' + S[i] + '</div>';
+} 
+$('Os').children[0].innerHTML = html;
+
+// Mouse move event handler
+function Mouse(evnt) 
+{
+	if (typeof evnt === 'undefined')
+	{
+		ymouse = event.Y + ClockFromMouseY;
+		xmouse = event.X + ClockFromMouseX;
+	}
+	else
+	{
+		ymouse = evnt.clientY + ClockFromMouseY;
+		xmouse = evnt.clientX + ClockFromMouseX;
+	}
+
+	
+}
+document.onmousemove = Mouse;
+
+function ClockAndAssign() 
+{
+	var time = new Date();
+	var secs = time.getSeconds();
+	var sec = -1.57 + Math.PI * secs / 30;
+	var mins = time.getMinutes();
+	var min = -1.57 + Math.PI * mins / 30;
+	var hr = time.getHours();
+	var hrs = -1.575 + Math.PI * hr / 6 + Math.PI * parseInt(time.getMinutes(), 10) / 360;
+	$('Od').style.top = window.document.body.scrollTop;
+	$('Of').style.top = window.document.body.scrollTop;
+	$('Oh').style.top = window.document.body.scrollTop;
+	$('Om').style.top = window.document.body.scrollTop;
+	$('Os').style.top = window.document.body.scrollTop;
+	for (i = 0; i < n; i++)
+	{
+		var F = $$('Face')[i];
+		F.style.top = y[i] + ClockHeight * Math.sin(-1.0471 + i * Split * Math.PI / 180) + scrll;
+		F.style.left = x[i] + ClockWidth * Math.cos(-1.0471 + i * Split * Math.PI / 180);
+	}
+	for (i = 0; i < H.length; i++)
+	{
+		var HL = $$('Hours')[i];
+		HL.style.top = y[i] + HandY + (i * HandHeight) * Math.sin(hrs) + scrll;
+		HL.style.left = x[i] + HandX + (i * HandWidth) * Math.cos(hrs);
+	}
+	for (i = 0; i < M.length; i++)
+	{
+		var ML = $$('Minutes')[i].style;
+		ML.top = y[i] + HandY + (i * HandHeight) * Math.sin(min) + scrll;
+		ML.left = x[i] + HandX + (i * HandWidth) * Math.cos(min);
+	}
+	for (i = 0; i < S.length; i++)
+	{
+		var SL = $$('Seconds')[i].style;
+		SL.top = y[i] + HandY + (i * HandHeight) * Math.sin(sec) + scrll;
+		SL.left = x[i] + HandX + (i * HandWidth) * Math.cos(sec);
+	}
+	for (i = 0; i < D.length; i++)
+	{
+		var DL = $$('Date')[i].style;
+		DL.top = Dy[i] + ClockHeight * 1.5 * Math.sin(currStep + i * Dsplit * Math.PI / 180) + scrll;
+		DL.left = Dx[i] + ClockWidth * 1.5 * Math.cos(currStep + i * Dsplit * Math.PI / 180);
+	}
+	currStep -= step;
+}
+
+function Delay() 
+{
+	scrll = 0;
+	Dy[0] = Math.round(DY[0] += ((ymouse) - DY[0]) * speed);
+	Dx[0] = Math.round(DX[0] += ((xmouse) - DX[0]) * speed);
+	for (i = 1; i < D.length; i++) {
+		Dy[i] = Math.round(DY[i] += (Dy[i - 1] - DY[i]) * speed);
+		Dx[i] = Math.round(DX[i] += (Dx[i - 1] - DX[i]) * speed);
+	}
+	y[0] = Math.round(Y[0] += ((ymouse) - Y[0]) * speed);
+	x[0] = Math.round(X[0] += ((xmouse) - X[0]) * speed);
+	for (i = 1; i < n; i++) {
+		y[i] = Math.round(Y[i] += (y[i - 1] - Y[i]) * speed);
+		x[i] = Math.round(X[i] += (x[i - 1] - X[i]) * speed);
+	}
+	ClockAndAssign();
+	setTimeout(Delay, 20);
+}
+
+Delay();
+}());
+</script>
+
+
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+<P><center><font color="#215e21"><h2>Tchille heuthe qu'il est?</h2></font></center></P>
+
+
+<CENTER>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=7 WIDTH=519>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE" HEIGHT=65>
+<P><IMG SRC="1200.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE" HEIGHT=65>
+il est m&eacute;jeu<br>
+il est m&icirc;nniet</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0100.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est eune heuthe</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0200.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est deux heuthes</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0300.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est trais heuthes</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0130.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est eune heuthe et d'mie</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0230.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est deux heuthes et d'mie</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0530.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est ch&icirc;ntch' heuthes et d'mie</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0730.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est sept heuthes et d'mie</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="1030.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est dgi&ecirc;x heuthes et d'mie</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0205.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est deux heuthes ch&icirc;nq</TD>
+</TR>
+
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0510.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est ch&icirc;ntch' heuthes dgix</TD>
+</TR>
+
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0415.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est quat' heuthes un quart</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="1120.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est onze heuthes v&icirc;ngt</TD>
+</TR>
+
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="1220.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est douze heuthes v&icirc;ngt</TD>
+</TR>
+
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0235.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est v&icirc;ngt-ch&icirc;n minnutes d&eacute; trais</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0340.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est v&icirc;ngt minnutes d&eacute; quat'</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0945.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est un quart d&eacute; dgix</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0550.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est dgi&ecirc;x minnutes d&eacute; six</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="1255.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est ch&icirc;n minnutes d&eacute; ieune</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="MIDDLE">
+<P><IMG SRC="0655.gif" WIDTH=60 HEIGHT=60></TD>
+<TD WIDTH="82%" VALIGN="MIDDLE">
+<P>il est ch&icirc;n minnutes d&eacute; sept</TD>
+</TR>
+</TABLE>
+</CENTER>
+&nbsp;<p>
+
+
+
+
+
+<div align="center"><table border="0"  width="650">
+  <tr><!-- Row 1 -->
+	 <td><img src="holouoge21.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge22.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge23.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	 <td><img src="holouoge19.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge20.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="jerriais183.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+  </tr>
+    <tr><!-- Row 1 -->
+	 <td><img src="holouoge01.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge02.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge03.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	 <td><img src="holouoge04.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge05.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge06.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+  </tr>
+      <tr><!-- Row 1 -->
+	 <td><img src="holouoge07.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge08.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge09.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	 <td><img src="holouoge10.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge11.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge12.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+  </tr>
+        <tr><!-- Row 1 -->
+	 <td><img src="holouoge13.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge14.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge15.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	 <td><img src="holouoge16.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge17.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge18.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+  </tr>
+          <tr><!-- Row 1 -->
+	 <td><img src="holouoge24.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="holouoge25.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="holouoge26.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	 <td><img src="holouoge27.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	  <td><img src="jerriais181.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+	   <td><img src="jerriais119.jpg" width="100" height="100" alt="eune h&ocirc;louoge" title="" border="0" /></td><!-- Col 3 -->
+  </tr>
+  
+</table></div>
+
+&nbsp;<p>
+<FONT SIZE=2>
+<i>Viyiz &eacute;tout:</i><p>
+<UL>
+<li><A HREF="a2k.html">Les heuthes, les jours et les ans</A><p>
+<li><a href="heuthedete.html">L'Heuthe d'&Ecirc;t&eacute;</a><p>
+<li><a href="heuthe.html">L'Heuthe d&eacute; J&egrave;rri</a><p>
+<li><a href="heures.html">Les Heures</a><p>
+<LI><A HREF="holjs.html">Aniet et ach'teu</A> - eune h&ocirc;louoge J&egrave;rriaise auve javascript<p>
+<li><a href="bships.html">Les navithes d&eacute; dg&egrave;rre</a> - la gamme d&eacute; "Battleships"<p>
+<li><a href="dviersjs.html">Tchille heuthe qu'il est ach'teu?</a> - auve javascript<p>
+<li><a href="heuthesq.html">Tchille heuthe qu'il est?</a> - un quiz<p>
+<li><A HREF="holqz.html">Tchille heuthe qu'il est?</A> - un quiz<p>
+<li><A HREF="holinmqz.html">Un quiz entouor l'heuthe auve d's &icirc;nmages</A><p>
+<li> <a href="heuthecl.html">Tchille heuthe qu'il est? (1)</a> - un quiz<p>
+<li> <a href="heuthecl2.html">Tchille heuthe qu'il est? (2)</a> - un quiz<p>
+
+<li><a href="hierdmain.html">Hi&egrave;r et D'main</a> - auve javascript<p>
+<li><A HREF="datehas.html">La date au h&acirc;sard</A><p>
+<li><A HREF="dates.html">Tchiques dates &icirc;nmportantes dans l'histouaithe d'J&egrave;rri</A><p>
+<li><A HREF="dates2.html">Tchiques dates en J&egrave;rriais</A><p>
+<li><A HREF="datesqz.html">Un mio d'histouaithe</A> - un quiz<p>
+<li><A HREF="datesqz2.html">Tchiques dates 2</A> - un quiz<p>
+<li><A HREF="datesqz3.html">Acouo tchiques dates</A> - un quiz<p>
+<li><a href="hastings.html">La date oubli&eacute;e</a><p>
+
+<li><a href="tictac.html">Tic... Tac... Tac...</a><p>
+<li><a href="8heuthes.html">A des huit heuthes!</a><p>
+<li><a href="holouoges.html">Quand l's h&ocirc;louoges changent&#133;..</a></li><p>
+<li><a href="anchetre.html">L'Haoulouoge de Nos Anch&ecirc;tres</a><p>
+<li><a href="cariyion.html">La p'tite Hoaulouoge qui c&acirc;riyionnet</a><p>
+<li><a href="enlouoge.html">L'Enlouoge qui s'd&ecirc;routi</a><p>
+<li><a href="haoul.html">Nos Haoulouoges</a><p>
+<li><a href="nothaul.html">Not' Haulouauge</a><p>
+<li><a href="hanlouoge.html">Ma Vieille Hanlouoge</a><p>
+<li><a href="holouogegj.html">D&ecirc;-ou&ocirc;lez l'h&ocirc;louoge et d&ecirc;comptez l's heuthes</a><p>
+<li><a href="tcheit.html">Qu'est Qu'est Tcheit</a><p>
+<li><a href="tempscouort.html">Au temps tchi couort</a><p>
+<li><a href="cahouain_holouoges.html">L'aut'e jour, quand l'Chef fit la b&eacute;veuthe</a><p>
+<li><a href="cahouain_oeu.html">L'autre jour, une Missis d'une paraisse d'amont</a><p>
+<li><a href="holouogegj.html">D&ecirc;-ou&ocirc;lez l'h&ocirc;louoge et d&ecirc;comptez l's heuthes</a><p>
+</UL>
+
+</FONT>
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/heuthvoc.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+</HTML>

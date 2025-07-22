@@ -1,0 +1,345 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/forteune.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:55 GMT -->
+<HEAD>
+<TITLE>L'Oracl'ye p&acirc;le</TITLE>
+<META  name="keywords" content="Jèrriais, Jersey language, langue jersiaise">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+
+
+
+function questype(swtch) {
+        if (swtch == 1){
+                yesno= false;
+                torf= true;
+        }
+        else if (swtch == 2) {
+                torf = false;
+                yesno = true;
+
+        }
+
+}
+function dontype() {
+alert("N'mettez rein ichîn! Ch'est pouor la rêponse!")
+document.form1.text1.value=""
+}
+function fortuneteller() {
+
+     if (document.form1.text2.value=="")  {
+ alert (" Bein, s'ou n'pouvez pon m'donner eune tchestchion, n'en v'chîn ieune! ")
+document.form1.text1.value="Oui! Ous êtes bête. Donnez-mé eune tchestchion la préchaine fais!"
+document.form1.text2.value="Êt'ous bête?"
+}
+
+
+
+else {
+document.form1.text1.value = getColor()
+}
+        }
+
+
+function nextquestion(){
+          document.form1.text1.value=""
+          document.form1.text2.value=""
+          
+          
+}
+
+
+function getColor() {
+
+if (torf) { 
+        currentdate = new Date()
+
+        fortune = currentdate.getSeconds()
+
+
+
+        if (fortune > 44)
+
+                fortune = fortune - 45
+
+        else if (fortune > 29)
+
+                fortune = fortune - 30
+
+        else if (fortune > 20)
+
+                fortune = fortune - 20
+
+
+
+        if (fortune == 0 )
+
+                return "Faux";
+
+        else if (fortune == 1 )
+
+                return "Vrai";
+
+        else if (fortune == 2 )
+
+                return "Faux";
+
+        else if (fortune == 3 )
+
+                return "Vrai!";
+
+        else if (fortune == 4 )
+
+                return "Faux";
+
+        else if (fortune == 5 )
+
+                return "Vrai";
+
+        else if (fortune == 6 )
+
+                return "Faux";
+
+        else if (fortune == 7 )
+
+                return "Vrai";
+
+        else if (fortune == 8 )
+
+                return "Faux";
+
+        else if (fortune == 9 )
+
+                return "Vrai";
+
+        else if (fortune == 10 )
+
+                return "Faux";
+
+        else if (fortune== 11 )
+
+                return "Vrai";
+
+        else if (fortune == 12 )
+
+                return "Faux";
+
+        else if (fortune == 13 )
+
+                return "Vrai";
+
+        else if (fortune== 14 )
+
+                return "Faux";
+
+        else if (fortune== 15 )
+
+                return "Vrai";
+
+        else if (fortune== 16 )
+
+                return "Faux";
+
+         else if (fortune== 17 )
+
+                return "Tout à fait vrai";
+
+         else if (fortune== 18 )
+
+                return "Faux!";
+
+ else if (fortune== 19 )
+
+                return "Vrai";
+
+ else if (fortune== 20 )
+
+                return "Faux";
+}
+
+
+
+
+else if (yesno) {
+
+        currentdate = new Date()
+
+        fortune = currentdate.getSeconds()
+
+
+
+        if (fortune > 44)
+
+                fortune = fortune - 45
+
+        else if (fortune > 29)
+
+                fortune = fortune - 30
+
+        else if (fortune > 20)
+
+                fortune = fortune - 20
+
+
+
+        if (fortune == 0 )
+
+                return "I\' n\'y a autcheune pôssibilité";
+
+        else if (fortune == 1 )
+
+                return "Ch\'la s\'peut";
+
+        else if (fortune == 2 )
+
+                return "Probabliément";
+
+        else if (fortune == 3 )
+
+                return "Comment dgiâbl\'ye qu\'tu peurs d\'mander chennechîn?!";
+
+        else if (fortune == 4 )
+
+                return "Oui-dgia!";
+
+        else if (fortune == 5 )
+
+                return "Comment qu\'ou pouvez d\'mander eune itelle tchestchion?";
+
+        else if (fortune == 6 )
+
+                return "J\'crai bein ";
+
+        else if (fortune == 7 )
+
+                return "Janmais!";
+
+        else if (fortune == 8 )
+
+                return "Ou l\'savez bein!";
+
+        else if (fortune == 9 )
+
+                return "Ch\'est pôssibl'ye";
+
+        else if (fortune == 10 )
+
+                return "Ma fé nannîn!";
+
+        else if (fortune== 11 )
+
+                return "Ou halez sus ma gambe, n\'est-che pon?";
+
+        else if (fortune == 12 )
+
+                return "Ah, nannîn";
+
+        else if (fortune == 13 )
+
+                return "I\' n\'y a pas mouoyen!";
+
+        else if (fortune== 14 )
+
+                return "Nou dithait bein nannîn!";
+
+        else if (fortune== 15 )
+
+                return "Ah, ch\'est pardîngue vrai!";
+
+        else if (fortune== 16 )
+
+                return "P\'t\'-êt\' qué oui";
+
+         else if (fortune== 17 )
+
+                return "Jé n\'l\'éthais pon creu!";
+
+         else if (fortune== 18 )
+
+                return "J\'en craithais à peine mes ièrs!";
+
+ else if (fortune== 19 )
+
+                return "Nou peut dithe OUI!!";
+
+ else if (fortune== 20 )
+
+                return "Man Doue d\'la vie, nannîn!";
+}
+          
+
+        }
+
+
+//-->
+</SCRIPT>
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+<center><font color="#215e21"><h2>L'Oracl'ye p&acirc;le!</h2></font></center><p>
+
+<CENTER> 
+&Ecirc;criviz vot' tchestchion en <a href="../jerriais.html" target="_top">J&egrave;rriais</a> dans la preunmi&eacute; bo&ecirc;te, et pis choua&icirc;si la r&ecirc;ponse qu'ou voulez: &quot;vrai ou faux&quot;
+          ou &quot;oui ou nann&icirc;n&quot;. Pis clyiquez sus &quot;Dites-m&eacute;&quot;.<br>
+          <br>
+          Pouor eune nouvelle tchestchion, clyiquez sus &quot;La préchaine tchestchion&quot;. <br>
+       </font> 
+          <br></CENTER>
+
+<CENTER> <table width="360" border="0">
+      <tr> 
+
+      <td width="150" align="center" valign="MIDDLE" bgcolor="green" color="ffffff"> 
+        <form name="form1">
+          <table border="0" width="99%" cellpadding="3">
+            <tr> 
+              <td align="center" valign="middle"> 
+                <input type="TEXT" name="text2" value="êcriviz vot' tchestchion ichîn" size=35>
+              </td>
+            </tr>
+            <tr> 
+              <td align="center" valign="middle"><font face="Arial, Helvetica, sans-serif" size="-1" color="#FFFFFF">vrai/faux</font> 
+			                  <input type="radio" name="rad1" value="t/f" onClick="questype(1)">
+                <font color="#FFFFFF">&nbsp;&nbsp;<font face="Arial, Helvetica, sans-serif" size="-1">oui/nann&icirc;n</font> 
+                </font><font color="#000000"> 
+			 <input type="radio" name="rad1" value="yes/no" onClick="questype(2)">
+                </font></td>
+            </tr>
+            <tr> 
+              <td align="center" valign="middle"> 
+                <input type="button" name="randombutton" value="Dites-mé" onClick="fortuneteller()">
+              </td>
+            </tr>
+            <tr> 
+              <td align="center" valign="middle"> 
+                <textarea name="text1" rows=2 cols=35 wrap="physical" onKeyDown="dontype()"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"> 
+                <input type="button" name="next" value="La préchaine tchestchion" onClick="nextquestion()">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+</CENTER>
+
+&nbsp;<p>
+&nbsp;<p>
+
+<FONT SIZE=2><CENTER>M&egrave;rcie bein des fais &agrave; Mike siez <a href="http://www.urban75.com/" target="_top">http://www.urban75.com</a> pouor l&eacute; script.</CENTER></FONT>
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/forteune.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:55 GMT -->
+</HTML>

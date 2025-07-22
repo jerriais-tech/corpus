@@ -1,0 +1,403 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/pays_dvinnale.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:51 GMT -->
+<HEAD>
+<TITLE>D'vinner l'Pays</TITLE>
+<META  name="keywords" content="Jèrriais, Jersey language, langue jersiaise">
+<META  name="description" content="J&egrave;rriais: la langue d'J&egrave;rri.">
+
+
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  ShuvoRim  (shuvorim@hotmail.com) -->
+<!-- Web Site:  http://www.shuvorim.tk -->
+
+<!-- Vèrsion Jèrriaise par Geraint Jennings -->
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"><!--
+
+/*
+ * Program - Country Guessing Game
+ * File Name - script.js
+ * Author - ShuvoRim
+ * Web site - http://www.shuvorim.tk
+ * Email - shuvorim@hotmail.com
+ * (c)ShuvoRim Pvt. Ltd. 2002 - 03
+ * All rights reserved.
+ * ------------------------------
+ * Visit our web site for free open
+ * source Applications, Applets,
+ * Scripts and Games. Thank you for
+ * using our program.
+ */
+
+
+/* declaring an array to hold the country names */
+
+ var country = new Array(180);
+
+/* initializing the array */
+
+country[0] = "AFGHANISTAN";
+   country[1] = "ARUBA";
+   country[2] = "ALBANNIE";
+   country[3] = "ALGERIE";
+   country[4] = "JERRI";
+   country[5] = "ANDORRE";
+   country[6] = "ANGOLA";
+   country[7] = "DGERNESY";
+   country[8] = "ARGENTINNE";
+   country[9] = "ARMENIE";
+  country[10] = "AUSTRALIE";
+  country[11] = "AUTRICHE";
+  country[12] = "AZERBAIDGIAN";
+  country[13] = "BAHAMES";
+  country[14] = "BAHRAIN";
+  country[15] = "BANGLADESH";
+  country[16] = "BARBADOS";
+  country[17] = "BELARUS";
+  country[18] = "BELGIQUE";
+  country[19] = "BELIZE";
+  country[20] = "BENIN";
+  country[21] = "BHUTAN";
+  country[22] = "BOLIVIE";
+  country[23] = "AUR'GNY";
+  country[24] = "BOTSWANA";
+  country[25] = "BRESI";
+  country[26] = "BRUNEI";
+  country[27] = "BULGARIE";
+  country[28] = "BURKINA FASO";
+  country[29] = "BURUNDI";
+  country[30] = "CAMBODGE";
+  country[31] = "CAMEROUN";
+  country[32] = "CANNADA";
+  country[33] = "VERT CAP";
+  country[34] = "TCHAD";
+  country[35] = "CHILE";
+  country[36] = "CHINNE";
+  country[37] = "COLOMBIE";
+  country[38] = "COMORES";
+  country[39] = "CONGO";
+  country[40] = "COSTA RICA";
+  country[41] = "CROATIE";
+  country[42] = "CUBA";
+  country[43] = "CHYPRE";
+  country[44] = "REPUBLIQUE TCHEQUE";
+  country[45] = "DANNEMAR";
+  country[46] = "DJIBOUTI";
+  country[47] = "EMITHAUX ARABES UNNIS";
+  country[48] = "EQUATEUR";
+  country[49] = "EGYPTE";
+  country[50] = "EL SALVADOR";
+  country[51] = "ERITREA";
+  country[52] = "ESTONNIE";
+  country[53] = "ETHIOPIE";
+  country[54] = "SER";
+  country[55] = "FIJI";
+  country[56] = "FINLANDE";
+  country[57] = "FRANCE";
+  country[58] = "GABON";
+  country[59] = "GAMBIE";
+  country[60] = "GEORGIE";
+  country[61] = "ALLEMANGNE";
+  country[62] = "GHANA";
+  country[63] = "GRECE";
+  country[64] ="GRENADA";
+  country[65] = "GUATEMALA";
+  country[66] = "DGINNEE";
+  country[67] = "HAITI";
+  country[68] = "ROUOYAUME UNNI";
+  country[69] = "HONDURAS";
+  country[70] = "HONG KONG";
+  country[71] = "HONGRIE";
+  country[72] = "ISLANDE";
+  country[73] = "INDE";
+  country[74] = "INDONESIE";
+  country[75] = "IRAN";
+  country[76] = "IRAQ";
+  country[77] = "ISRAEL";
+  country[78] = "ITALIE";
+  country[79] = "JAMAIQUE";
+  country[80] = "JAPON";
+  country[81] = "JOURDAIN";
+  country[82] = "KAZAKHSTAN";
+  country[83] = "KENYA";
+  country[84] = "KYRGYZSTAN";
+  country[85] = "KIRIBATI";
+  country[86] = "COREE";
+  country[87] = "KUWAIT";
+  country[88] = "LAOS";
+  country[89] = "LETTONNIE";
+  country[90] = "LIBAN";
+  country[91] = "LESOTHO";
+  country[92] = "LIBERIE";
+  country[93] = "LIBYE";
+  country[94] = "LIECHTENSTEIN";
+  country[95] = "LITHUANIE";
+  country[96] = "LUXEMBOURG";
+  country[97] = "MADAGASCAR";
+  country[98] = "MALAWI";
+  country[99] = "MALAYSIE";
+ country[100] = "MALDIVES";
+ country[101] = "MALI";
+ country[102] = "MALTE";
+ country[103] = "MAURITANNIE";
+ country[104] = "ILE MAURICE";
+ country[105] = "MEXIQUE";
+ country[106] = "MOLDOVA";
+ country[107] = "MONACO";
+ country[108] = "MONGOLIE";
+ country[109] = "MONTSERRAT";
+ country[110] = "MAROC";
+ country[111] = "MOZAMBIQUE";
+ country[112] = "MYANMAR";
+ country[113] = "NAMIBIE";
+ country[114] = "NAURU";
+ country[115] = "NEPAL";
+ country[116] = "PAYS BAS";
+ country[117] = "NOUVELLE ZELANDE";
+ country[118] = "NICARAGUA";
+ country[119] = "NIGERIE";
+ country[120] = "NOROUAGUE";
+ country[121] = "OMAN";
+ country[122] = "PAKISTAN";
+ country[123] = "PANAMA";
+ country[124] = "PAPUA NOUVELLE DGINNEE";
+ country[125] = "PARAGUAY";
+ country[126] = "PEROU";
+ country[127] = "PH'LIPPINES";
+ country[128] = "POLONGNE";
+ country[129] = "PORTUNGA";
+ country[130] = "QATAR";
+ country[131] = "ROUMANIE";
+ country[132] = "RUSSIE";
+ country[133] = "RWANDA";
+ country[134] = "SAINT MATHIN";
+ country[135] = " ARABIE SAUDI";
+ country[136] = "SENEGAL";
+ country[137] = "SEYCHELLES";
+ country[138] = "SIERRA LEONE";
+ country[139] = "SINGAPOUR";
+ country[140] = "SLOVAQUIE";
+ country[141] = "SLOVENIE";
+ country[142] = "ILES SOLOMON";
+ country[143] = "SOMALIE";
+ country[144] = "AFRIQUE DU SUD";
+ country[145] = "ESPANGNE";
+ country[146] = "SRI LANKA";
+ country[147] = "SOUDAN";
+ country[148] = "SURINAME";
+ country[149] = "SWAZILAND";
+ country[150] = "SUEDE";
+ country[151] = "SUISSE";
+ country[152] = "SYRIE";
+ country[153] = "TAIWAN";
+ country[154] = "TAJIKISTAN";
+ country[155] = "TANZANIA";
+ country[156] = "THAILANDE";
+ country[157] = "TOGO";
+ country[158] = "TONGA";
+ country[159] = "TRINIDAD ET TOBAGO";
+ country[160] = "TEUNNISIE";
+ country[161] = "TURTCHIE";
+ country[162] = "TURKMENISTAN";
+ country[163] = "TUVALU";
+ country[164] = "UGANDA";
+ country[165] = "UKRAINE";
+ country[166] = "IRLANDE";
+ country[167] = "URUGUAY";
+ country[168] = "UZBEKISTAN";
+ country[169] = "VANUATU";
+ country[170] = "CITE DU VATICAN ";
+ country[171] = "VENEZUELA";
+ country[172] = "VIETNAM";
+ country[173] = "COTE D'IVIETHE";
+ country[174] = "SAMOA";
+ country[175] = "YEMEN";
+ country[176] = "TIMOR D'L'EST";
+ country[177] = "PALESTIN";
+ country[178] = "ZAMBIA";
+ country[179] = "ZIMBABWE";
+
+/* generates a random integer between 0 to 179 */
+
+ var sr = Math.floor(Math.random() * 180);
+
+/* stores the country name */
+
+ var temp = country[sr];
+
+/* declaring and initializing tries */
+
+ var tries = 0;
+
+/* the main function */
+
+ function guessit()
+ {
+
+   var guess = document.form1.guess1.value;
+
+   tries++;
+
+   window.status = "Tours : " + tries + "              (C) ShuvoRim Pvt. Ltd.";
+
+   switch(tries)
+   {
+
+     case 1:
+     document.form1.hint.value = "First Hint : L'nom du pays c'menche en " + temp.charAt(0);
+     break;
+
+     case 2:
+     document.form1.hint.value = "Second Hint : L'nom du pays finnit en " + temp.charAt(temp.length - 1);
+     break;
+
+     case 3:
+     document.form1.hint.value = "Last Hint : L'nom du pays a " + temp.length + " caractéthes";
+     break;
+
+     default:
+     document.form1.hint.value = "I' n'y'a pus d'aîgue";
+
+   }
+
+   if(guess.toUpperCase() == temp)	/* if guess equals to temp */
+   {
+
+     if(window.confirm("Oui dgia ! Lé pays est " + temp + "\nVoul'ous stèrter eune nouvelle gamme?"))
+      window.location.reload();		/* reloads the page for a new game */
+
+   }
+
+   else
+   {
+
+     if(tries == 5) /* game over */
+     {
+
+	if(window.confirm("Tchi pitchi! Ous avez pèrdu. Lé pays est  " + temp + "\nVoul'ous stèrter eune nouvelle gamme?"))
+	{
+	  window.location.reload();	/* reloads the page for a new game */
+
+	  document.form1.hint.value = "&Ecirc;crivez l'nom du pays d'vinn&eacute; et clyiquez sus D'vinnez!";
+
+	}
+
+     }
+
+   }
+
+ }
+
+/* end of guessit() function! */
+
+//--></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"><!--
+
+ function catchKeyCode() //calls when the user press the RETURN key
+ {
+
+   if(event.keyCode == 13)
+    guessit();
+
+ }
+
+ function stat()
+ {
+
+   window.status = "Tours : " + tries + "              (C) ShuvoRim Pvt. Ltd.";
+
+ }
+
+ function clearBox()
+ {
+
+   document.form1.guess1.value = "";
+
+ }
+
+ function newGame()
+ {
+
+   if(window.confirm("Voul'ous stèrter eune nouvelle gamme?"))
+   {
+
+     window.location.reload();	/* reloads the page for a new game */
+
+     document.form1.hint.value = "&Ecirc;crivez l'nom du pays d'vinn&eacute; et clyiquez sus D'vinnez!";
+
+   }
+
+ }
+
+//--></SCRIPT>
+
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21" onLoad=stat() onKeyPress=catchKeyCode()>
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+<center><font color="#215e21"><h2>D'vinner l'Pays</h2></font></center><p>
+
+&nbsp;<p>
+
+<center><FORM NAME=form1>
+<TABLE CLASS=tab BORDER=0 BGCOLOR=#215e21 CELLPADDING=4 CELLSPACING=0>
+<TR>
+<TD CLASS=td1>
+<INPUT TYPE=text SIZE=46 NAME=hint VALUE="&Ecirc;crivez l'nom du pays d'vinn&eacute; et clyiquez sus D'vinnez!" READONLY CLASS=txt1>
+</TD>
+</TR>
+<TR>
+<TD CLASS=td1>
+<INPUT TYPE=text NAME=guess1 SIZE=50 CLASS=txt2 TITLE="&Ecirc;crivez l'nom d'vinn&eacute; ich&icirc;n">
+</TD>
+</TR>
+<TR>
+<TD CALSS=td1 ALIGN=right>
+
+<INPUT TYPE=button VALUE=D'vinnez! onClick=guessit() CLASS=btn TITLE="Clyiquez ich&icirc;n pouor d'vinner ou contr&ocirc;ler.">
+
+<INPUT TYPE=button VALUE=Cli&egrave;rgi onClick=clearBox() CLASS=btn TITLE="Clyiquez ich&icirc;n pouor cli&egrave;rgi la bo&ecirc;te">
+
+<INPUT TYPE=button VALUE=&Egrave;rst&egrave;rter onClick=newGame() CLASS=btn TITLE=" Clyiquez ich&icirc;n pouor &egrave;rst&egrave;rter.">
+
+</TD>
+</TR>
+</TABLE>
+</FORM>
+<p>
+&nbsp;<p>
+I' faut &ecirc;crithe l&eacute; nom d'un pays sans accents, et si&eacute;the les &icirc;nstructions.<p>
+
+
+</center>
+
+
+
+&nbsp;<p>
+<FONT SIZE=2>
+<I>Viyiz &eacute;tout:</I><p>
+<UL>
+<li><a href="pays.html">Des pays du monde en J&egrave;rriais</a><p>
+<li><a href="urope_carte.html">L'&Ucirc;rope</a><p>
+<li><a href="paycapcad.html">Des pays et lus capitales</a><p>
+<li><a href="uropeqz.html">Pliaichiz les Pays!</a><p>
+</UL>
+</FONT>
+
+
+
+
+&nbsp;<p>
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/pays_dvinnale.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:51 GMT -->
+</HTML>

@@ -1,0 +1,58 @@
+body
+{
+    font: normal 100%/100% Times New Roman, Verdana, helvetica, sans-serif;
+    background: #215e21;
+    color: white;
+    padding: 0;
+}
+
+h1, h2
+{
+    color: #CC33CC;
+    font-size: 0.5em;
+}
+
+h2
+{
+    font-size: 0.5em;
+}
+
+a
+{
+    color: #D7FFD7;
+    background: transparent;
+}
+
+#mainnav, #mainnav ul
+{
+    padding: 0.5em 0.5em;
+    margin-left: 0;
+    list-style-type: none;
+    background: ;
+    border: none;
+    width: 15em;
+}
+
+#mainnav li
+{
+    border-bottom: 1px solid #215e21;
+}
+
+#mainnav a
+{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#mainnav a:hover, #mainnav a:active, #mainnav a:focus
+{
+    color: #D7FFD7;
+}
+
+#mainnav ul
+{
+    margin-left: 0;
+    border: none;
+    border-left: none;
+}

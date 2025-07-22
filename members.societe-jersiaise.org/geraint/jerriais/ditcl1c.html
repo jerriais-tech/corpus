@@ -1,0 +1,469 @@
+<HTML>
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/ditcl1c.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:09:56 GMT -->
+<HEAD><META NAME="Author" CONTENT="Produced using Hot Potatoes by Half-Baked Software, registered to Geraint Jennings.">
+<TITLE>
+Ditons 1
+</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var Feedback = '';
+var Correct = 'Ch\'est bein!';
+var Incorrect = 'Nann&icirc;n! Acouo eune fais!'; 
+var GiveHint = 'Eune bouonne lettre a \'t&eacute; ajou&ocirc;t&eacute;e';
+var CaseSensitive = 'True';
+var YourScoreIs = 'Vos points:';
+var platform = 'win';
+
+var CurrentWord = 0;
+
+var WinLowerString='abcdefghijklmnopqrstuvwxyz%9A%9C%E0%E1%E2%E3%E4%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%EF%F0%F1%F2%F3%F4%F5%F6%F8%F9%FA%FB%FC%FD%FE%FF';
+var WinUpperString='ABCDEFGHIJKLMNOPQRSTUVWXYZ%8A%8C%C0%C1%C2%C3%C4%C5%C6%C7%C8%C9%CA%CB%CC%CD%CE%CF%D0%D1%D2%D3%D4%D5%D6%D8%D9%DA%DB%DC%DD%DE%9F';
+
+var MacLowerString='abcdefghijklmnopqrstuvwxyz%8A%8C%8D%8E%96%9A%9F%BE%BF%88%8B%9B%CF%D8%89%90%87%91%8F%92%94%95%93%97%98%9C%9E%9D';
+var MacUpperString='ABCDEFGHIJKLMNOPQRSTUVWXYZ%80%81%82%83%84%85%86%AE%AF%CB%CC%CD%CE%D9%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%F1%F2%F3%F4';
+
+var LowerString = '';
+var UpperString = '';
+
+MacAnswers = new Array();
+WinAnswers = new Array();
+AnswerList = new Array();
+
+var IsWrong = 0;
+
+function StartUp(){
+
+MacAnswers[1] = 'corb%94ns';
+MacAnswers[2] = 'corb%94ns';
+MacAnswers[3] = 'corb%94ns';
+MacAnswers[4] = 'corb%94ns';
+MacAnswers[5] = 'crabe';
+MacAnswers[6] = 'crabe';
+MacAnswers[7] = 'crabe';
+MacAnswers[8] = 'crabe';
+MacAnswers[9] = 'cats';
+MacAnswers[10] = 'cats';
+MacAnswers[11] = 'cats';
+MacAnswers[12] = 'cats';
+MacAnswers[13] = '%90v%90que';
+MacAnswers[14] = '%90v%90que';
+MacAnswers[15] = '%90v%90que';
+MacAnswers[16] = '%90v%90que';
+MacAnswers[17] = 'Tchian';
+MacAnswers[18] = 'Tchian';
+MacAnswers[19] = 'Tchian';
+MacAnswers[20] = 'Tchian';
+MacAnswers[21] = 'marmo%9Eset';
+MacAnswers[22] = 'marmo%9Eset';
+MacAnswers[23] = 'marmo%9Eset';
+MacAnswers[24] = 'marmo%9Eset';
+MacAnswers[25] = 'r\'nard';
+MacAnswers[26] = 'r\'nard';
+MacAnswers[27] = 'r\'nard';
+MacAnswers[28] = 'r\'nard';
+MacAnswers[29] = 'm%8E';
+MacAnswers[30] = 'm%8E';
+MacAnswers[31] = 'm%8E';
+MacAnswers[32] = 'm%8E';
+MacAnswers[33] = 'vaque';
+MacAnswers[34] = 'vaque';
+MacAnswers[35] = 'vaque';
+MacAnswers[36] = 'vaque';
+MacAnswers[37] = 'pe%94le';
+MacAnswers[38] = 'pe%94le';
+MacAnswers[39] = 'pe%94le';
+MacAnswers[40] = 'pe%94le';
+MacAnswers[41] = 'qu\'ville';
+MacAnswers[42] = 'qu\'ville';
+MacAnswers[43] = 'qu\'ville';
+MacAnswers[44] = 'qu\'ville';
+MacAnswers[45] = '%99ti';
+MacAnswers[46] = '%99ti';
+MacAnswers[47] = '%99ti';
+MacAnswers[48] = '%99ti';
+
+
+WinAnswers[1] = 'corb%EEns';
+WinAnswers[2] = 'corb%EEns';
+WinAnswers[3] = 'corb%EEns';
+WinAnswers[4] = 'corb%EEns';
+WinAnswers[5] = 'crabe';
+WinAnswers[6] = 'crabe';
+WinAnswers[7] = 'crabe';
+WinAnswers[8] = 'crabe';
+WinAnswers[9] = 'cats';
+WinAnswers[10] = 'cats';
+WinAnswers[11] = 'cats';
+WinAnswers[12] = 'cats';
+WinAnswers[13] = '%EAv%EAque';
+WinAnswers[14] = '%EAv%EAque';
+WinAnswers[15] = '%EAv%EAque';
+WinAnswers[16] = '%EAv%EAque';
+WinAnswers[17] = 'Tchian';
+WinAnswers[18] = 'Tchian';
+WinAnswers[19] = 'Tchian';
+WinAnswers[20] = 'Tchian';
+WinAnswers[21] = 'marmo%FBset';
+WinAnswers[22] = 'marmo%FBset';
+WinAnswers[23] = 'marmo%FBset';
+WinAnswers[24] = 'marmo%FBset';
+WinAnswers[25] = 'r\'nard';
+WinAnswers[26] = 'r\'nard';
+WinAnswers[27] = 'r\'nard';
+WinAnswers[28] = 'r\'nard';
+WinAnswers[29] = 'm%E9';
+WinAnswers[30] = 'm%E9';
+WinAnswers[31] = 'm%E9';
+WinAnswers[32] = 'm%E9';
+WinAnswers[33] = 'vaque';
+WinAnswers[34] = 'vaque';
+WinAnswers[35] = 'vaque';
+WinAnswers[36] = 'vaque';
+WinAnswers[37] = 'pe%EEle';
+WinAnswers[38] = 'pe%EEle';
+WinAnswers[39] = 'pe%EEle';
+WinAnswers[40] = 'pe%EEle';
+WinAnswers[41] = 'qu\'ville';
+WinAnswers[42] = 'qu\'ville';
+WinAnswers[43] = 'qu\'ville';
+WinAnswers[44] = 'qu\'ville';
+WinAnswers[45] = '%F4ti';
+WinAnswers[46] = '%F4ti';
+WinAnswers[47] = '%F4ti';
+WinAnswers[48] = '%F4ti';
+
+
+	platform = 'win';
+	if (navigator.appVersion.indexOf('Mac') != -1) {
+		platform = 'mac';
+	}
+
+	if (platform == 'win'){
+		for (i = 1; i < WinAnswers.length; i++){
+			AnswerList[i] = unescape(WinAnswers[i]);
+		LowerString = unescape(WinLowerString);
+		UpperString = unescape(WinUpperString);
+		}
+	}
+	else {
+		for (i = 1; i < MacAnswers.length; i++){
+			AnswerList[i] = unescape(MacAnswers[i]);
+		LowerString = unescape(MacLowerString);
+		UpperString = unescape(MacUpperString);
+		}
+	}
+}
+
+function ConvertCase(InString, Direction){
+
+	var FromString = '';
+	var ToString = '';
+
+	if (Direction == 0){
+		FromString = UpperString;
+		ToString = LowerString;
+	}
+	else{
+		FromString = LowerString;
+		ToString = UpperString;
+	}
+
+	var i = 0;
+	j = 0;
+	var OutString = '';
+	for (i=0; i<InString.length; i++){
+		if (FromString.indexOf(InString.charAt(i)) > -1){
+			j = FromString.indexOf(InString.charAt(i));			
+			OutString += ToString.charAt(j);
+		}
+		else{	
+			OutString += InString.charAt(i);
+		}
+	}
+	return OutString;
+}
+
+
+
+function CheckAllAnswers(){
+	var x = 0;
+	var y = 0;
+	var AnsNum = 0;
+	var InString = '';
+	IsWrong = 0;
+	var Answers = new Array(4);
+	var Tries = Math.floor((AnswerList.length) / 4);
+	var NumberCorrect = 0;
+	var Score = 0;
+
+	for (x=0; x<(document.cloze.elements.length); x++){
+		InString = TrimString(document.cloze.elements[x].value);
+		AnsNum = (x*4) +1;
+		Answers[1] = AnswerList[AnsNum];
+		Answers[2] = AnswerList[AnsNum+1];
+		Answers[3] = AnswerList[AnsNum+2];
+		Answers[4] = AnswerList[AnsNum+3];
+
+		if (CaseSensitive == 'False') {
+			InString = ConvertCase(InString, 1);
+			for (y=1; y<5; y++) {
+				Answers[y] = ConvertCase(Answers[y], 1);
+			}
+		}
+
+		if ((InString == Answers[1]) || (InString == Answers[2]) ||(InString == Answers[3]) || (InString == Answers[4])) {
+			NumberCorrect++;
+		}
+		else {
+			IsWrong = 1;
+			document.cloze.elements[x].value = '';
+		}
+	}
+
+	
+	Score = Math.floor((NumberCorrect*100)/Tries);
+
+	if (IsWrong == 1) {
+		Feedback = Incorrect;
+		Feedback+= '<BR>' + YourScoreIs + ' ' + Score + '%.';
+	}
+
+	else {
+		Feedback = Correct;
+		Feedback+= ' ' + YourScoreIs + ' ' + Score + '%.'+ '<BR>';
+		 	Feedback += '<form method=post><INPUT TYPE=\"button\" VALUE=\"Avant\"';
+  Feedback += ' onClick=\"parent.location=\'ditcl2.html\'\"></form>';
+
+	}
+
+	
+
+	WriteFeedback(Feedback);
+}
+
+function TrimString(InString){
+
+	var x = 0;
+
+	if (InString.length != 0) {
+
+		while ((escape(InString.charAt(InString.length - 1)) == '%20') || (escape(InString.charAt(InString.length - 1)) == '%0A') || (escape(InString.charAt(InString.length - 1)) == '%0D')){
+			InString = InString.substring(0, InString.length - 1);
+		}
+
+		while ((escape(InString.charAt(0)) == '%20') || (escape(InString.charAt(0)) == '%0A') || (escape(InString.charAt(0)) == '%0D')){
+			InString = InString.substring(1, InString.length);
+		}
+
+		while (InString.indexOf('  ') != -1) {
+			x = InString.indexOf('  ');
+			InString = InString.substring(0, x) + InString.substring(x+1, InString.length );
+		}
+		return InString;
+	}
+	else {
+		return '';
+	}
+}
+
+function WriteFeedback(Feedback) {
+parent.frames[0].document.clear();
+parent.frames[0].document.open();
+parent.frames[0].document.writeln ("<html>");
+parent.frames[0].document.writeln ("<body bgcolor=#FFFFFF text=#BA050A background=\"\">");
+parent.frames[0].document.writeln ("<font size = +1><center><b>");
+parent.frames[0].document.writeln (Feedback);
+parent.frames[0].document.writeln ("</b></center></font></body></html>");
+parent.frames[0].document.close();
+}
+
+function Cheat(){
+
+	CurrentAnswers = new Array(4);
+	CorrectBits = new Array(4);
+	var CurrentAnswer = FindCurrent();
+
+	if (CurrentAnswer == -1) {
+		return;
+	}
+
+	CurrentAnswers[1] = AnswerList[(CurrentAnswer * 4) + 1];
+	CurrentAnswers[2] = AnswerList[(CurrentAnswer * 4) + 2];
+	CurrentAnswers[3] = AnswerList[(CurrentAnswer * 4) + 3];
+	CurrentAnswers[4] = AnswerList[(CurrentAnswer * 4) + 4];
+
+	CorrectBits[1] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[1]);
+	CorrectBits[2] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[2]);
+	CorrectBits[3] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[3]);
+	CorrectBits[4] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[4]);
+
+	Longest = FindLongest(CorrectBits[1], CorrectBits[2], CorrectBits[3], CorrectBits[4]);
+		
+	document.cloze.elements[CurrentAnswer].value = CorrectBits[Longest];
+	WriteFeedback(GiveHint);
+}
+
+function TrackFocus(BoxNumber){
+	CurrentWord = BoxNumber;
+}
+
+
+function CheckBeginning(Guess, Answer){
+	var OutString = '';
+	var i = 0;
+	var UpperGuess = '';
+	var UpperAnswer = '';
+
+	if (CaseSensitive == 'False') {
+		UpperGuess = ConvertCase(Guess, 1);
+		UpperAnswer = ConvertCase(Answer, 1);
+	}
+	else {
+		UpperGuess = Guess;
+		UpperAnswer = Answer;
+	}
+
+	while (UpperGuess.charAt(i) == UpperAnswer.charAt(i)) {
+		OutString += Guess.charAt(i);
+		i++;
+	}
+	OutString += Answer.charAt(i);
+	return OutString;
+}
+
+
+function CheckAnswer(Guess, AnsNum){
+
+	if (CaseSensitive == 'True'){
+
+		if ((Guess == AnswerList[(AnsNum * 4) + 1]) || (Guess == AnswerList[(AnsNum * 4) + 2]) || (Guess == AnswerList[(AnsNum * 4) + 3]) || (Guess == AnswerList[(AnsNum * 4) + 4])) {
+
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	else{
+		Guess = ConvertCase(Guess, 1);
+		if ((Guess == ConvertCase(AnswerList[(AnsNum * 4) + 1], 1)) || (Guess == ConvertCase(AnswerList[(AnsNum * 4) + 2], 1)) || (Guess == ConvertCase(AnswerList[(AnsNum * 4) + 3], 1)) || (Guess == ConvertCase(AnswerList[(AnsNum * 4) + 4], 1))) {
+
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+}
+
+function FindCurrent() {
+
+	var FoundCurrent = -1;
+	var x = 0;
+
+	if (CheckAnswer(document.cloze.elements[CurrentWord].value, CurrentWord) == false) {
+		FoundCurrent = CurrentWord;
+	}	
+	else {
+
+		x=CurrentWord + 1;
+		while ((FoundCurrent == -1) && (x<document.cloze.elements.length)){
+			if (CheckAnswer(document.cloze.elements[x].value, x) == false) {
+				FoundCurrent = x;
+			}
+			x++;	
+		}
+	}
+	if (FoundCurrent == -1){
+		x = 0;
+		while ((FoundCurrent == -1) && (x<CurrentWord)){
+			if (CheckAnswer(document.cloze.elements[x].value, x) == false) {
+
+				FoundCurrent = x;
+			}
+			x++;
+		}
+
+	}
+	return FoundCurrent;
+}
+
+function FindLongest(First, Second, Third, Fourth){
+var Longest = 0;
+var LongString = '';
+	   Longest = 4;
+	   LongString = Fourth;
+	   if (Third.length >= LongString.length){
+			 Longest = 3;
+			 LongString = Third;
+	   }
+	   if (Second.length >= LongString.length){
+			 Longest = 2;
+			 LongString = Second;
+	   }
+	   if (First.length >= LongString.length){
+			 Longest = 1;
+			 LongString = First;
+	   }
+	   return Longest;
+}
+
+
+</SCRIPT></HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="#" onLoad="StartUp()">
+
+<CENTER>
+<img align=middle src="coolme2.jpg"><p>
+
+<h2>Ditons 1</h2>
+<b><i>Compli&eacute;tez les patholes tchi manquent</i></b>
+
+</CENTER><br>
+
+<FORM>
+<INPUT TYPE="button" VALUE="A&icirc;dgiz-m&eacute;!" onClick="parent.FeedbackFrame.location='ditcl1w.html#help'"><BR>
+</FORM>
+
+<FORM NAME="cloze">
+<BLOCKQUOTE>
+
+Les <INPUT TYPE="TEXT" NAME="0" SIZE="7" onFocus="TrackFocus(0)"> et les pigeons n'juquent pon ensembl'ye<BR>
+<BR>
+I' faut &ecirc;t' hue&ucirc;l&icirc;n d'avant &ecirc;t' <INPUT TYPE="TEXT" NAME="1" SIZE="9" onFocus="TrackFocus(1)"> <BR>
+<BR>
+D&eacute; niet touos les <INPUT TYPE="TEXT" NAME="2" SIZE="9" onFocus="TrackFocus(2)"> sont gris<BR>
+<BR>
+Un cat r'garde bein un <INPUT TYPE="TEXT" NAME="3" SIZE="6" onFocus="TrackFocus(3)"> <BR>
+<BR>
+<INPUT TYPE="TEXT" NAME="4" SIZE="6" onFocus="TrackFocus(4)"> tchi ouasse n&eacute; mord pas<BR>
+<BR>
+Nou n'apprend pon &agrave; un vi&egrave;r <INPUT TYPE="TEXT" NAME="5" SIZE="9" onFocus="TrackFocus(5)"> &agrave; faithe des gr&icirc;ngnes<BR>
+<BR>
+Nou n'p&acirc;le pon d'un <INPUT TYPE="TEXT" NAME="6" SIZE="6" onFocus="TrackFocus(6)"> sans en vaie la coue<BR>
+<BR>
+Nou n'peut emp&ecirc;chi la <INPUT TYPE="TEXT" NAME="7" SIZE="9" onFocus="TrackFocus(7)"> d'monter ou un tchian d'ouasser!<BR>
+<BR>
+Ch'n'est pon par les cornes qu&eacute; nou trait eune <INPUT TYPE="TEXT" NAME="8" SIZE="9" onFocus="TrackFocus(8)"> <BR>
+<BR>
+Ch'est la <INPUT TYPE="TEXT" NAME="9" SIZE="9" onFocus="TrackFocus(9)"> tch'appelle l&eacute; tr&eacute;pid ni&egrave;r tchu<BR>
+<BR>
+Eune <INPUT TYPE="TEXT" NAME="10" SIZE="8" onFocus="TrackFocus(10)"> carr&eacute;e dans un rond creux<BR>
+<BR>
+Janmais mauvais ouvriyi n&eacute; trouvit bouon <INPUT TYPE="TEXT" NAME="11" SIZE="9" onFocus="TrackFocus(11)">
+
+
+</BLOCKQUOTE></FORM>
+<CENTER><FORM NAME="buttonform">
+<INPUT TYPE="button" VALUE="Contr&ocirc;le" onClick="CheckAllAnswers()"><INPUT TYPE="button" VALUE="Sugg&eacute;thez!"  onClick="Cheat()">
+<P>
+<TABLE BORDER=1 CELLPADDING=10><TR><TD><CENTER><B> &nbsp;&nbsp;cats&nbsp;&nbsp; &nbsp;&nbsp;corb&icirc;ns&nbsp;&nbsp; &nbsp;&nbsp;crabe&nbsp;&nbsp; &nbsp;&nbsp;&ecirc;v&ecirc;que&nbsp;&nbsp; &nbsp;&nbsp;marmo&ucirc;set&nbsp;&nbsp; &nbsp;&nbsp;m&eacute;&nbsp;&nbsp; &nbsp;&nbsp;&ocirc;ti&nbsp;&nbsp; &nbsp;&nbsp;pe&icirc;le&nbsp;&nbsp; &nbsp;&nbsp;qu'ville&nbsp;&nbsp; &nbsp;&nbsp;r'nard&nbsp;&nbsp; &nbsp;&nbsp;Tchian&nbsp;&nbsp; &nbsp;&nbsp;vaque&nbsp;&nbsp; &nbsp;&nbsp;</B></CENTER></TD></TR></TABLE>
+<P>
+<INPUT TYPE="button" VALUE="Avant" onClick="parent.location='ditcl2.html'"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="parent.location='quizmnu.html'"><INPUT TYPE="button" VALUE="Arri&eacute;the" onClick="parent.history.back()">
+</FORM></CENTER>
+</BODY>
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/ditcl1c.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:09:56 GMT -->
+</HTML>
+
+

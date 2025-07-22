@@ -1,0 +1,510 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/deskjer.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+<HEAD>
+<TITLE>Almonas d'aniet en J&egrave;rriais</TITLE>
+<META  name="keywords" content="J&egrave;rriais, calendar, calendrier, language, langue">
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Peg Duggan (pegduggan@hotmail.com) -->
+
+<!-- Begin
+dayName = new Array ("D&icirc;nmanche", "Lundi", "Mardi", "M&ecirc;cr&eacute;di", "Jeudi", "Vendr&eacute;di", "Sanm'di")
+monName = new Array ("Janvyi", "F&eacute;vri", "Mar", "Avri", "Mai", "Ju&icirc;n", "Juilet", "Ao&ucirc;t", "Septembre", "Octobre", "Novembre", "D&eacute;zembre")
+now = new Date
+
+Jan = new Array
+Jan[1] = "L&eacute; Jour d&eacute; l'An"
+Jan[2] = "La Saint S&eacute;rafim d&eacute; Sarov"
+Jan[3] = "Fraid hiv&eacute; - caud &ecirc;t&eacute;"
+Jan[4] = "L'&Eacute;glyise P&acirc;roua&icirc;ssiale d&eacute; Saint Louothains fut cons&acirc;cr&eacute;e aniet en 1199"
+Jan[5] = "&Ecirc;piphanie"
+Jan[6] = "L'Anniv&egrave;rsaithe d&eacute; la Bat&acirc;le d&eacute; J&egrave;rri<br>L&eacute; Vi&egrave;r Nou&eacute;"
+Jan[7] = "Gerald Durrell fut n&eacute; aniet en 1925"
+Jan[8] = "Galil&eacute;o mouothit aniet en 1642"
+Jan[9] = "Nicholas Bott fut n&eacute; aniet en 1797"
+Jan[10] = "Y'a pus d'un temps dans la vie"
+Jan[11] = "Y'en a pus d'mathi&eacute;s qu&eacute; d'contents"
+Jan[12] = "La preunmi&eacute;the &ecirc;lection pouor D&eacute;put&eacute;s &egrave;s &Ecirc;tats eut lieu aniet en 1857"
+Jan[13] = "N&eacute; v'l&agrave; eune vaque tch'est si maigre qu'nou l&icirc; vait les madelles"
+Jan[14] = "Lewis Carroll mouothit aniet en 1898"
+Jan[15] = "Pie tchi crie, s&icirc;ngne d&eacute; plyie"
+Jan[16] = "Les barbi&egrave;rs s'ent'-r&acirc;sent"
+Jan[17] = "La Saint Anton&icirc;n l'Grand"
+Jan[18] = "V'l&agrave; tchi veint d'La Pompe d&eacute; Haut"
+Jan[19] = "la Saint Br&eacute;lade"
+Jan[20] = "Georgie mouothit aniet en 1926"
+Jan[21] = "Poule tchi caqu'te d&ecirc;couvre san nid"
+Jan[22] = "Comme un rouai sus san tr&ocirc;ne, assis &agrave; s'n a&icirc;the"
+Jan[23] = "J'avons &agrave; p&acirc;sser La Corbi&egrave;the, valet; l&eacute; pi&eacute;the est &agrave; v'n&icirc;n"
+Jan[24] = "La Saint Timoth&eacute;e"
+Jan[25] = "La S&eacute;th&eacute;e d'Burns"
+Jan[26] = "L&eacute; Jour d&eacute; l'Australie"
+Jan[27] = "Jean Dorey fut n&eacute; aniet en 1831"
+Jan[28] = "Un rouoge couochant, s&icirc;ngne d&eacute; bieau temps"
+Jan[29] = "Quand y'a un grand creux i' faut un grand cliou"
+Jan[30] = "E.J. Luce fut n&eacute; aniet en 1881"
+Jan[31] = "Janvyi a deux bonnets, F&eacute;vri en a trais"
+
+Feb = new Array
+Feb[1] = "Pas pus d'chaleu qu'dans l'fond d'mes braies"
+Feb[2] = "La Cand'leu"
+Feb[3] = "Les taillaisons d'vrai c'menchaient &agrave; la Cand'leu"
+Feb[4] = "Jean Picot fut n&eacute; aniet en 1846"
+Feb[5] = "V'l&agrave; tch'est bouon &agrave; conter &agrave; Mo&iuml;se Potteur"
+Feb[6] = "Mathyie-t&#233; ou n't&#233; mathyie pas, ta crouaix tu port&#233;thas"
+Feb[7] = "La plyie d'F&eacute;vri est l'sang d'la t&egrave;rre"
+Feb[8] = "L'adv&egrave;rsit&eacute; fait prendre sus s&eacute;"
+Feb[9] = "Nou fait l's avaines aupr&egrave;s Nou&eacute;, au mais d'F&eacute;vri ou Mar"
+Feb[10] = "Un sou &ecirc;pa&icirc;ngni est un sou g&acirc;ngni"
+Feb[11] = "Charles II donnit des t&egrave;rres en Am&eacute;thique au Sire George de Carteret"
+Feb[12] = "Lillie Langtry mouothit aniet en 1929<br>L's &Ecirc;tats d'J&egrave;rri vot&icirc;tent l&eacute; J&egrave;rriais comme langue officielle aniet en 2019"
+Feb[13] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Radio"
+Feb[14] = "La Saint Valent&icirc;n"
+Feb[15] = "Messire &Egrave;rthu d'la Mathe fut n&eacute; aniet en 1914"
+Feb[16] = "Faut tr&eacute;jous garder eune pomme pour la s&eacute;"
+Feb[17] = "Charles II fut procli&acirc;m&eacute; Rouai dans l'Vi&egrave;r Marchi aniet en 1649"
+Feb[18] = "L&eacute; chein tchi fait d'san mus n'peut pon faithe pus"
+Feb[19] = "Aut'fais nou m'ttait d'la flieur d&eacute; seu dans d'l'ieau-d'vie, trais boutillies dans eune b&acirc;rrique d&eacute; 120 pots d'cidre, au mais d'F&eacute;vri"
+Feb[20] = "Georgie fut n&eacute;e aniet en 1846"
+Feb[21] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Langues Mat&egrave;rnelles"
+Feb[22] = "Nou s&egrave;me la pouothette au mais d'F&eacute;vri"
+Feb[23] = "Deux t&ecirc;tes valent mus qu'ieune"
+Feb[24] = "M&ecirc;tchi p&ecirc;tcheux, m&ecirc;tchi pi&egrave;rcheux"
+Feb[25] = "R&egrave;gl'ye duthe mais d&ecirc;r&egrave;gl'ye n'duthe pas"
+Feb[26] = "Nou t&acirc;che d&eacute; s'mer l'ouognonnette au mais d'F&eacute;vri ou d'bouonne heuthe en Mar"
+Feb[27] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Blianc Ours"
+Feb[28] = "Si la m&eacute; bouoillait y'&eacute;thait bein d's alouettes d&eacute; pr&icirc;nses"
+Feb[29] = "L'ann&eacute;e bissextile"
+
+Mar = new Array
+Mar[1] = "La Saint D&acirc;vi"
+Mar[2] = "N'faut pon aver honte d&eacute; san m&ecirc;tchi"
+Mar[3] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Vie Sauvage"
+Mar[4] = "Livonia mouothit aniet en 1925"
+Mar[5] = "La Saint Pithan d'Cornouailles"
+Mar[6] = "Quand P&acirc;ques marchinne - peste et dg&egrave;rre et fanminne!"
+Mar[7] = "Si la m&eacute; bouoillait y'&eacute;thait bein du pa&icirc;sson d'tchuit"
+Mar[8] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Femmes"
+Mar[9] = "Un couochon n'est pon un v&egrave;rm&icirc;ngnon"
+Mar[10] = "L'a&eacute;roport d&eacute; J&egrave;rri fut ou&egrave;rt aniet en 1937"
+Mar[11] = "M&eacute; v'ch&icirc;n, et m&eacute; v'lo, <br>Par ich&icirc;n et par ilo, <br>Patchi'-ous s'ou voulez, <br>M&eacute; v'ch&icirc;n, et m&eacute; v'lo"
+Mar[12] = "I' faut &ecirc;t' hue&ucirc;l&icirc;n d'avant &ecirc;t' crabe"
+Mar[13] = "P&ecirc;tcheux n'a janmais mal au tchoeu d'sa pouque"
+Mar[14] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Caltchul"
+Mar[15] = "Jules C&eacute;sar mouothit"
+Mar[16] = "Bieaut&eacute; sans bouont&eacute; n'est qu'vanit&eacute;"
+Mar[17] = "La Saint Patrice"
+Mar[18] = "Il est comme les tambours d&eacute; France - i' va en rabattant"
+Mar[19] = "Bou&ocirc;n Dgieu l'sait et l'conna&icirc;t, mais n's'en va pon l'dithe &agrave; p&egrave;rsonne"
+Mar[20] = "L&eacute; Jour d'la Francophonie"
+Mar[21] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Po&eacute;sie"
+Mar[22] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute; l'Ieau"
+Mar[23] = "S'lon les pa&icirc;ssonni&egrave;rs lus pa&icirc;sson est tr&eacute;jous frais"
+Mar[24] = "S'i' n'y'avait pon d'rente &agrave; vendre n'y'en &eacute;thait pon d'acat&eacute;e"
+Mar[25] = "L'Annonci&acirc;tion"
+Mar[26] = "L'resp&eacute; et la politesse n&eacute; cou&ocirc;tent rein"
+Mar[27] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Thi&acirc;tre"
+Mar[28] = "Ch'n'est pon mal torchi, pouor n'aver qu'eune n&acirc;sil'ye"
+Mar[29] = "Envyer du tch&egrave;rbon au Neuch&acirc;t&eacute;"
+Mar[30] = "Au R'nouv&eacute;, tout est b&eacute;<br> au Stembre, rein n'y r'sembl'ye"
+Mar[31] = "Nou ouait l'&acirc;ne; ch'est s&icirc;ngne d&eacute; plyie"
+
+Apr = new Array
+Apr[1] = "L&eacute; Jour des Coues"
+Apr[2] = "Au mais d'Avri, tout annima change d'habit"
+Apr[3] = "Du temps d'Avri - eune achie d'plyie et ieune d&eacute; sol&eacute;"
+Apr[4] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la C&acirc;rotte"
+Apr[5] = "Quand veint l'mais d'Avri<br>l&eacute; coucou s'trouve mort' ou vi"
+Apr[6] = "Un bieau jour d&eacute; bouonne heuthe dans l'ann&eacute;e vole l'&eacute;t&eacute;"
+Apr[7] = "La nouvelle couleu d'J&egrave;rri ha&ucirc;l&icirc;ndgie pouor la preunmi&eacute; fais aniet en 1981"
+Apr[8] = "Quand vents d'ava s'en vont a'amont, et r'tchaient d'ava de siette, ch'est r'pr&icirc;nse d&eacute; mauvais temps"
+Apr[9] = "L&eacute; Jour d'la langue F&icirc;nlandaise"
+Apr[10] = "Douard L&eacute; Bro mouothit aniet en 1964"
+Apr[11] = "Du vr&eacute;geais d'Avri est s&icirc;ngne d&eacute; rude temps"
+Apr[12] = "Preunmi&eacute; homme en espace aniet en 1961"
+Apr[13] = "En Avri, n&eacute; tchitte pas un fi"
+Apr[14] = "AA Le Gros fut n&eacute; aniet en 1840"
+Apr[15] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'l'Art"
+Apr[16] = "&Agrave; la mi&eacute;-Avri les h&eacute;thondes et l'orfi et l'coucou s'i' vit"
+Apr[17] = "Charles, Pr&icirc;nce d&eacute; Galles, arrivit en J&egrave;rri aniet en 1646"
+Apr[18] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'l'H&eacute;thitage"
+Apr[19] = "Ch'est bouon conter &agrave; Jacques Potteur, l&eacute; Rouai du Di, ou &agrave; Douard Vi san p&egrave;rrutchi"
+Apr[20] = "Quand l'temps est cliai comme un v&egrave;rre, qu&eacute; nou vait les C'm&icirc;ns d'St. Jacques &#150; ch'est s&icirc;ngne d&eacute; bieau temps"
+Apr[21] = "Avri l'doux &#150; quant i s'y'met<br>Ch'est l'pi&egrave;the de tous"
+Apr[22] = "Ch'n'est pon par les c&ocirc;nes qu&eacute; nou trait eune vaque"
+Apr[23] = "La Saint George"
+Apr[24] = "L&eacute; mais d'Avri peut &ecirc;t' tra&icirc;tre tchiquefais"
+Apr[25] = "La Saint Mar"
+Apr[26] = "Pot d'pichi n'est pon profit, sus la t&ecirc;te d'un offici"
+Apr[27] = "L&eacute; Jour du Rouai &egrave;s Pays Bas"
+Apr[28] = "Le Bein est par mouochieaux<br>Les Pou&ocirc;rres gens par troupieaux"
+Apr[29] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Danse"
+Apr[30] = "Faut aller &egrave;s oeux d'mauves d'vant l'preunmyi d'Mai ou bein y'a dangi tch'i' saient couis"
+
+May = new Array
+May[1] = "La Saint Marcou"
+May[2] = "N&eacute; v'ch&icirc;n l'adg&egrave;vement du quart'ron"
+May[3] = "Si les trais preunmi&egrave;rs jours d&eacute; Mai sont bieaux i' y'&eacute;tha du cidre comme d&eacute; l'ieau"
+May[4] = "Un &ecirc;ssaim d&eacute; Mai vaut eune vaque &agrave; lait"
+May[5] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Langue Port&ucirc;ndgaise"
+May[6] = "I' n'y'a coumme s&eacute; sa c'm&icirc;nse &agrave; laver"
+May[7] = "L&eacute; t&eacute;l&eacute;graphe entr&eacute; J&egrave;rri et la France fut ou&egrave;rt aniet en 1860"
+May[8] = "Quand les cos chantent, ch'est s&icirc;ngne d&eacute; plyie"
+May[9] = "L&eacute; Jour d'la Lib&eacute;thation"
+May[10] = "Ch&acirc;tchun s'plia&icirc;t - coumme disait l'chein tch'embraichait l'tchu d'sa vaque"
+May[11] = "La F&ecirc;te des Saints Cyril et M&eacute;thode"
+May[12] = "Faithe et dithe ch'est deux"
+May[13] = "I' faudra l'boulement d'Mai<br>pouor nouos ram'ner un mio d&eacute; vrai"
+May[14] = "L'ordgi veint d'vant la ruinne"
+May[15] = "As-tu ou&iuml; l'conte d&eacute; Richard m&eacute;n oncl'ye? I' fit caca dans l'&acirc;tre, pensant qu&eacute; ch'tait p&acirc;te!"
+May[16] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Leunmi&eacute;the"
+May[17] = "Jour N&acirc;tionna d'la Norouague"
+May[18] = "I' faut s'graie d'it&eacute; comme nou-s'a"
+May[19] = "Fra&icirc;nque Le Maistre fut n&eacute; aniet en 1910"
+May[20] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute; la Mo&ucirc;que &agrave; Myi"
+May[21] = "L'heuthe d'&Ecirc;t&eacute; fut &icirc;ntroduite en J&egrave;rri aniet en 1916<p>La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Th&eacute;e"
+May[22] = "Les louanges d&eacute; s&eacute;-m&eacute;me et d'sa m&eacute;the n&eacute; valent rein du tout"
+May[23] = "Des mo&ucirc;ques d'un jour &agrave; voltilyi partout &#150; s&icirc;ngne d&eacute; plyie"
+May[24] = "La Grande R'veue"
+May[25] = "I' n&eacute; f'thait pon b&eacute; &agrave; ch&eacute;rchi n&eacute;the vaque dans geon br&ucirc;l&eacute;"
+May[26] = "J'va donn&eacute;, nou n'l&icirc; r'garde pon la dent"
+May[27] = "Fraid Mai et caud Ju&icirc;n - emplyent grange et grainyi"
+May[28] = "Un rouoge couochant, s&icirc;gne d&eacute; bieau temps"
+May[29] = "Jour d'la Fielle d&eacute; Tch&ecirc;ne"
+May[30] = "Quand y'a assez d'bliu dans l'ou&ecirc;st pouor faithe eune cheintuthe d&eacute; braies &agrave; Tanme Luce, ch'est s&icirc;ngne d&eacute; bieau temps"
+May[31] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du P&egrave;rrot"
+
+Jun = new Array
+Jun[1] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Lait"
+Jun[2] = "L&eacute; chein tchi peut faithe un p'tit pangni en peut faithe un grand"
+Jun[3] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Bike"
+Jun[4] = "D&eacute; niet touos les cats sont gris"
+Jun[5] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'l'Envithonnement"
+Jun[6] = "La Journ&eacute;e d'la Nouormandie"
+Jun[7] = "L&eacute; Rouai George VI v&icirc;sitit J&egrave;rri lib&eacute;th&eacute; en 1945"
+Jun[8] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d's Och&eacute;ans"
+Jun[9] = "Henry Luce Manuel fut n&eacute; aniet en 1818"
+Jun[10] = "La Journ&eacute;e d'Cam&otilde;es"
+Jun[11] = "L&eacute; preunmi&eacute; st&icirc;nme arrivit en J&egrave;rri aniet en 1823<p> L'heuthe d&eacute; Greenwich fut &icirc;ntroduite en J&egrave;rri aniet en 1898"
+Jun[12] = "La Journ&eacute;e N&acirc;tionale d'la Russie"
+Jun[13] = "Dans l'mais d'Ju&icirc;n &ocirc;ti roui est s&icirc;ngne d'un mauvais gard&icirc;ngni"
+Jun[14] = "La Lib&eacute;th&acirc;tion d's &Icirc;les Falkland en 1982"
+Jun[15] = "Si nou veurt mangi auve l&eacute; Dgi&acirc;bl'ye, i' faut eune longue tchulyi"
+Jun[16] = "I' n'y'a pas pi&eacute;the qu&eacute; les dgeux enrichis"
+Jun[17] = "L&eacute; G&eacute;n&eacute;tha de Gaulle arrivit en J&egrave;rri aniet en 1940"
+Jun[18] = "Hante la fil'ye d&eacute; tan va&icirc;s&icirc;n; s'tu n'la v&eacute; l's&eacute;, tu la v&egrave;rras l'mat&icirc;n"
+Jun[19] = "Philippe Langlois mouothit aniet en 1884"
+Jun[20] = "N'y'a pon d'f&ecirc;te sans lend'main"
+Jun[21] = "Il est avis &agrave; vielle vaque qu&eacute; janmais janne n'a mo&ucirc;tchi"
+Jun[22] = "Nou n'peut faithe baithe &acirc;ne s'ou n'a s&eacute;"
+Jun[23] = "La F&ecirc;te N&acirc;tionnale du Luxembourg"
+Jun[24] = "La Saint Jean"
+Jun[25] = "&Agrave; la Saint Jean, les pommes craquent souos la dent"
+Jun[26] = "L&eacute; p&ecirc;tcheux n'sent pon sa pouque"
+Jun[27] = "Ju&icirc;n fait blianchi les fains, et dans nos contr&eacute;es<br/>I' ram&egrave;ne l'&Ecirc;t&eacute;"
+Jun[28] = "La bombard&eacute;thie Allemande aniet en 1940<p>L&eacute; Vi&egrave;r Ch&acirc;t&eacute; fut pr&eacute;sent&eacute; &agrave; J&egrave;rri par la Couronne aniet en 1907"
+Jun[29] = "La F&ecirc;te des saints Pi&egrave;rre et Paul"
+Jun[30] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d's Ast&eacute;ro&iuml;des"
+
+Jul = new Array
+Jul[1] = "L&eacute; c'menchement d'l'Otchup&acirc;tion en 1940<p>L&eacute; Jour du Cannada"
+Jul[2] = "N&eacute; v'l&agrave; l'&Ecirc;t&eacute; chutte fais - nou ouait les critchets"
+Jul[3] = "Entrez par l'us &ecirc;trait; car l'us d'la p&egrave;rdition a d'la la&icirc;ze, et l&eacute; c'm&icirc;n tch'y m&egrave;ne est grand, et y'en a hardi tchi y'entrent"
+Jul[4] = "L'&Icirc;nd&eacute;pendance des &Ecirc;tats-Unnis"
+Jul[5] = "L&eacute; Jour du Tynwald"
+Jul[6] = "Tchi a bu, b&eacute;tha"
+Jul[7] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Chocolat"
+Jul[8] = "Quand p&ecirc;tcheux et chasseux s'sont riches, l&eacute; dgi&acirc;bl'ye es'sa minnistre"
+Jul[9] = "La Statue du Rouai George II fut d&ecirc;vouail&eacute;e dans l'Vi&egrave;r Marchi aniet en 1751"
+Jul[10] = "&Ecirc;coute-pathai janmais n'ou&iuml;t drait"
+Jul[11] = "Eileen Le Sueur mouothit aniet en 2012"
+Jul[12] = "L&eacute; Rouai George V v&icirc;sitit J&egrave;rri aniet en 1921 <p> La Bat&acirc;le d'la Boyne"
+Jul[13] = "La Reine, not' Duc, v&icirc;sitit J&egrave;rri aniet en 2001"
+Jul[14] = "La F&ecirc;te Fran&ccedil;aise"
+Jul[15] = "La Saint Swith&icirc;n"
+Jul[16] = "La Saint H&eacute;lyi"
+Jul[17] = "Janmais est un long mais"
+Jul[18] = "La s&egrave;rcl'ye s'&ecirc;pa&ucirc;mit vite au sol&eacute; un co abattue, au mais d'Juilet"
+Jul[19] = "Chent ans bouler chivi&eacute;the, chent ans porter banni&eacute;the"
+Jul[20] = "PW Luce mouothit aniet en 1966"
+Jul[21] = "L&eacute; preunmi&eacute; houmme sus la Leune aniet en 1969"
+Jul[22] = "Nou cope la fe&ucirc;gi&eacute;the au mais d'Juilet et au mais d'Ao&ucirc;t, et pis nou la ramasse quand l'avo&ucirc;t est finni"
+Jul[23] = "Mangeons l'miyeu tandi qu&eacute; l'pi&eacute;the amende"
+Jul[24] = "Un tchian peut bein &egrave;rgarder un &eacute;v&ecirc;que"
+Jul[25] = "Tout a un but, un pod&icirc;n en a deux"
+Jul[26] = "Faut agi env&egrave;rs les gens comme nou veurt tch'i' vouos faichent"
+Jul[27] = "Les ba&icirc;nis sont dans la pouque"
+Jul[28] = "I' s'm&acirc;t'tait d'vant l'rouai quand il est m&acirc;rri"
+Jul[29] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Tigre"
+Jul[30] = "D'&eacute;crivains et d'avocats, le Dgi&acirc;bl'ye fait un grand amas"
+Jul[31] = "L&eacute; preunmi&eacute; moto arrivit en J&egrave;rri aniet en 1899"
+
+Aug = new Array
+Aug[1] = "L&eacute; Jour d&eacute; Lammas<br>L&eacute; Jour N&acirc;tionna d'la Suisse"
+Aug[2] = "En J&egrave;rri nou sauve sa chouette s&eacute;-m&ecirc;me, et nou la s&egrave;me dans tchique temps les preunmi&eacute; dgi&ecirc;x jours d'Ao&ucirc;t"
+Aug[3] = "Jean Sullivan mouothit aniet en 1899"
+Aug[4] = "Vaut mus aver affaithe au dgi&acirc;bl'ye qu'&agrave; ses anges"
+Aug[5] = "Victor Hugo arrivit en J&egrave;rri aniet en 1852"
+Aug[6] = "La Transfidguth&acirc;tion"
+Aug[7] = "L&eacute; nouoyi est l'pus prudent d&eacute; touos les bouais; il attend qu&eacute; l'&Ecirc;t&eacute; sait v'nu d'vant montrer ses fielles"
+Aug[8] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Cat"
+Aug[9] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Peupl'yes &Icirc;ndig&egrave;nes"
+Aug[10] = "La Saint Louothains"
+Aug[11] = "Les pots d&ecirc;couv&egrave;rts font les cats l&acirc;rrons"
+Aug[12] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Jann&egrave;che"
+Aug[13] = "L&eacute; Docteu Fra&icirc;nque L&eacute; Maistre mouothit aniet en 2002"
+Aug[14] = "FMH fut n&eacute;e aniet en 1902"
+Aug[15] = "L'Assomption"
+Aug[16] = "&Agrave; la mi&eacute;-Ao&ucirc;t<br>l'Hiv&eacute; s'noue"
+Aug[17] = "Eune cli&ocirc;s&eacute;e d&eacute; s'n&icirc;les au mais d'Ao&ucirc;t est s&icirc;ngne d'un failli f&egrave;rmyi"
+Aug[18] = "Les ris m&egrave;n'nont &agrave; r'tch&icirc;ngn-cat"
+Aug[19] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'l'Orangoutan"
+Aug[20] = "Quand l'temps s'couvre et est bein laid auve d&eacute; gros nouages au mais d'Ao&ucirc;t, &ocirc;rageux, nou dit - ch'n'est qu'des minnes d'avo&ucirc;t"
+Aug[21] = "Philippe Le Sueur Mourant mouothit aniet en 1918"
+Aug[22] = "I' n&eacute; f'thait pon bou&ocirc;n &agrave; ch&egrave;rchi n&eacute;the vaque dans geon br&ucirc;l&eacute;"
+Aug[23] = "Nou n'gra&icirc;sse pon la t&egrave;rre auve des fi&egrave;rs de tch&eacute;thue"
+Aug[24] = "La Saint Ou&euml;n<p>L'&Icirc;nd&eacute;pendence d'l'&Ucirc;kra&icirc;ne"
+Aug[25] = "L&eacute; tr&eacute;pid, nous-s'a peine &agrave; l'craithe,<br>dit qu'la pe&icirc;le a un ni&egrave;r dri&eacute;the"
+Aug[26] = "Les preunmi&eacute; avions arriv&icirc;tent en J&egrave;rri aniet en 1912"
+Aug[27] = "Cat tchi s'lave au d'ssus d'l'ouethelle, ch'est s&icirc;ngne d&eacute; plyie"
+Aug[28] = "Nou n'est janmais bout&eacute;s qu&eacute; par eune vaque &ecirc;c&ocirc;n&eacute;e"
+Aug[29] = "Nos couochons n'veulent pus d'chours!"
+Aug[30] = "L&eacute; chein tchi tcheint la pouque est aussi pi&eacute;the comme l&eacute; chein tchi met d'dans"
+Aug[31] = "I' n'est pon temps d'arr&ecirc;ter l&eacute; j'va quand l'h&egrave;rnais est v&egrave;rs&eacute;"
+
+Sep = new Array
+Sep[1] = "Quand Ni&egrave;r Mont met san bonnet, la plyie veint d'vant la niet"
+Sep[2] = "La Reine Victoria v&icirc;sitit J&egrave;rri aniet en 1846"
+Sep[3] = "Nou sait bein chein qu'en est mais nou n'sait pon chein qu'en s'sa"
+Sep[4] = "GW de Carteret mouothit aniet en 1940"
+Sep[5] = "L&eacute; sol&eacute; d&eacute; Stembre trompe Madanme"
+Sep[6] = "Nou n'peut pon tondre un mouton tchi n'a pon d'laine"
+Sep[7] = "L&eacute; t&eacute;l&eacute;graphe entr&eacute; J&egrave;rri et l'Angli&eacute;t&egrave;rre fut ou&egrave;rt aniet en 1860"
+Sep[8] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute; l'abc<br>Frederic Mistral fut n&eacute; aniet en 1830<br>L&eacute; Rouai, not' Duc, v&icirc;nt au tr&ocirc;ne aniet en 2022"
+Sep[9] = "Dgillaume l&eacute; Contch&eacute;thant mouothit aniet en 1087"
+Sep[10] = "La Saint Aub&egrave;rt <br> Jour N&acirc;tionna du Dgibr&acirc;ltar"
+Sep[11] = "L&eacute; Jour N&acirc;tionna d'la Catalongne"
+Sep[12] = "Eune seule journ&eacute;e siez T&eacute; vaut mus qu'mille"
+Sep[13] = "&Agrave; la tabl'ye coumme au clios<br>Car ch'est l'ventre tchi sou&ocirc;tcheint l'dos"
+Sep[14] = "Neu ca&ucirc;ff&eacute;es, neu tchi&eacute;dgies, neu flieuthies, neu bouoillies font eune leinsive accomplyie"
+Sep[15] = "Vaut mus payi l'boulandgi qu&eacute; l'docteu"
+Sep[16] = "L'app&eacute;tit veint en mangeant"
+Sep[17] = "PW Luce fut n&eacute; aniet en 1882"
+Sep[18] = "Un sou &ecirc;pa&icirc;ngni est un sou g&acirc;ngni"
+Sep[19] = "Ciel maqu's&eacute;l&eacute; n'est janmais v&icirc;ngt-quatre heuthes sans laver"
+Sep[20] = "Charles Picot fut n&eacute; aniet en 1840<p>Eileen Le Sueur fut n&eacute;e aniet en 1914"
+Sep[21] = "La Saint Matchi"
+Sep[22] = "Philippe Langlois fut n&eacute; aniet en 1817"
+Sep[23] = "Quand y'a eune m&acirc;sse d&eacute; hagues sus l's &ecirc;p&icirc;ngnes, ch'est s&icirc;ngne d'un rude hiv&eacute;"
+Sep[24] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Gorille"
+Sep[25] = "La Saint S&egrave;rge d&eacute; Radon&egrave;j"
+Sep[26] = "La Journ&eacute;e &Ucirc;rop&eacute;enne des Langues"
+Sep[27] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Tourisme"
+Sep[28] = "L'Anm&icirc;n Flippe mouothit aniet en 1893<p>L&eacute; Jour d'la R'forme - La Folle d'Avo&ucirc;t"
+Sep[29] = "George d'la Forge fut n&eacute; aniet en 1891<p>La Saint Mich&eacute;"
+Sep[30] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Traduction <p> &Agrave; la St. Mich&eacute; les pithots, et &agrave; Nou&eacute; les picots "
+
+Oct = new Array
+Oct[1] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Caf&eacute;"
+Oct[2] = "Quand i' tchait d'la plyie, faut faithe comme les Fran&ccedil;ais &#150; faut la la&icirc;ssi tchaie!"
+Oct[3] = "La Sainte Th&eacute;r&egrave;se d&eacute; Lisieux"
+Oct[4] = "La Saint Fran&ccedil;ouais d'Assise<p>La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Annimaux"
+Oct[5] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Ens&icirc;ngnants"
+Oct[6] = "J'ai veu la leune &agrave; gauche, i' faut qu&eacute; j'tou&ocirc;nne ma pa&ucirc;te"
+Oct[7] = "Trop d&eacute; couques g&acirc;tent la soupe"
+Oct[8] = "Quand l'achie prend trop fort, ou n'duthe pas"
+Oct[9] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Poste"
+Oct[10] = "Au mais d'Octobre l&eacute; lanchon s'trouve sus les Cauds Sablions, i' veinnent l&agrave; j'ter lus oeuvres"
+Oct[11] = "Des vents d'nord-&ecirc;t, tchi heurlent d'niet s'et d'jour s&eacute; taisent"
+Oct[12] = "La Journ&eacute;e N&acirc;tionale d'l'Espangne"
+Oct[13] = "Lillie Langtry fut n&eacute;e aniet en 1853"
+Oct[14] = "L'Anniv&egrave;rsaithe d&eacute; la Bat&acirc;le d&eacute; Hastings"
+Oct[15] = "Touos l's i&egrave;rs n&eacute; vaient pon d'eune sorte"
+Oct[16] = "Porter la sausse &agrave; la m&eacute;"
+Oct[17] = "&Agrave; la St. Lucas &#150; tchil'ye tes m&ecirc;les si tu'en as, pouor qu'&agrave; la Toussaint i' s'&ecirc;crasent entre tes mains"
+Oct[18] = "La Saint Lucas"
+Oct[19] = "En allant douochement nou va liain"
+Oct[20] = "Nou r'tchil'ye chein qu'nou s&egrave;me"
+Oct[21] = "Elie mouothit aniet en 1918"
+Oct[22] = "Oh, p&eacute;tit jus d'p&eacute;pinnot -<br>Qu&eacute; j't'aime quand j't&eacute; vai<br>Et acouo pus quand j't&eacute; bai!<br>J'aime mus t'baithe et m'en r'senti<br>Qu&eacute; d't&eacute; la&icirc;ssi et m'en r'penti!"
+Oct[23] = "Nou sait bein chein qu'en est mais nou n'sait pon chein qu'en s'sa"
+Oct[24] = "La Saint Maglouaithe"
+Oct[25] = "Quand y'a eune bosse au bat&eacute;, y'a un creux dans la m&eacute;"
+Oct[26] = "N'y'a rein d'nouv&eacute; souos l'touannement du sol&eacute;"
+Oct[27] = "George d'la Forge mouothit aniet en 1984"
+Oct[28] = "N'faut pon aver honte d&eacute; san m&ecirc;tchi"
+Oct[29] = "L&eacute; Monument Don fut d&ecirc;vouail&eacute; aniet en 1885"
+Oct[30] = "Quand Octobre prend f&icirc;n<br>La Toussaint est au mat&icirc;n"
+Oct[31] = "La S&eacute;th&eacute;e &egrave;s Chorchi&egrave;rs <br> (Halloween)"
+
+Nov = new Array
+Nov[1] = "La Toussaint"
+Nov[2] = "La f&icirc;n du temps f'tha tout vaie"
+Nov[3] = "La preuve du pod&icirc;n ch'est d&eacute; l'gou&ocirc;ter"
+Nov[4] = "Par p'tit p&egrave;rtu, nou vait grand jeu"
+Nov[5] = "La S&eacute;th&eacute;e d'Guy Fawkes"
+Nov[6] = "L&eacute; pa&icirc;sson vaut mus qu'la faux pouor gra&icirc;ssi"
+Nov[7] = "Ch'n'est pas a&icirc;si &agrave; pliutchi un crapaud quand i' n'y'a pon d&eacute; g'veux d'ssus"
+Nov[8] = "La plyie veint dans un temps mouilli "
+Nov[9] = "La tch&ecirc;te d'la Muth&acirc;le d&eacute; B&egrave;rl&icirc;n en 1989"
+Nov[10] = "Laelius mouothit aniet en 1884"
+Nov[11] = "Coumme nou fait san liet, nou s'couoche"
+Nov[12] = "Du feu et l'&ocirc;rage siex s'maines d&eacute;vant Nou&eacute; &#150; rompt l'dos d'l'hiv&eacute;"
+Nov[13] = "Livonia fut n&eacute;e aniet en 1849 "
+Nov[14] = "Si j'monte jusque dans les cieux, Tu'es l&agrave;!"
+Nov[15] = "La Saint M&acirc;lo"
+Nov[16] = "Un p'tit siez s&eacute; vaut mus qu' un siez l's aut's"
+Nov[17] = "La Cour &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;cidit qu'les M&icirc;ntchi&egrave;rs et l's &Ecirc;cr&eacute;hos 'taient &agrave; J&egrave;rri aniet en 1953"
+Nov[18] = "Quand i' fait fraid des portes valent mus qu'des h&egrave;ches"
+Nov[19] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Hommes"
+Nov[20] = "Laelius fut n&eacute; aniet en 1820"
+Nov[21] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la T&eacute;l&eacute;vision"
+Nov[22] = "Apportez d&eacute; siez vous siez nous, mais n'emportez pas d'siez nous siez vous"
+Nov[23] = "La Saint Cli&eacute;ment"
+Nov[24] = "N'y'a pon deux paids ni deux m'suthes"
+Nov[25] = "La Sainte Cat'linne"
+Nov[26] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'l'Olivyi"
+Nov[27] = "Eune aube g&eacute;l&eacute;e d'vant Nou&eacute;, dans v&icirc;ngt-quatre heuthes est r'payie"
+Nov[28] = "La Masse fut pr&eacute;sent&eacute;e au Bailli aniet en 1663"
+Nov[29] = "Quand veint la f&icirc;n d'Novembre l'arl&eacute;v&eacute;e vouos trompe"
+Nov[30] = "La Saint Andr&eacute;"
+
+Dec = new Array
+Dec[1] = "Un couochon n'est pas un v&egrave;rt-m&icirc;ngnon"
+Dec[2] = "Henry Luce Manuel mouothit aniet en 1875"
+Dec[3] = "AA Le Gros mouothit aniet en 1877"
+Dec[4] = "&Agrave; forche d&eacute; crier Nou&eacute; i' veint!"
+Dec[5] = "Beinv'nu tch' apporte et mal &egrave;rchu tch' emporte"
+Dec[6] = "La Saint Nic'lesse"
+Dec[7] = "Ch'est la pe&icirc;le tch'appelle l&eacute; tr&eacute;pid ni&egrave;r tchu"
+Dec[8] = "Janmais mauvais ouvriyi n&#233; trouvit bouon &#244;ti "
+Dec[9] = "Es grands maux les grands r'mi&egrave;des"
+Dec[10] = "La nouvelle couleu d'J&egrave;rri procli&acirc;m&eacute;e par la Reine, not' Duc, en 1980"
+Dec[11] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale des Montangnes"
+Dec[12] = "Deux t&ecirc;tes valent mus qu'ieune"
+Dec[13] = "Les preunmi&egrave;rs v&eacute;nus sont les preunmi&egrave;rs s&egrave;rvis"
+Dec[14] = "La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Marmo&ucirc;thet"
+Dec[15] = "Messire &Egrave;rthu d'la Mathe mouothit aniet en 1994"
+Dec[16] = "Quand i' fait fraid des portes valent mus qu' des h&egrave;ches"
+Dec[17] = "Eune teurque en or fut d&ecirc;cou&egrave;rte &agrave; Saint H&eacute;lyi aniet en 1889"
+Dec[18] = "Les pri&eacute;thes du s&eacute; n&eacute; sont pon les cheinnes du mat&icirc;n"
+Dec[19] = "Faut faithe l&eacute; fain quandi qu&eacute; l'sol&eacute; lit"
+Dec[20] = "Tchi l&icirc; donn'nait la leune aniet i' vouos d'mand'dait l'sol&eacute; d'main"
+Dec[21] = "La Saint Thomas"
+Dec[22] = "L&eacute; jour d&eacute; St. Thomas, l&eacute; pus court et l&eacute; pus bas"
+Dec[23] = "La Longue Veille"
+Dec[24] = "La S&egrave;rvelle d&eacute; Nou&eacute;"
+Dec[25] = "Nou&eacute;"
+Dec[26] = "Eune vaque &agrave; pa&icirc;tre dans l'clios - ch'n'est pon un mithacl'ye;<br>Un tch&egrave;rdron tchi cra&icirc;t dans l'clios - ch'n'est pon un mithacl'ye nitout;<br>Eune mauve tchi piaille sus les falaises - ch'n'est pon dame un mithacl'ye;<br>Mais eune vaque assise sus un tch&egrave;rdron &agrave; piailli coumme eune mauve - ma f&eacute;, n'en v'l&agrave;-t-i' un mithacl'ye!"
+Dec[27] = "Bou&ocirc;n Pid, Bou&ocirc;n Yi, Bouonne Dent, et l'Paradis &agrave; la f&icirc;n d'vouos jours!"
+Dec[28] = "Amelia Perchard fut n&eacute;e aniet en 1921"
+Dec[29] = "Un cliou m&icirc;ns en temps sauve la reue"
+Dec[30] = "Jean Picot mouothit aniet en 1922"
+Dec[31] = "L&eacute; Tchu d&eacute; l'An"
+//  End -->
+</script>
+
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+
+
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+<CENTER><TABLE width=450 bgcolor=#215e21><TR><TD>
+&nbsp;<p>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+document.write("<Font size=6 color=#ffffff>")
+document.write("<center><B><I>" + dayName[now.getDay()] + ", l&eacute; " + now.getDate() + " d'" + monName[now.getMonth()] + ", " + now.getFullYear() + ".</I></B></center><BR>" )
+document.write("<Font size=5><b>")
+if (now.getMonth() == 0) document.write("<center><i>&quot;" + Jan[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 1) document.write("<center><i>&quot;" + Feb[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 2) document.write("<center><i>&quot;" + Mar[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 3) document.write("<center><i>&quot;" + Apr[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 4) document.write("<center><i>&quot;" + May[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 5) document.write("<center><i>&quot;" + Jun[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 6) document.write("<center><i>&quot;" + Jul[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 7) document.write("<center><i>&quot;" + Aug[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 8) document.write("<center><i>&quot;" + Sep[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 9) document.write("<center><i>&quot;" + Oct[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 10) document.write("<center><i>&quot;" + Nov[now.getDate()] + "&quot;</i></center>")
+if (now.getMonth() == 11) document.write("<center><i>&quot;" + Dec[now.getDate()] + "&quot;</i></center>")
+document.write("</b></Font>")
+
+//  End -->
+</script>
+
+&nbsp;<p>
+</TD></TR></TABLE></CENTER>
+
+<p>
+
+&nbsp;<p>
+&nbsp;<p>
+&nbsp;<p>
+
+<FONT SIZE=2>
+<I>Viyiz &eacute;tout:</I><p>
+<UL>
+
+<li><A HREF="smaine.html">L'Ann&eacute;e et la S'maine en J&egrave;rriais</A><p>
+
+
+</UL>
+</FONT>
+
+
+
+<!-- 
+
+I' p&egrave;rdrait sa t&ecirc;te s'ou n&eacute; t'nait pon 
+ 
+ Vaut mus r'tou&ocirc;nner mi&eacute;-vouaie qu&eacute; d'aller tr&eacute;jous mal vouaie 
+Quand la forteune tape &agrave; la porte, faut li'a&icirc;dgi &agrave; entrer 
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Lion
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Loup
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d'la Paix
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale du Rhinoc&eacute;ros
+
+
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+La Journ&eacute;e &Icirc;nt&egrave;rn&acirc;tionnale d&eacute;
+
+Ous &ecirc;tes l&eacute; s&eacute; d'la t&egrave;rre. Mais si l's&eacute; p&egrave;rd san r'lais, atout tch'est qu' nou l'sal'la ? I' n'vaut pus tch'&agrave; &ecirc;t' fliantchi hors, et &agrave; &ecirc;t' pilv&acirc;tchi par les hommes.
+
+L'amour est pus fort qu&eacute; dgi&ecirc;x boeux
+
+
+Les mathiages et l's ent&egrave;rrements, dans les ma&icirc;sons font des changements
+
+
+
+ -->
+
+
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/deskjer.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:03 GMT -->
+</HTML>

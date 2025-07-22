@@ -1,0 +1,1028 @@
+<HTML>
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/neunmxc.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:10:11 GMT -->
+<HEAD><META NAME="Author" CONTENT="Produced using Hot Potatoes by Half-Baked Software, registered to Geraint Jennings.">
+<TITLE>
+Les neunm&eacute;thos
+</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var Feedback = '';
+var Correct = 'Ch\'est bein!';
+var Incorrect = 'Nann&icirc;n! Acouo eune fais!';
+var GiveHint = 'Eune bou&ocirc;nne lettre a \'t&eacute; ajou&ocirc;t&eacute;e.';
+var platform = 'win';
+
+var ISWrong = 0
+
+WinLetters = new Array()
+
+WinLetters[0] = 'T';
+WinLetters[1] = 'S';
+WinLetters[2] = 'D';
+WinLetters[3] = 'R';
+WinLetters[4] = 'S';
+WinLetters[5] = 'O';
+WinLetters[6] = 'N';
+WinLetters[7] = 'Z';
+WinLetters[8] = 'E';
+WinLetters[9] = 'G';
+WinLetters[10] = 'S';
+WinLetters[11] = 'E';
+WinLetters[12] = 'I';
+WinLetters[13] = 'Z';
+WinLetters[14] = 'E';
+WinLetters[15] = 'D';
+WinLetters[16] = 'I';
+WinLetters[17] = 'I';
+WinLetters[18] = 'I';
+WinLetters[19] = 'P';
+WinLetters[20] = 'G';
+WinLetters[21] = 'Z';
+WinLetters[22] = 'E';
+WinLetters[23] = 'Z';
+WinLetters[24] = 'T';
+WinLetters[25] = 'R';
+WinLetters[26] = 'A';
+WinLetters[27] = 'I';
+WinLetters[28] = 'S';
+WinLetters[29] = 'D';
+WinLetters[30] = 'E';
+WinLetters[31] = 'U';
+WinLetters[32] = 'X';
+WinLetters[33] = 'E';
+WinLetters[34] = 'E';
+WinLetters[35] = 'O';
+WinLetters[36] = 'H';
+WinLetters[37] = 'D';
+WinLetters[38] = 'G';
+WinLetters[39] = 'I';
+WinLetters[40] = 'E';
+WinLetters[41] = 'X';
+WinLetters[42] = 'N';
+WinLetters[43] = 'E';
+WinLetters[44] = 'U';
+WinLetters[45] = 'F';
+WinLetters[46] = 'U';
+WinLetters[47] = 'E';
+WinLetters[48] = 'S';
+WinLetters[49] = 'Z';
+WinLetters[50] = 'S';
+WinLetters[51] = 'I';
+WinLetters[52] = 'X';
+WinLetters[53] = 'N';
+WinLetters[54] = 'E';
+WinLetters[55] = 'U';
+WinLetters[56] = 'F';
+WinLetters[57] = 'I';
+WinLetters[58] = 'E';
+WinLetters[59] = 'U';
+WinLetters[60] = 'N';
+WinLetters[61] = 'E';
+WinLetters[62] = 'T';
+WinLetters[63] = 'X';
+WinLetters[64] = 'Q';
+WinLetters[65] = 'P';
+WinLetters[66] = 'T';
+WinLetters[67] = 'D';
+WinLetters[68] = 'H';
+WinLetters[69] = 'U';
+WinLetters[70] = 'I';
+WinLetters[71] = 'T';
+WinLetters[72] = 'C';
+WinLetters[73] = 'R';
+WinLetters[74] = 'G';
+WinLetters[75] = 'A';
+WinLetters[76] = 'H';
+WinLetters[77] = 'E';
+WinLetters[78] = 'V';
+WinLetters[79] = 'I';
+WinLetters[80] = 'N';
+WinLetters[81] = 'G';
+WinLetters[82] = 'T';
+WinLetters[83] = 'T';
+WinLetters[84] = 'C';
+WinLetters[85] = 'H';
+WinLetters[86] = 'I';
+WinLetters[87] = 'E';
+WinLetters[88] = 'U';
+WinLetters[89] = 'N';
+WinLetters[90] = 'E';
+WinLetters[91] = 'X';
+WinLetters[92] = 'N';
+WinLetters[93] = 'T';
+WinLetters[94] = 'T';
+WinLetters[95] = 'E';
+
+
+MacLetters = new Array()
+
+MacLetters[0] = 'T';
+MacLetters[1] = 'S';
+MacLetters[2] = 'D';
+MacLetters[3] = 'R';
+MacLetters[4] = 'S';
+MacLetters[5] = 'O';
+MacLetters[6] = 'N';
+MacLetters[7] = 'Z';
+MacLetters[8] = 'E';
+MacLetters[9] = 'G';
+MacLetters[10] = 'S';
+MacLetters[11] = 'E';
+MacLetters[12] = 'I';
+MacLetters[13] = 'Z';
+MacLetters[14] = 'E';
+MacLetters[15] = 'D';
+MacLetters[16] = 'I';
+MacLetters[17] = 'I';
+MacLetters[18] = 'I';
+MacLetters[19] = 'P';
+MacLetters[20] = 'G';
+MacLetters[21] = 'Z';
+MacLetters[22] = 'E';
+MacLetters[23] = 'Z';
+MacLetters[24] = 'T';
+MacLetters[25] = 'R';
+MacLetters[26] = 'A';
+MacLetters[27] = 'I';
+MacLetters[28] = 'S';
+MacLetters[29] = 'D';
+MacLetters[30] = 'E';
+MacLetters[31] = 'U';
+MacLetters[32] = 'X';
+MacLetters[33] = 'E';
+MacLetters[34] = 'E';
+MacLetters[35] = 'O';
+MacLetters[36] = 'H';
+MacLetters[37] = 'D';
+MacLetters[38] = 'G';
+MacLetters[39] = 'I';
+MacLetters[40] = 'E';
+MacLetters[41] = 'X';
+MacLetters[42] = 'N';
+MacLetters[43] = 'E';
+MacLetters[44] = 'U';
+MacLetters[45] = 'F';
+MacLetters[46] = 'U';
+MacLetters[47] = 'E';
+MacLetters[48] = 'S';
+MacLetters[49] = 'Z';
+MacLetters[50] = 'S';
+MacLetters[51] = 'I';
+MacLetters[52] = 'X';
+MacLetters[53] = 'N';
+MacLetters[54] = 'E';
+MacLetters[55] = 'U';
+MacLetters[56] = 'F';
+MacLetters[57] = 'I';
+MacLetters[58] = 'E';
+MacLetters[59] = 'U';
+MacLetters[60] = 'N';
+MacLetters[61] = 'E';
+MacLetters[62] = 'T';
+MacLetters[63] = 'X';
+MacLetters[64] = 'Q';
+MacLetters[65] = 'P';
+MacLetters[66] = 'T';
+MacLetters[67] = 'D';
+MacLetters[68] = 'H';
+MacLetters[69] = 'U';
+MacLetters[70] = 'I';
+MacLetters[71] = 'T';
+MacLetters[72] = 'C';
+MacLetters[73] = 'R';
+MacLetters[74] = 'G';
+MacLetters[75] = 'A';
+MacLetters[76] = 'H';
+MacLetters[77] = 'E';
+MacLetters[78] = 'V';
+MacLetters[79] = 'I';
+MacLetters[80] = 'N';
+MacLetters[81] = 'G';
+MacLetters[82] = 'T';
+MacLetters[83] = 'T';
+MacLetters[84] = 'C';
+MacLetters[85] = 'H';
+MacLetters[86] = 'I';
+MacLetters[87] = 'E';
+MacLetters[88] = 'U';
+MacLetters[89] = 'N';
+MacLetters[90] = 'E';
+MacLetters[91] = 'X';
+MacLetters[92] = 'N';
+MacLetters[93] = 'T';
+MacLetters[94] = 'T';
+MacLetters[95] = 'E';
+
+
+var Letters = new Array()
+
+var WinLowerString='abcdefghijklmnopqrstuvwxyz%9A%9C%E0%E1%E2%E3%E4%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%EF%F0%F1%F2%F3%F4%F5%F6%F8%F9%FA%FB%FC%FD%FE%FF';
+var WinUpperString='ABCDEFGHIJKLMNOPQRSTUVWXYZ%8A%8C%C0%C1%C2%C3%C4%C5%C6%C7%C8%C9%CA%CB%CC%CD%CE%CF%D0%D1%D2%D3%D4%D5%D6%D8%D9%DA%DB%DC%DD%DE%9F';
+
+var MacLowerString='abcdefghijklmnopqrstuvwxyz%8A%8C%8D%8E%96%9A%9F%BE%BF%88%8B%9B%CF%D8%89%90%87%91%8F%92%94%95%93%97%98%9C%9E%9D';
+var MacUpperString='ABCDEFGHIJKLMNOPQRSTUVWXYZ%80%81%82%83%84%85%86%AE%AF%CB%CC%CD%CE%D9%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%F1%F2%F3%F4';
+
+var LowerString = '';
+var UpperString = '';
+
+
+function Initialize(){
+
+	var i = 0;
+
+        platform = 'win';
+        if (navigator.appVersion.indexOf('Mac') != -1) {
+                platform = 'mac';
+        }
+
+        if (platform == 'win'){
+                for (i = 0; i < WinLetters.length; i++){
+                        Letters[i] = unescape(WinLetters[i]);
+		LowerString = unescape(WinLowerString);
+		UpperString = unescape(WinUpperString);
+
+                }
+        }
+        else {
+                for (i = 0; i < MacLetters.length; i++){
+                        Letters[i] = unescape(MacLetters[i]);
+		LowerString = unescape(MacLowerString);
+		UpperString = unescape(MacUpperString);
+
+                }
+        }
+}
+
+function ConvertCase(InString, Direction){
+
+	var FromString = '';
+	var ToString = '';
+
+	if (Direction == 0){
+		FromString = UpperString;
+		ToString = LowerString;
+	}
+	else{
+		FromString = LowerString;
+		ToString = UpperString;
+	}
+
+	var i = 0;
+	j = 0;
+	var OutString = '';
+	for (i=0; i<InString.length; i++){
+		if (FromString.indexOf(InString.charAt(i)) > -1){
+			j = FromString.indexOf(InString.charAt(i));			
+			OutString += ToString.charAt(j);
+		}
+		else{	
+			OutString += InString.charAt(i);
+		}
+	}
+	return OutString;
+}
+
+
+function CheckAnswer(){
+
+	var x = 0
+	ISWrong = 0
+
+	for (x=0; x<(document.crossword.elements.length); x++){
+		if ((document.crossword.elements[x].value == Letters[x]) || (document.crossword.elements[x].value == ConvertCase(Letters[x], 0))){
+		}
+		else {
+			ISWrong = 1;
+			document.crossword.elements[x].value = ''
+		}
+	}
+	if (ISWrong == 1) {
+		Feedback = Incorrect;
+	}
+	else{
+		Feedback = Correct;
+		Feedback += '<form method=post><INPUT TYPE=\"button\" VALUE=\"Avant\" onClick=\"parent.location=\'anni.html\'\"></form>';
+	}
+	WriteFeedback(Feedback)
+}
+
+function WriteFeedback(Feedback) {
+	parent.FeedbackFrame.document.clear();
+	parent.FeedbackFrame.document.open();
+	parent.FeedbackFrame.document.writeln ("<html>");
+	parent.FeedbackFrame.document.writeln ("<body bgcolor=#FFFFFF text=#BA050A background=\"\">");
+	parent.FeedbackFrame.document.writeln ("<font size = +1><center><b>");
+	parent.FeedbackFrame.document.writeln (Feedback);
+	parent.FeedbackFrame.document.writeln ("</b></center></font></body></html>");
+	parent.FeedbackFrame.document.close();
+}
+
+function Cheat(){
+	var x = 0
+	var Done = 0
+	for (x=0; x<(document.crossword.elements.length); x++){
+		if (Done != 1) {
+			if (document.crossword.elements[x].value == ''){
+				document.crossword.elements[x].value = Letters[x];
+				Done = 1;
+			}
+		}
+	}
+	if (Done == 0){
+		Feedback = Correct;
+		Feedback += '<form method=post><INPUT TYPE=\"button\" VALUE=\"Avant\" onClick=\"parent.location=\'anni.html\'\"></form>';
+		WriteFeedback(Feedback);
+	}
+	else{
+		WriteFeedback(GiveHint);
+	}
+}
+
+
+</SCRIPT></HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="#" onLoad="Initialize()">
+
+<FORM>
+<INPUT TYPE="button" VALUE="A&icirc;dgiz-m&eacute;!" onClick="parent.FeedbackFrame.location='neunmxw.html#help'"><BR>
+</FORM>
+
+<FORM NAME="crossword">
+<CENTER>
+<H2>Les neunm&eacute;thos</H2>
+<b><i>Mots croua&icirc;sis</i></b></CENTER><br>
+
+<TABLE BORDER=0><TR><TD>
+<CENTER><TABLE BORDER=0>
+<TR><TD COLSPAN=2><CENTER><FONT SIZE=+2><FONT COLOR="#150890">Les d'vinailles d'trav&egrave;rs:</FONT COLOR></FONT SIZE></CENTER></TD></TR>
+
+
+<TR><TD VALIGN=TOP>5. </TD>
+<TD>11</TD></TR>
+
+<TR><TD VALIGN=TOP>6. </TD>
+<TD>16</TD></TR>
+
+<TR><TD VALIGN=TOP>8. </TD>
+<TD>3</TD></TR>
+
+<TR><TD VALIGN=TOP>9. </TD>
+<TD>2</TD></TR>
+
+<TR><TD VALIGN=TOP>10. </TD>
+<TD>19</TD></TR>
+
+<TR><TD VALIGN=TOP>11. </TD>
+<TD>6</TD></TR>
+
+<TR><TD VALIGN=TOP>12. </TD>
+<TD>9</TD></TR>
+
+<TR><TD VALIGN=TOP>13. </TD>
+<TD>1</TD></TR>
+
+<TR><TD VALIGN=TOP>17. </TD>
+<TD>8</TD></TR>
+
+<TR><TD VALIGN=TOP>19. </TD>
+<TD>21</TD></TR>
+
+
+<TR><TD COLSPAN=2><CENTER><FONT SIZE=+2><FONT COLOR="#150890">Les d'vinailles d'ava:</FONT COLOR></FONT SIZE></CENTER></TD></TR>
+
+
+<TR><TD VALIGN=TOP>1. </TD>
+<TD>13</TD></TR>
+
+<TR><TD VALIGN=TOP>2. </TD>
+<TD>16</TD></TR>
+
+<TR><TD VALIGN=TOP>3. </TD>
+<TD>18</TD></TR>
+
+<TR><TD VALIGN=TOP>4. </TD>
+<TD>7</TD></TR>
+
+<TR><TD VALIGN=TOP>7. </TD>
+<TD>17</TD></TR>
+
+<TR><TD VALIGN=TOP>9. </TD>
+<TD>12</TD></TR>
+
+<TR><TD VALIGN=TOP>10. </TD>
+<TD>2</TD></TR>
+
+<TR><TD VALIGN=TOP>14. </TD>
+<TD>4</TD></TR>
+
+<TR><TD VALIGN=TOP>15. </TD>
+<TD>30</TD></TR>
+
+<TR><TD VALIGN=TOP>16. </TD>
+<TD>10</TD></TR>
+
+<TR><TD VALIGN=TOP>18. </TD>
+<TD>100</TD></TR>
+
+
+</TABLE></CENTER>
+</TD>
+
+<TD BGCOLOR="#DEDEDE">
+<CENTER>
+<TABLE BORDER=0>
+
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>1</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="0" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>2</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="1" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>3</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="2" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="3" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>4</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="4" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>5</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="5" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="6" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="7" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="8" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="9" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>6</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="10" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="11" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="12" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="13" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="14" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>7</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="15" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="16" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="17" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="18" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="19" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="20" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="21" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="22" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="23" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>8</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="24" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="25" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="26" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="27" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="28" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>9</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="29" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="30" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="31" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="32" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="33" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="34" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="35" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="36" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>10</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="37" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="38" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="39" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="40" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="41" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="42" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="43" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="44" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="45" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="46" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="47" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="48" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="49" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>11</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="50" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="51" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="52" SIZE="1" MAXLENGTH="1"></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>12</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="53" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="54" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="55" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="56" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>13</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="57" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="58" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="59" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="60" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="61" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="62" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="63" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>14</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="64" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="65" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>15</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="66" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>16</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="67" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>17</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="68" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="69" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="70" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="71" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>18</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="72" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="73" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="74" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="75" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="76" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="77" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2>19</FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="78" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="79" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="80" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="81" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="82" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="83" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="84" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="85" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="86" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="87" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="88" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="89" SIZE="1" MAXLENGTH="1"></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="90" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="91" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="92" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="93" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+<TR ALIGN=RIGHT>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="94" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+
+<TD VALIGN=TOP><FONT COLOR="#150890" SIZE=-2></FONT></TD>
+<TD><INPUT TYPE="TEXT" NAME="95" SIZE="1" MAXLENGTH="1"></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+<TD></TD>
+</TR>
+
+
+</TABLE></CENTER>
+
+</TD></TR></TABLE></CENTER></FORM>
+
+<CENTER><FORM NAME="ButtonForm">
+<INPUT TYPE="button" VALUE="Contr&ocirc;le" onClick="CheckAnswer()"> <INPUT TYPE="button" VALUE="Sugg&eacute;thez!"  onClick="Cheat()">
+
+<P>
+<INPUT TYPE="button" VALUE="Avant" onClick="parent.location='anni.html'"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="parent.location='quizmnu.html'"><INPUT TYPE="button" VALUE="Arri&eacute;the" onClick="parent.history.back()">
+</FORM></CENTER>
+
+</BODY>
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/neunmxc.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:10:11 GMT -->
+</HTML>
+
+
+

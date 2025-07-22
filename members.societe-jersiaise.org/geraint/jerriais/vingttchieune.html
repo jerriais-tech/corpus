@@ -1,0 +1,243 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/vingttchieune.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:57 GMT -->
+<HEAD>
+<TITLE>V&icirc;ngt-tch'ieune - Blackjack</TITLE>
+<META  name="keywords" content="Jèrriais, Jersey language, langue jersiaise">
+<META  name="description" content="J&egrave;rriais: la langue d'J&egrave;rri.">
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Mike McGrath (mike_mcgrath@lineone.net) -->
+<!-- Web Site:  http://home.clara.net/mikem  -->
+
+<!-- Begin
+var gameOver; var cardCount;
+function Shuffle(max){
+var num=Math.random()*max;
+return Math.round(num)+1;
+}
+function getSuit(){
+suit = Shuffle(4);
+if(suit == 1) return "Picl'ye";
+if(suit == 2) return "Trêfl'ye";
+if(suit == 3) return "Carreau";
+else return "Tchoeu";
+}
+function cardName(card){
+if(card == 1) return "As";
+if(card == 2) return "Deux";
+if(card == 3) return "Trais";
+if(card == 4) return "Quat'";
+if(card == 5) return "Chîn";
+if(card == 6) return "Six";
+if(card == 7) return "Sept";
+if(card == 8) return "Huit";
+if(card == 9) return "Neuf";
+if(card == 10) return "Dgix";
+if(card == 11) return "Valet";
+if(card == 12) return "Danme";
+if(card == 13) return "Rouai";
+return "" + card;
+}
+function cardValue(card,strWho){
+if(card == 1) {
+	if(strWho =="You" && document.display.you.value >10){
+	document.display.say2.value=document.display.say2.value+" - bas"; return 1;}
+	else return 11; }
+ if(card > 10) return 10; 
+return card;
+}
+function PickACard(strWho){
+card = Shuffle(12);
+suit = getSuit();
+if(strWho =="You")
+document.display.say2.value=(cardName(card) + " dé " + suit);
+else
+document.display.say1.value=(cardName(card) + " dé " + suit);
+return cardValue(card,strWho);
+}
+function NewHand(form){
+if(gameOver !=0)
+{form.say1.value=("J'sommes acouo à jouer!"); form.say2.value=(""); return;}
+else
+{form.dealer.value = 0; form.you.value = 0; cardCount=0;
+form.dealer.value = eval(form.dealer.value) + PickACard("Dealer");
+form.you.value = eval(form.you.value) + PickACard("You");
+gameOver= -1; cardCount+=1;}
+}
+function Dealer(form){
+if (gameOver ==0)
+{form.say1.value=("Donnez les cartes!"); form.say2.value=(""); return;}
+else
+if(form.you.value<10)
+{form.say1.value=("Pas auve mains qu'dgix!"); form.say2.value=("Prannez eune carte!"); return;}
+else
+if (cardCount <2)
+{form.say1.value=("Au mains deux cartes!"); form.say2.value=("Acouo eune fais!"); return;}
+else
+while(form.dealer.value < 17)
+{form.dealer.value = eval(form.dealer.value) + PickACard("Dealer");}
+}
+function User(form){
+if (gameOver ==0)
+{form.say1.value=("Donnez les cartes!"); form.say2.value=(""); return;}
+else
+{cardCount+=1; form.say1.value=("Ous avez...");
+form.you.value = eval(form.you.value) + PickACard("You");}
+if(form.you.value > 21)
+{form.say1.value=("Ous êtes hors!");
+gameOver=0; form.numgames.value=eval(form.numgames.value)-1;}
+}
+function LookAtHands(form){
+if (gameOver ==0 || form.you.value<10 || cardCount <2){return;}
+else
+if(form.dealer.value > 21)
+{form.say1.value=("La maîson a pèrdu!"); form.say2.value=("Ous avez gângni!");
+gameOver=0; form.numgames.value=eval(form.numgames.value)+1;}
+ else
+if(form.you.value > form.dealer.value)
+{form.say1.value=("Ous avez gângni!"); form.say2.value=("££££££££££££");
+gameOver=0; form.numgames.value=eval(form.numgames.value)+1;}
+ else
+ if(form.dealer.value == form.you.value)
+{form.say1.value=("Êgaux"); form.say2.value=("Acouo eune fais!");
+gameOver=0; form.numgames.value=eval(form.numgames.value)-1;}
+ else
+{form.say1.value=("La maîson a gângni!"); form.say2.value=("Tchi pitchi!");
+gameOver=0; form.numgames.value=eval(form.numgames.value)-1;}
+}
+function setBj(){
+gameOver=0; cardCount=0; 
+document.display.dealer.value=""; 
+document.display.you.value="";
+document.display.numgames.value="0";
+document.display.say1.value="    Clyiquez sus 'Donnez'";
+document.display.say2.value="    pouor c'menchi!";
+}
+// End -->
+</script>
+
+
+
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21" OnLoad="setBj()">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+<center><font color="#215e21"><h2>V&icirc;ngt-tch'ieune</h2></font></center><p>
+&nbsp;<p>
+
+<center>
+
+<table width=500 border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td><center><img src="ahp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="10sp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="4dp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="6cp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="khp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="8sp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="jdp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="6cp.jpg" width="51" height="75" alt=""></center></td>
+</tr>
+</table>
+
+
+
+
+<form name="display">
+<table width=500 bgcolor="darkgreen" border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td><center><input type=button value=" Donnez " onClick="NewHand(this.form)"></center></td>
+<td><center><b><font size="5" color="white">Donneux</b></font></center></td>
+<td><center><input type=text name="dealer" size="2"></center></td>
+<td><center><b><font size="5" color="white">Carte(s):</b></font>  <input type=text name="say1" size="25" value=""></center></td>
+</tr>
+<tr>
+<td><center></center></td>
+<td><center><b><font size="5" color="white">Joueux</b></font></center></td>
+<td><center><input type=text name="you" size="2"></center></td>
+<td><center><b><font size="5" color="white">Carte(s): </b></font> <input type=text name="say2" size="25" value=""></center></td>
+</tr>
+<tr>
+<td><center><b><font size="5" color="white">M&egrave;rques:</font></b><input type=text name="numgames" size="3" value="0"></center></td>
+<td colspan=3><center>
+<input type=button value=" Gardez " onClick="Dealer(this.form);LookAtHands(this.form);">
+<input type=button value=" Prannez " onClick="User(this.form)"></center></td></tr>
+</table>
+</form>
+
+<table width=500 border="0" cellspacing="0" cellpadding="3">
+<tr>
+<td><center><img src="4cp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="jhp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="ksp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="9dp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="qcp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="3hp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="5sp.jpg" width="51" height="75" alt=""></center></td>
+<td><center><img src="adp.jpg" width="51" height="75" alt=""></center></td>
+
+</tr>
+</table>
+</center>
+
+<p><center>
+<font face="arial, helvetica" size="-2">JavaScript adapt&eacute; d&eacute; siez <a href="http://javascriptsource.com/">The JavaScript Source</a></font>
+</center><p>
+
+
+<CENTER>
+<TABLE width=500>
+<TR>
+<TD>
+<FONT SIZE=2>
+
+V&icirc;ngt-tch'ieune, connue &eacute;tout coumme blackjack, est eune gamme d&eacute; cartes. Nou la joue coumme chennech&icirc;n: deux cartes sont donn&eacute;es, ieune pouor l&eacute; donneux et l'aut' pouor l&eacute; joueux. L&eacute; joueux dait prendre acouo eune carte et pis choua&icirc;si s'i' veurt prendre acouo des cartes. L'id&eacute;e d'la gamme est d'arriver &agrave; v&icirc;ngt-tch'iun ou d'aver la pus haute m&egrave;rque sans p&acirc;sser v&icirc;ngt-tch'ieun.<p>
+
+Si l'joueux p&acirc;sse v&icirc;ngt-tch'iun, il a p&egrave;rdu. S'i' d&eacute;cide d&eacute; garder ses cartes, ch'est l'tou au donneux d&eacute; jouer. S'il &egrave;rchait pus d'm&egrave;rques qu&eacute; l'joueux sans p&acirc;sser v&icirc;ngt-tch'iun, il a battu l&eacute; joueux.<p>
+
+Clyiquez sus &#147;Donnez&#148; pouor c'menchi, et pis clyiquez sus &#147;Prannez&#148; pouor ajou&ocirc;ter eune carte. Quand ou voulez garder les m&egrave;rques &egrave;rchus et p&acirc;sser l'tou au donneux, clyiquez sus &#147;Gardez&#148;.<p>
+
+Bouonne chance!
+
+
+</FONT></TD>
+</TR>
+</TABLE>
+</CENTER><p>
+
+
+
+&nbsp;<p>
+<FONT SIZE=2>
+<I>Viyiz &eacute;tout:</I><p>
+<UL>
+<li><a href="cartevoc.html">Jouer &egrave;s cartes en J&egrave;rriais</a><p>
+<li><a href="gammvoc.html">Des gammes</a><p>
+<li><a href="jeux.html">Les jeux J&egrave;rriais du temps p&acirc;ss&eacute;</a><p>
+<LI><A HREF="cartes.html">Ch&egrave;rchiz la Danme</A> - Hunt the Lady<p>
+<LI><A HREF="carte_hasard.html">Eune carte au h&acirc;sard</A><p>
+<li><a href="courses.html">&Egrave;s courses</a><p>
+<li><a href="1a10cartecad.html">D&eacute; ieune &agrave; dgix auve des cartes</a><p>
+<LI><A HREF="cartesqz.html">Les cartes</A><p>
+<li><a href="cartecad.html">Les cartes</a> - acouo un quiz<p>
+<li><a href="cartesqz2.html">Les Cartes</a><p>
+<li><a href="cartesqz3.html">Les Cartes</a><p>
+
+</UL>
+</FONT>
+
+
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/vingttchieune.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:57 GMT -->
+</HTML>

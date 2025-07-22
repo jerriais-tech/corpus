@@ -1,0 +1,459 @@
+<HTML>
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/entouor_jerric.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:10:13 GMT -->
+<HEAD><META NAME="Author" CONTENT="Produced using Hot Potatoes by Half-Baked Software, registered to Geraint Jennings.">
+<TITLE>
+Entouor J&egrave;rri
+</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var Feedback = '';
+var Correct = 'Ch\'est bein!';
+var Incorrect = 'Nann&icirc;n! Acouo eune fais!'; 
+var GiveHint = 'Eune bouonne lettre a \'t&eacute; ajou&ocirc;t&eacute;e';
+var CaseSensitive = 'True';
+var YourScoreIs = 'Vos points:';
+var platform = 'win';
+
+var CurrentWord = 0;
+
+var WinLowerString='abcdefghijklmnopqrstuvwxyz%9A%9C%E0%E1%E2%E3%E4%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%EF%F0%F1%F2%F3%F4%F5%F6%F8%F9%FA%FB%FC%FD%FE%FF';
+var WinUpperString='ABCDEFGHIJKLMNOPQRSTUVWXYZ%8A%8C%C0%C1%C2%C3%C4%C5%C6%C7%C8%C9%CA%CB%CC%CD%CE%CF%D0%D1%D2%D3%D4%D5%D6%D8%D9%DA%DB%DC%DD%DE%9F';
+
+var MacLowerString='abcdefghijklmnopqrstuvwxyz%8A%8C%8D%8E%96%9A%9F%BE%BF%88%8B%9B%CF%D8%89%90%87%91%8F%92%94%95%93%97%98%9C%9E%9D';
+var MacUpperString='ABCDEFGHIJKLMNOPQRSTUVWXYZ%80%81%82%83%84%85%86%AE%AF%CB%CC%CD%CE%D9%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%F1%F2%F3%F4';
+
+var LowerString = '';
+var UpperString = '';
+
+MacAnswers = new Array();
+WinAnswers = new Array();
+AnswerList = new Array();
+
+var IsWrong = 0;
+
+function StartUp(){
+
+MacAnswers[1] = 'Manche';
+MacAnswers[2] = 'Manche';
+MacAnswers[3] = 'Manche';
+MacAnswers[4] = 'Manche';
+MacAnswers[5] = 'douze';
+MacAnswers[6] = 'douze';
+MacAnswers[7] = 'douze';
+MacAnswers[8] = 'douze';
+MacAnswers[9] = 'P%89ra%94sses';
+MacAnswers[10] = 'p%89ra%94sses';
+MacAnswers[11] = 'p%89ra%94sses';
+MacAnswers[12] = 'p%89ra%94sses';
+MacAnswers[13] = 'vaque';
+MacAnswers[14] = 'vaque';
+MacAnswers[15] = 'vaque';
+MacAnswers[16] = 'vaque';
+MacAnswers[17] = 'patate';
+MacAnswers[18] = 'patate';
+MacAnswers[19] = 'patate';
+MacAnswers[20] = 'patate';
+MacAnswers[21] = 'ch%94nquante';
+MacAnswers[22] = 'ch%94nquante';
+MacAnswers[23] = 'ch%94nquante';
+MacAnswers[24] = 'ch%94nquante';
+MacAnswers[25] = 'neuf';
+MacAnswers[26] = 'neuf';
+MacAnswers[27] = 'neuf';
+MacAnswers[28] = 'neuf';
+MacAnswers[29] = 'douze';
+MacAnswers[30] = 'douze';
+MacAnswers[31] = 'douze';
+MacAnswers[32] = 'douze';
+MacAnswers[33] = 'Conn%90tabl\'yes';
+MacAnswers[34] = 'Conn%90tabl\'yes';
+MacAnswers[35] = 'Conn%90tabl\'yes';
+MacAnswers[36] = 'Conn%90tabl\'yes';
+MacAnswers[37] = 'Gouv%8Frneux';
+MacAnswers[38] = 'Gouv%8Frneux';
+MacAnswers[39] = 'Gouv%8Frneux';
+MacAnswers[40] = 'Gouv%8Frneux';
+MacAnswers[41] = 'Reine';
+MacAnswers[42] = 'Reine';
+MacAnswers[43] = 'Reine';
+MacAnswers[44] = 'Reine';
+
+
+WinAnswers[1] = 'Manche';
+WinAnswers[2] = 'Manche';
+WinAnswers[3] = 'Manche';
+WinAnswers[4] = 'Manche';
+WinAnswers[5] = 'douze';
+WinAnswers[6] = 'douze';
+WinAnswers[7] = 'douze';
+WinAnswers[8] = 'douze';
+WinAnswers[9] = 'P%E2ra%EEsses';
+WinAnswers[10] = 'p%E2ra%EEsses';
+WinAnswers[11] = 'p%E2ra%EEsses';
+WinAnswers[12] = 'p%E2ra%EEsses';
+WinAnswers[13] = 'vaque';
+WinAnswers[14] = 'vaque';
+WinAnswers[15] = 'vaque';
+WinAnswers[16] = 'vaque';
+WinAnswers[17] = 'patate';
+WinAnswers[18] = 'patate';
+WinAnswers[19] = 'patate';
+WinAnswers[20] = 'patate';
+WinAnswers[21] = 'ch%EEnquante';
+WinAnswers[22] = 'ch%EEnquante';
+WinAnswers[23] = 'ch%EEnquante';
+WinAnswers[24] = 'ch%EEnquante';
+WinAnswers[25] = 'neuf';
+WinAnswers[26] = 'neuf';
+WinAnswers[27] = 'neuf';
+WinAnswers[28] = 'neuf';
+WinAnswers[29] = 'douze';
+WinAnswers[30] = 'douze';
+WinAnswers[31] = 'douze';
+WinAnswers[32] = 'douze';
+WinAnswers[33] = 'Conn%EAtabl\'yes';
+WinAnswers[34] = 'Conn%EAtabl\'yes';
+WinAnswers[35] = 'Conn%EAtabl\'yes';
+WinAnswers[36] = 'Conn%EAtabl\'yes';
+WinAnswers[37] = 'Gouv%E8rneux';
+WinAnswers[38] = 'Gouv%E8rneux';
+WinAnswers[39] = 'Gouv%E8rneux';
+WinAnswers[40] = 'Gouv%E8rneux';
+WinAnswers[41] = 'Reine';
+WinAnswers[42] = 'Reine';
+WinAnswers[43] = 'Reine';
+WinAnswers[44] = 'Reine';
+
+
+	platform = 'win';
+	if (navigator.appVersion.indexOf('Mac') != -1) {
+		platform = 'mac';
+	}
+
+	if (platform == 'win'){
+		for (i = 1; i < WinAnswers.length; i++){
+			AnswerList[i] = unescape(WinAnswers[i]);
+		LowerString = unescape(WinLowerString);
+		UpperString = unescape(WinUpperString);
+		}
+	}
+	else {
+		for (i = 1; i < MacAnswers.length; i++){
+			AnswerList[i] = unescape(MacAnswers[i]);
+		LowerString = unescape(MacLowerString);
+		UpperString = unescape(MacUpperString);
+		}
+	}
+}
+
+function ConvertCase(InString, Direction){
+
+	var FromString = '';
+	var ToString = '';
+
+	if (Direction == 0){
+		FromString = UpperString;
+		ToString = LowerString;
+	}
+	else{
+		FromString = LowerString;
+		ToString = UpperString;
+	}
+
+	var i = 0;
+	j = 0;
+	var OutString = '';
+	for (i=0; i<InString.length; i++){
+		if (FromString.indexOf(InString.charAt(i)) > -1){
+			j = FromString.indexOf(InString.charAt(i));			
+			OutString += ToString.charAt(j);
+		}
+		else{	
+			OutString += InString.charAt(i);
+		}
+	}
+	return OutString;
+}
+
+
+
+function CheckAllAnswers(){
+	var x = 0;
+	var y = 0;
+	var AnsNum = 0;
+	var InString = '';
+	IsWrong = 0;
+	var Answers = new Array(4);
+	var Tries = Math.floor((AnswerList.length) / 4);
+	var NumberCorrect = 0;
+	var Score = 0;
+
+	for (x=0; x<(document.cloze.elements.length); x++){
+		InString = TrimString(document.cloze.elements[x].value);
+		AnsNum = (x*4) +1;
+		Answers[1] = AnswerList[AnsNum];
+		Answers[2] = AnswerList[AnsNum+1];
+		Answers[3] = AnswerList[AnsNum+2];
+		Answers[4] = AnswerList[AnsNum+3];
+
+		if (CaseSensitive == 'False') {
+			InString = ConvertCase(InString, 1);
+			for (y=1; y<5; y++) {
+				Answers[y] = ConvertCase(Answers[y], 1);
+			}
+		}
+
+		if ((InString == Answers[1]) || (InString == Answers[2]) ||(InString == Answers[3]) || (InString == Answers[4])) {
+			NumberCorrect++;
+		}
+		else {
+			IsWrong = 1;
+			document.cloze.elements[x].value = '';
+		}
+	}
+
+	
+	Score = Math.floor((NumberCorrect*100)/Tries);
+
+	if (IsWrong == 1) {
+		Feedback = Incorrect;
+		Feedback+= '<BR>' + YourScoreIs + ' ' + Score + '%.';
+	}
+
+	else {
+		Feedback = Correct;
+		Feedback+= ' ' + YourScoreIs + ' ' + Score + '%.'+ '<BR>';
+		 	Feedback += '<form method=post><INPUT TYPE=\"button\" VALUE=\"Avant\"';
+  Feedback += ' onClick=\"parent.location=\'quizmnu.html\'\"></form>';
+
+	}
+
+	
+
+	WriteFeedback(Feedback);
+}
+
+function TrimString(InString){
+
+	var x = 0;
+
+	if (InString.length != 0) {
+
+		while ((escape(InString.charAt(InString.length - 1)) == '%20') || (escape(InString.charAt(InString.length - 1)) == '%0A') || (escape(InString.charAt(InString.length - 1)) == '%0D')){
+			InString = InString.substring(0, InString.length - 1);
+		}
+
+		while ((escape(InString.charAt(0)) == '%20') || (escape(InString.charAt(0)) == '%0A') || (escape(InString.charAt(0)) == '%0D')){
+			InString = InString.substring(1, InString.length);
+		}
+
+		while (InString.indexOf('  ') != -1) {
+			x = InString.indexOf('  ');
+			InString = InString.substring(0, x) + InString.substring(x+1, InString.length );
+		}
+		return InString;
+	}
+	else {
+		return '';
+	}
+}
+
+function WriteFeedback(Feedback) {
+parent.frames[0].document.clear();
+parent.frames[0].document.open();
+parent.frames[0].document.writeln ("<html>");
+parent.frames[0].document.writeln ("<body bgcolor=#FFFFFF text=#BA050A background=\"\">");
+parent.frames[0].document.writeln ("<font size = +1><center><b>");
+parent.frames[0].document.writeln (Feedback);
+parent.frames[0].document.writeln ("</b></center></font></body></html>");
+parent.frames[0].document.close();
+}
+
+function Cheat(){
+
+	CurrentAnswers = new Array(4);
+	CorrectBits = new Array(4);
+	var CurrentAnswer = FindCurrent();
+
+	if (CurrentAnswer == -1) {
+		return;
+	}
+
+	CurrentAnswers[1] = AnswerList[(CurrentAnswer * 4) + 1];
+	CurrentAnswers[2] = AnswerList[(CurrentAnswer * 4) + 2];
+	CurrentAnswers[3] = AnswerList[(CurrentAnswer * 4) + 3];
+	CurrentAnswers[4] = AnswerList[(CurrentAnswer * 4) + 4];
+
+	CorrectBits[1] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[1]);
+	CorrectBits[2] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[2]);
+	CorrectBits[3] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[3]);
+	CorrectBits[4] = CheckBeginning(document.cloze.elements[CurrentAnswer].value, CurrentAnswers[4]);
+
+	Longest = FindLongest(CorrectBits[1], CorrectBits[2], CorrectBits[3], CorrectBits[4]);
+		
+	document.cloze.elements[CurrentAnswer].value = CorrectBits[Longest];
+	WriteFeedback(GiveHint);
+}
+
+function TrackFocus(BoxNumber){
+	CurrentWord = BoxNumber;
+}
+
+
+function CheckBeginning(Guess, Answer){
+	var OutString = '';
+	var i = 0;
+	var UpperGuess = '';
+	var UpperAnswer = '';
+
+	if (CaseSensitive == 'False') {
+		UpperGuess = ConvertCase(Guess, 1);
+		UpperAnswer = ConvertCase(Answer, 1);
+	}
+	else {
+		UpperGuess = Guess;
+		UpperAnswer = Answer;
+	}
+
+	while (UpperGuess.charAt(i) == UpperAnswer.charAt(i)) {
+		OutString += Guess.charAt(i);
+		i++;
+	}
+	OutString += Answer.charAt(i);
+	return OutString;
+}
+
+
+function CheckAnswer(Guess, AnsNum){
+
+	if (CaseSensitive == 'True'){
+
+		if ((Guess == AnswerList[(AnsNum * 4) + 1]) || (Guess == AnswerList[(AnsNum * 4) + 2]) || (Guess == AnswerList[(AnsNum * 4) + 3]) || (Guess == AnswerList[(AnsNum * 4) + 4])) {
+
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	else{
+		Guess = ConvertCase(Guess, 1);
+		if ((Guess == ConvertCase(AnswerList[(AnsNum * 4) + 1], 1)) || (Guess == ConvertCase(AnswerList[(AnsNum * 4) + 2], 1)) || (Guess == ConvertCase(AnswerList[(AnsNum * 4) + 3], 1)) || (Guess == ConvertCase(AnswerList[(AnsNum * 4) + 4], 1))) {
+
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+}
+
+function FindCurrent() {
+
+	var FoundCurrent = -1;
+	var x = 0;
+
+	if (CheckAnswer(document.cloze.elements[CurrentWord].value, CurrentWord) == false) {
+		FoundCurrent = CurrentWord;
+	}	
+	else {
+
+		x=CurrentWord + 1;
+		while ((FoundCurrent == -1) && (x<document.cloze.elements.length)){
+			if (CheckAnswer(document.cloze.elements[x].value, x) == false) {
+				FoundCurrent = x;
+			}
+			x++;	
+		}
+	}
+	if (FoundCurrent == -1){
+		x = 0;
+		while ((FoundCurrent == -1) && (x<CurrentWord)){
+			if (CheckAnswer(document.cloze.elements[x].value, x) == false) {
+
+				FoundCurrent = x;
+			}
+			x++;
+		}
+
+	}
+	return FoundCurrent;
+}
+
+function FindLongest(First, Second, Third, Fourth){
+var Longest = 0;
+var LongString = '';
+	   Longest = 4;
+	   LongString = Fourth;
+	   if (Third.length >= LongString.length){
+			 Longest = 3;
+			 LongString = Third;
+	   }
+	   if (Second.length >= LongString.length){
+			 Longest = 2;
+			 LongString = Second;
+	   }
+	   if (First.length >= LongString.length){
+			 Longest = 1;
+			 LongString = First;
+	   }
+	   return Longest;
+}
+
+
+</SCRIPT></HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="#" onLoad="StartUp()">
+
+<CENTER>
+
+<h2>Entouor J&egrave;rri</h2>
+<b><i>Compli&eacute;tez les patholes tchi manquent</i></b>
+
+</CENTER><br>
+
+<FORM>
+<INPUT TYPE="button" VALUE="A&icirc;dgiz-m&eacute;!" onClick="parent.FeedbackFrame.location='entouor_jerriw.html#help'"><BR>
+</FORM>
+
+<FORM NAME="cloze">
+<BLOCKQUOTE>
+
+J&egrave;rri est ieune des &Icirc;les d'la <INPUT TYPE="TEXT" NAME="0" SIZE="6" onFocus="TrackFocus(0)">.<BR>
+<BR>
+J&egrave;rri a <INPUT TYPE="TEXT" NAME="1" SIZE="9" onFocus="TrackFocus(1)"> P&acirc;ra&icirc;sses.<BR>
+<BR>
+St. H&eacute;lyi est ieune des <INPUT TYPE="TEXT" NAME="2" SIZE="9" onFocus="TrackFocus(2)">.<BR>
+<BR>
+La <INPUT TYPE="TEXT" NAME="3" SIZE="9" onFocus="TrackFocus(3)"> J&egrave;rriaise nos donne du bou&ocirc;n lait.<BR>
+<BR>
+La Rouoyale J&egrave;rriaise est eune fanmeuse <INPUT TYPE="TEXT" NAME="4" SIZE="6" onFocus="TrackFocus(4)"> qu'nou tchultive en J&egrave;rri.<BR>
+<BR>
+I' y'a <INPUT TYPE="TEXT" NAME="5" SIZE="10" onFocus="TrackFocus(5)">-trais membres des &Ecirc;tats.<BR>
+<BR>
+&Egrave;s &Ecirc;tats, i' y'a v&icirc;ngt-<INPUT TYPE="TEXT" NAME="6" SIZE="9" onFocus="TrackFocus(6)"> D&eacute;put&eacute;s.<BR>
+<BR>
+I' y'a <INPUT TYPE="TEXT" NAME="7" SIZE="9" onFocus="TrackFocus(7)"> S&eacute;nateurs.<BR>
+<BR>
+I' y'a douze <INPUT TYPE="TEXT" NAME="8" SIZE="13" onFocus="TrackFocus(8)"> &eacute;tout.<BR>
+<BR>
+L&eacute; Lieut'nant-<INPUT TYPE="TEXT" NAME="9" SIZE="10" onFocus="TrackFocus(9)"> d'meuthe &agrave; Government House.<BR>
+<BR>
+I' r'pr&eacute;sente la <INPUT TYPE="TEXT" NAME="10" SIZE="9" onFocus="TrackFocus(10)">, not' Duc.<BR>
+<BR>
+
+
+</BLOCKQUOTE></FORM>
+<CENTER><FORM NAME="buttonform">
+<INPUT TYPE="button" VALUE="Contr&ocirc;le" onClick="CheckAllAnswers()"><INPUT TYPE="button" VALUE="Sugg&eacute;thez!"  onClick="Cheat()">
+<P>
+<TABLE BORDER=1 CELLPADDING=10><TR><TD><CENTER><B> &nbsp;&nbsp;ch&icirc;nquante&nbsp;&nbsp; &nbsp;&nbsp;Conn&ecirc;tabl'yes&nbsp;&nbsp; &nbsp;&nbsp;douze&nbsp;&nbsp; &nbsp;&nbsp;douze&nbsp;&nbsp; &nbsp;&nbsp;Gouv&egrave;rneux&nbsp;&nbsp; &nbsp;&nbsp;Manche&nbsp;&nbsp; &nbsp;&nbsp;neuf&nbsp;&nbsp; &nbsp;&nbsp;P&acirc;ra&icirc;sses&nbsp;&nbsp; &nbsp;&nbsp;patate&nbsp;&nbsp; &nbsp;&nbsp;Reine&nbsp;&nbsp; &nbsp;&nbsp;vaque&nbsp;&nbsp; &nbsp;&nbsp;</B></CENTER></TD></TR></TABLE>
+<P>
+<INPUT TYPE="button" VALUE="Avant" onClick="parent.location='quizmnu.html'"><INPUT TYPE="button" VALUE="R'tou au cont'nu" onClick="parent.location='quizmnu.html'"><INPUT TYPE="button" VALUE="Arri&eacute;the" onClick="parent.history.back()">
+</FORM></CENTER>
+</BODY>
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/entouor_jerric.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:10:13 GMT -->
+</HTML>
+
+

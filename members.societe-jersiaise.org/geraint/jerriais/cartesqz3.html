@@ -1,0 +1,869 @@
+<?xml version="1.0"?>
+       <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+       <html xmlns="http://www.w3.org/1999/xhtml"
+             xml:lang="en">
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/cartesqz3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:44 GMT -->
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Geraint Jennings."></meta><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"></meta>
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC:Creator" content="Geraint Jennings" />
+<meta name="DC:Title" content="Les Cartes" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+
+<title>
+Les Cartes
+</title>
+
+<!-- Made with executable version 5.5 Release 0 Build 22 -->
+
+<style type="text/css">
+
+body {
+	font-family: Geneva,Arial;
+	background-color: #ffffff;
+	color: #000000;
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: small;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: small;
+}
+
+div,span{
+	font-size: small;
+}
+
+div.Titles{
+	padding-top: 10px;
+	text-align: center;
+	margin-bottom: 4px;
+	color: #008000;
+}
+
+.ExerciseTitle{
+	font-size: large;
+	color: #008000;
+}
+
+.ExerciseSubtitle{
+	color: #008000;
+}
+
+span.Instructions{
+
+}
+
+.FeedbackText{
+
+}
+
+div.Feedback {
+	background-color: #ffffff;
+	left: 1px;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: #008000;
+	position: absolute;
+	display: none;
+	font-size: small;
+}
+
+div.StdDiv{
+	background-color: #ffffff;
+	text-align: center;
+	font-size: smaller;
+	color: #000000;
+	padding: 8px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: #000000;
+	margin: 1px;
+}
+
+.FunctionButton {
+	background-color: #ffffff;
+	color: #000000;
+	text-align: center;
+	border-style: solid;
+	border-color: #ffffff;
+	border-width: 2px;
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+div.NavButtonBar{
+	background-color: #008000;
+	text-align: center;
+	margin: 2px 0px 2px 0px;
+	clear: both;
+	font-size: small;
+}
+
+div.NavButtonBar button {
+	border-style: solid;
+	border-color: #008000;
+	background-color: #008000;
+	border-width: 2px;
+	padding: 2px 2px 2px 2px;
+	color: #ffffff;
+	cursor: pointer;	
+}
+
+a{
+	color: #0000ff;
+}
+
+a: visited{
+	color: #0000cc;
+}
+
+a:hover{
+	color: #0000ff;
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: small;
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	color: #000000;
+	background-color: #ffffff;
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+}
+
+</style>
+
+<script type="text/javascript"> 
+
+//<![CDATA[
+
+<!--
+
+function BrowserCheck() {
+	var b = navigator.appName;
+	this.mac = (navigator.appVersion.indexOf('Mac') != -1);
+	if (b=="Netscape") this.b = 'ns';
+	else if (b=="Microsoft Internet Explorer") this.b = 'ie';
+	else this.b = b;
+	this.ns = (this.b == 'ns');
+	this.ie = (this.b == 'ie');
+	this.version = navigator.appVersion;
+	if (this.b == 'ie'){
+		var x = this.version.indexOf('MSIE ') + 5;
+		var vnum = '';
+
+		while ((this.version.charAt(x) > -1)&&(this.version.charAt(x) < 10)){
+			vnum += this.version.charAt(x);
+			x++;
+		}
+		this.v = parseInt(vnum);
+	}
+	else{
+		this.v = parseInt(this.version);
+	}
+	if (this.ns&&(this.v == 5)){
+		this.v = 6;
+	}
+	this.min = (this.v > 5);
+}
+
+is = new BrowserCheck();
+
+if ((is.min == false)||(is.ie5mac)){
+	alert('Your browser can\'t handle this page. You need NS6+ or IE6+ on Windows, or NS6+ on Mac.');
+}
+
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	if (is.ns) this.W = window.innerWidth;
+	if (is.ie) this.W = document.body.clientWidth;
+	if (is.ns) this.H = window.innerHeight;
+	if (is.ie) this.H = document.body.clientHeight;
+}
+
+var pg = null;
+
+function SuppressBackspace(e){ 
+	 if (is.ns) {
+		thisKey = e.keyCode;
+	}
+	else {
+		thisKey = window.event.keyCode;
+	}
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+	}
+
+	if (Suppress == true){
+		if (is.ie){
+			window.event.returnValue = false;	
+			window.event.cancelBubble = true;
+		}
+		else{
+			e.preventDefault();
+		}
+	}
+}
+
+var NavLightColor = '#7fbf7f';
+var NavShadeColor = '#004000';
+var NavBarColor = '#008000';
+var FuncLightColor = '#ffffff';
+var FuncShadeColor = '#7f7f7f';
+var ExBGColor = '#ffffff';
+
+function NavBtnOver(Btn){
+	Btn.style.padding = '1px 3px 3px 1px';
+	Btn.style.borderLeftColor = NavLightColor;
+	Btn.style.borderTopColor = NavLightColor;
+	Btn.style.borderRightColor = NavShadeColor;
+	Btn.style.borderBottomColor = NavShadeColor;
+}
+
+function NavBtnOut(Btn){
+	Btn.style.borderColor = NavBarColor;
+	Btn.style.padding = '2px 2px 2px 2px';
+}
+
+function NavBtnDown(Btn){
+	Btn.style.borderLeftColor = NavShadeColor;
+	Btn.style.borderTopColor = NavShadeColor;
+	Btn.style.borderRightColor = NavLightColor;
+	Btn.style.borderBottomColor = NavLightColor;
+	Btn.style.padding = '3px 1px 1px 3px';
+}
+
+function FuncBtnOver(Btn){
+	Btn.style.padding = '2px 7px 4px 5px';
+	Btn.style.borderLeftColor = FuncLightColor;
+	Btn.style.borderTopColor = FuncLightColor;
+	Btn.style.borderRightColor = FuncShadeColor;
+	Btn.style.borderBottomColor = FuncShadeColor;
+}
+
+function FuncBtnOut(Btn){
+	Btn.style.borderColor = '#ffffff';
+	Btn.style.padding = '3px 6px 3px 6px';
+}
+
+function FuncBtnDown(Btn){
+	Btn.style.borderLeftColor = FuncShadeColor;
+	Btn.style.borderTopColor = FuncShadeColor;
+	Btn.style.borderRightColor = FuncLightColor;
+	Btn.style.borderBottomColor = FuncLightColor;
+	Btn.style.padding = '4px 5px 2px 7px';
+}
+
+function Card(ID){
+	this.elm=document.getElementById(ID);
+	this.name=ID;
+	this.css=this.elm.style;
+	this.elm.style.left = 0 +'px';
+	this.elm.style.top = 0 +'px';
+	this.HomeL = 0;
+	this.HomeT = 0;
+	this.tag=-1;
+	this.index=-1;
+}
+
+function CardGetL(){return parseInt(this.css.left)}
+Card.prototype.GetL=CardGetL;
+
+function CardGetT(){return parseInt(this.css.top)}
+Card.prototype.GetT=CardGetT;
+
+function CardGetW(){return parseInt(this.elm.offsetWidth)}
+Card.prototype.GetW=CardGetW;
+
+function CardGetH(){return parseInt(this.elm.offsetHeight)}
+Card.prototype.GetH=CardGetH;
+
+function CardGetB(){return this.GetT()+this.GetH()}
+Card.prototype.GetB=CardGetB;
+
+function CardGetR(){return this.GetL()+this.GetW()}
+Card.prototype.GetR=CardGetR;
+
+function CardSetL(NewL){this.css.left = NewL+'px'}
+Card.prototype.SetL=CardSetL;
+
+function CardSetT(NewT){this.css.top = NewT+'px'}
+Card.prototype.SetT=CardSetT;
+
+function CardSetW(NewW){this.css.width = NewW+'px'}
+Card.prototype.SetW=CardSetW;
+
+function CardSetH(NewH){this.css.height = NewH+'px'}
+Card.prototype.SetH=CardSetH;
+
+function CardInside(X,Y){
+	var Result=false;
+	if(X>=this.GetL()){if(X<=this.GetR()){if(Y>=this.GetT()){if(Y<=this.GetB()){Result=true;}}}}
+	return Result;
+}
+Card.prototype.Inside=CardInside;
+
+function CardSwapColours(){
+	var c=this.css.backgroundColor;
+	this.css.backgroundColor=this.css.color;
+	this.css.color=c;
+}
+Card.prototype.SwapColours=CardSwapColours;
+
+function CardHighlight(){
+	this.css.backgroundColor='#000000';
+	this.css.color='#ffffff';
+}
+Card.prototype.Highlight=CardHighlight;
+
+function CardUnhighlight(){
+	this.css.backgroundColor='#ffffff';
+	this.css.color='#000000';
+}
+Card.prototype.Unhighlight=CardUnhighlight;
+
+function CardOverlap(OtherCard){
+	var smR=(this.GetR()<(OtherCard.GetR()+10))? this.GetR(): (OtherCard.GetR()+10);
+	var lgL=(this.GetL()>OtherCard.GetL())? this.GetL(): OtherCard.GetL();
+	var HDim=smR-lgL;
+	if (HDim<1){return 0;}
+	var smB=(this.GetB()<OtherCard.GetB())? this.GetB(): OtherCard.GetB();
+	var lgT=(this.GetT()>OtherCard.GetT())? this.GetT(): OtherCard.GetT();
+	var VDim=smB-lgT;
+	if (VDim<1){return 0;}
+	return (HDim*VDim);	
+}
+Card.prototype.Overlap=CardOverlap;
+
+function CardDockToR(OtherCard){
+	this.SetL(OtherCard.GetR() + 5);
+	this.SetT(OtherCard.GetT());
+}
+
+Card.prototype.DockToR=CardDockToR;
+
+function CardSetHome(){
+	this.HomeL=this.GetL();
+	this.HomeT=this.GetT();
+}
+Card.prototype.SetHome=CardSetHome;
+
+function CardGoHome(){
+	this.SetL(this.HomeL);
+	this.SetT(this.HomeT);
+}
+
+Card.prototype.GoHome=CardGoHome;
+
+var CorrectResponse = 'Ch\'est bein! Bein fait!';
+var IncorrectResponse = 'N&#226;nn&#238;n. Acouo eune fais!';
+var YourScoreIs = 'Vos m&#232;rques:';
+var Correction = '[strCorrection]';
+var DivWidth = 600; //default value
+var FeedbackWidth = 200; //default
+var ExBGColor = '#ffffff';
+var PageBGColor = '#ffffff';
+var TextColor = '#000000';
+var TitleColor = '#008000';
+var Penalties = 0;
+var Score = 0;
+
+var CurrDrag = -1;
+var topZ = 100;
+
+var DragWidth = 200;
+var LeftColPos = 100;
+var RightColPos = 500;
+var DragTop = 120;
+var StartTime = (new Date()).toLocaleString();
+var HPNStartTime = (new Date()).getTime();
+var Finished = false;
+var SubmissionTimeout = 30000;
+
+
+
+//Fixed and draggable card arrays
+FC = new Array();
+DC = new Array();
+
+function doDrag(e) {
+	if (CurrDrag == -1) {return};
+	if (is.ie){var Ev = window.event}else{var Ev = e}
+	var difX = Ev.clientX-window.lastX; 
+	var difY = Ev.clientY-window.lastY; 
+	var newX = DC[CurrDrag].GetL()+difX; 
+	var newY = DC[CurrDrag].GetT()+difY; 
+	DC[CurrDrag].SetL(newX); 
+	DC[CurrDrag].SetT(newY);
+	window.lastX = Ev.clientX; 
+	window.lastY = Ev.clientY; 
+	return false;
+} 
+
+
+function beginDrag(e, DragNum) { 
+	CurrDrag = DragNum;
+	if (is.ie){
+		var Ev = window.event;
+		document.onmousemove=doDrag;
+		document.onmouseup=endDrag;
+	}
+	else{
+		var Ev = e;
+		window.onmousemove=doDrag; 
+		window.onmouseup=endDrag;
+	} 
+	DC[CurrDrag].Highlight();
+	topZ++;
+	DC[CurrDrag].css.zIndex = topZ;
+	window.lastX=Ev.clientX; 
+	window.lastY=Ev.clientY;
+	return false;  
+} 
+
+function endDrag(e) { 
+	if (CurrDrag == -1) {return};
+	DC[CurrDrag].Unhighlight();
+	if (is.ie){document.onmousemove=null}else{window.onmousemove=null;}
+	onEndDrag();	
+	CurrDrag = -1;
+	return true;
+} 
+
+function onEndDrag(){ 
+//Is it dropped on any of the fixed cards?
+	var Docked = false;
+	var DropTarget = DroppedOnFixed(CurrDrag);
+	if (DropTarget > -1){
+//If so, send home any card that is currently docked there
+		for (var i=0; i<DC.length; i++){
+			if (DC[i].tag == DropTarget+1){
+				DC[i].GoHome();
+				DC[i].tag = 0;
+				D[i][2] = 0;
+			}
+		}
+//Dock the dropped card
+		DC[CurrDrag].DockToR(FC[DropTarget]);
+		D[CurrDrag][2] = F[DropTarget][1];
+		DC[CurrDrag].tag = DropTarget+1;
+		Docked = true;
+	}
+
+	if (Docked == false){
+		DC[CurrDrag].GoHome();
+		DC[CurrDrag].tag = 0;
+		D[CurrDrag][2] = 0;
+	}
+} 
+
+function DroppedOnFixed(DNum){
+	var Result = -1;
+	var OverlapArea = 0;
+	var Temp = 0;
+	for (var i=0; i<FC.length; i++){
+		Temp = DC[DNum].Overlap(FC[i]);
+		if (Temp > OverlapArea){
+			OverlapArea = Temp;
+			Result = i;
+		}
+	}
+	return Result;
+}
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+
+function StartUp(){
+	if (is.ie){
+		document.attachEvent('onkeydown',SuppressBackspace);
+		window.attachEvent('onkeydown',SuppressBackspace);
+	}
+	else if (is.ns){
+		window.addEventListener('keypress',SuppressBackspace,false);
+	}
+
+
+
+
+	PreloadImages('ksp.jpg','3cp.jpg','5sp.jpg','ahp.jpg','4dp.jpg');
+
+
+//Calculate page dimensions and positions
+	pg = new PageDim();
+	DivWidth = Math.floor((pg.W*4)/5);
+	DragWidth = Math.floor((DivWidth*3)/10);
+	LeftColPos = Math.floor(pg.W/15);
+	RightColPos = pg.W - (DragWidth + LeftColPos);
+	DragTop = parseInt(document.getElementById('CheckButtonDiv').offsetHeight) + parseInt(document.getElementById('CheckButtonDiv').offsetTop) + 10;
+
+	if (is.ie){
+		DragTop += 15;
+	}
+
+//Shuffle the items on the right
+	D = Shuffle(D);
+
+	var CurrTop = DragTop;
+	var TempInt = 0;
+	var DropHome = 0;
+	var Widest = 0;
+
+	for (var i=0; i<F.length; i++){
+		FC[i] = new Card('F' + i);
+//		FC[i].SetW(DragWidth);
+		FC[i].elm.innerHTML = F[i][0] + '<br clear="all" />'; //required for Navigator rendering bug with images
+
+		if (FC[i].GetW() > Widest){
+			Widest = FC[i].GetW();
+		}
+	}
+
+	if (Widest > DragWidth){Widest = DragWidth;}
+
+	CurrTop = DragTop;
+
+	DragWidth = Math.floor((DivWidth-Widest)/2) - 24;
+	RightColPos = DivWidth + LeftColPos - (DragWidth + 14);
+	var Highest = 0;
+	var WidestRight = 0;
+
+	for (i=0; i<D.length; i++){
+		DC[i] = new Card('D' + i);
+		DC[i].elm.innerHTML = D[i][0] + '<br clear="all" />'; //required for Navigator rendering bug with images
+		if (DC[i].GetW() > DragWidth){DC[i].SetW(DragWidth);}
+		DC[i].css.cursor = 'move';
+		DC[i].css.backgroundColor = '#ffffff';
+		DC[i].css.color = '#000000';
+		TempInt = DC[i].GetH();
+		if (TempInt > Highest){Highest = TempInt;}
+		TempInt = DC[i].GetW();
+		if (TempInt > WidestRight){WidestRight = TempInt;}
+	}
+
+	var HeightToSet = Highest;
+	if (is.ns||is.ie5mac){HeightToSet -= 12;}
+	var WidthToSet = WidestRight;
+	if (is.ns||is.ie5mac){WidthToSet -= 12;}
+
+	for (i=0; i<D.length; i++){
+		DC[i].SetT(CurrTop);
+		DC[i].SetL(RightColPos);
+		if (DC[i].GetH() < Highest){
+			DC[i].SetH(HeightToSet);
+		}
+		if (DC[i].GetW() < WidestRight){
+			DC[i].SetW(WidthToSet);
+		}
+		DC[i].SetHome();
+		DC[i].tag = -1;
+		CurrTop = CurrTop + DC[i].GetH() + 5;
+	}
+
+	CurrTop = DragTop;
+
+	for (var i=0; i<F.length; i++){
+		FC[i].SetW(Widest);
+		if (FC[i].GetH() < Highest){
+			FC[i].SetH(HeightToSet);
+		}
+		FC[i].SetT(CurrTop);
+		FC[i].SetL(LeftColPos);
+		FC[i].SetHome();
+		TempInt = FC[i].GetH();
+		CurrTop = CurrTop + TempInt + 5;
+	}
+
+
+}
+
+
+
+F = new Array();
+F[0] = new Array();
+F[0][0]='<img src="ksp.jpg" alt="Tchi carte?" width="51" height="75" align="left" border="0"></img>';
+F[0][1] = 1;
+F[1] = new Array();
+F[1][0]='<img src="3cp.jpg" alt="Tchi carte?" width="51" height="75" align="left" border="0"></img>';
+F[1][1] = 2;
+F[2] = new Array();
+F[2][0]='<img src="5sp.jpg" alt="Tchi carte?" width="51" height="75" align="left" border="0"></img>';
+F[2][1] = 3;
+F[3] = new Array();
+F[3][0]='<img src="ahp.jpg" alt="Tchi carte?" width="51" height="75" border="0"></img>';
+F[3][1] = 4;
+F[4] = new Array();
+F[4][0]='<img src="4dp.jpg" alt="Tchi carte?" width="51" height="75" border="0"></img>';
+F[4][1] = 5;
+
+
+D = new Array();
+D[0] = new Array();
+D[0][0]='l&#233; Rouai d&#233; picl\'ye';
+D[0][1] = 1;
+D[0][2] = 0;
+D[1] = new Array();
+D[1][0]='l&#233; trais d&#233; tr&#234;fl\'ye';
+D[1][1] = 2;
+D[1][2] = 0;
+D[2] = new Array();
+D[2][0]='l&#233; ch&#238;n d&#233; picl\'ye';
+D[2][1] = 3;
+D[2][2] = 0;
+D[3] = new Array();
+D[3][0]='l\'as d&#233; tchoeu';
+D[3][1] = 4;
+D[3][2] = 0;
+D[4] = new Array();
+D[4][0]='l&#233; quat\' d&#233; carreau';
+D[4][1] = 5;
+D[4][2] = 0;
+
+
+function Shuffle(InArray){
+	Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < j; k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function TimerStartUp(){
+	setTimeout('StartUp()', 300);
+}
+
+function CheckAnswer(){
+//Set the default score and response
+	var TotalCorrect = 0;
+	Score = 0;
+	var Response = '';
+
+//for each fixed, check to see if the tag value for the draggable is the same as the fixed
+	var i, j;
+	for (i=0; i<D.length; i++){
+		if ((D[i][2] == D[i][1])&&(D[i][2] > 0)){
+			TotalCorrect++;
+		}
+		else{
+			DC[i].GoHome();
+		}
+	}
+
+	Score = Math.floor((100*(TotalCorrect-Penalties))/F.length);
+
+	if (TotalCorrect == F.length) {
+		Response = YourScoreIs + ' ' + Score + '%.';
+		WriteFeedback(Response + '<br />' + CorrectResponse);
+
+//Bug avoider for ie5mac
+		if ((is.ie)&&(!is.mac)){
+			WriteToInstructions(Response);
+		}
+
+		Finished = true;
+		setTimeout('Finish()', SubmissionTimeout);
+	}
+	else {
+		Response = IncorrectResponse + '<br />' + YourScoreIs + ' ' + Score + '%.';
+		WriteFeedback(Response);
+		Penalties++; // Penalty for inaccurate check
+	}
+}
+
+function WriteFeedback(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+//Calculate and set its left setting
+	topZ++;
+	FDiv.style.zIndex = topZ;
+
+//Position the feedback div
+	pg = new PageDim();
+	FDiv.style.left = Math.floor(pg.W/3) + 'px';
+	FDiv.style.width = Math.floor(pg.W/3) + 'px';
+//Set the top again in case the window has been resized
+	if (is.ns){
+		FDiv.style.top = Math.floor(pg.H/3) + window.pageYOffset + 'px';
+	}
+	else{
+		FDiv.style.top = Math.floor(pg.H/3) + document.body.scrollTop + 'px';
+	}
+	FDiv.style.display = 'block';
+	document.getElementById('FeedbackOKButton').focus();
+
+
+	RefreshImages();
+
+}
+
+function HideFeedback(){
+	document.getElementById('FeedbackContent').innerHTML = '';
+	document.getElementById('FeedbackDiv').style.display='none';
+	FocusAButton();
+	if (Finished == true){
+		Finish();
+	}
+}
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		document.getElementsByTagName('button')[0].focus();
+	}
+}
+
+function WriteToInstructions(Feedback) {
+	Feedback = '<span class="FeedbackText">' + Feedback + '</span>';
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+function Finish(){
+//If there's a form, fill it out and submit it
+	if (document.store != null){
+		Frm = document.store;
+		Frm.starttime.value = HPNStartTime;
+		Frm.endtime.value = (new Date()).getTime();
+		Frm.mark.value = Score;
+		Frm.submit();
+	}
+}
+
+//-->
+
+//]]>
+
+</script>
+</head> 
+
+<body onload="TimerStartUp()" id="TheBody"> 
+
+<!-- BeginTopNavButtons -->
+
+
+<div class="NavButtonBar">
+
+
+<button onfocus="NavBtnOver(this)" onblur="NavBtnOut(this)"  onmouseover="NavBtnOver(this)" onmouseout="NavBtnOut(this)" onmousedown="NavBtnDown(this)" onmouseup="NavBtnOver(this)" onclick="history.back(); return false;">Arri&#233;the</button>
+
+
+
+<button onfocus="NavBtnOver(this)" onblur="NavBtnOut(this)"  onmouseover="NavBtnOver(this)" onmouseout="NavBtnOut(this)" onmousedown="NavBtnDown(this)" onmouseup="NavBtnOver(this)" onclick="location='quizmnu.html'; return false;"> R'tou au cont'nu </button>
+
+
+
+
+</div>
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<span class="ExerciseTitle">Les Cartes</span><br />
+	<span class="ExerciseSubtitle">Des choses tchi vont ensembl'ye</span><br />
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<p id="Instructions">Trouvez les bouonnes pathes</p>
+</div>
+
+<div class="StdDiv" id="CheckButtonDiv">
+<button id="CheckButton1" class="FunctionButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onclick="CheckAnswer()">&nbsp;Contr&#244;le&nbsp;</button>
+</div>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+<!--
+
+
+for (var i=0; i<F.length; i++){
+	document.write('<div id="F' + i + '" class="CardStyle"></div>');
+}
+
+for (var i=0; i<D.length; i++){
+	document.write('<div id="D' + i + '" class="CardStyle" onmousedown="beginDrag(event, ' + i + ')"></div>');
+}
+
+//-->
+
+//]]>
+</script>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FunctionButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="HideFeedback(); return false;">&nbsp;OK&nbsp;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/cartesqz3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:44 GMT -->
+</html>

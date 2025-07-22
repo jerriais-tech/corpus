@@ -1,0 +1,294 @@
+<HTML>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/gammepar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:39 GMT -->
+<HEAD>
+<TITLE>La Gamme des P&acirc;ra&icirc;sses - Parishes of Jersey</TITLE>
+<META  name="keywords" content="Jèrriais, language, langue, paroisses, parishes, parish crests, heraldry">
+<script language="JavaScript">
+
+<!-- hide
+
+
+
+// init global variables here
+
+var counter ;			// count of parishes
+
+var num_cor ;
+
+var num_hits ;		// count of tries
+
+var coin_file_name;		// coin file
+
+var crest_file_name;		// crest file
+
+coin_file_names    = new MakeArray(12);		
+
+crest_file_names   = new MakeArray(12);
+
+
+
+counter =0;			// count of parishes
+
+num_cor = 0;
+
+num_hits = 0;			// count of tries
+
+
+
+// each parish must have a coin and crest images
+
+coin_file_names[0] = 'st_ouen.jpg'; crest_file_names[0]='st_ouen.jpg'
+
+coin_file_names[7] = 'ste_mathie.jpg'; crest_file_names[7]='ste_mathie.jpg'
+
+coin_file_names[2] = 'st_jean.jpg'; crest_file_names[2]='st_jean.jpg'
+
+coin_file_names[6] = 'la_trinnete.jpg'; crest_file_names[6]='la_trinnete.jpg'
+
+coin_file_names[4] = 'st_martin.jpg'; crest_file_names[4]='st_martin.jpg'
+
+coin_file_names[5] = 'st_pierre.jpg'; crest_file_names[5]='st_pierre.jpg'
+
+coin_file_names[3] = 'st_louothains.jpg'; crest_file_names[3]='st_louothains.jpg'
+
+coin_file_names[1] = 'st_helyi.jpg'; crest_file_names[1]='st_helyi.jpg'
+
+coin_file_names[8] = 'st_sauveur.jpg'; crest_file_names[8]='st_sauveur.jpg'
+
+coin_file_names[9] = 'grouville.jpg'; crest_file_names[9]='grouville.jpg'
+
+coin_file_names[10] = 'st_brelade.jpg'; crest_file_names[10]='st_brelade.jpg'
+
+coin_file_names[11] = 'st_cliement.jpg'; crest_file_names[11]='st_cliement.jpg'
+
+
+
+function MakeArray(n)	// function to make an 'array'
+
+{
+
+   this.length = n;
+
+   for (var i = 1; i <= n; i++) 
+
+     { 
+
+     this[i] = 0;
+
+     }
+
+     return this;
+
+}
+
+
+
+function update_counter()
+
+{
+
+
+
+// display number of correct hits 
+
+document.display_hits.correct_number_of_hits.value  = num_cor;
+
+num_cor = num_cor + 1;
+
+
+
+// update counter and check for overflow
+
+counter++;
+
+if( counter > 11 ) counter = 0;
+
+
+
+// determine images and then display them
+
+coin_file_name = coin_file_names[counter]; 
+
+crest_file_name = crest_file_names[counter];
+
+
+
+document.coin.src =coin_file_name;
+
+document.crest.src=crest_file_name;
+
+}
+
+
+
+function check(value)
+
+{
+
+  if( value == counter )	// test for correct image 
+
+  { 
+
+
+
+    update_counter();
+
+  }
+
+  else
+
+  {
+
+  }
+
+
+
+// update number of tries and then display it
+
+num_hits = num_hits + 1;
+
+document.display_hits.total_number_of_hits.value  = num_hits;
+
+}
+
+
+
+// -->
+
+</script>
+
+</HEAD>
+<body bgcolor="#ffffff" text="#000000" alink="#00FF40" link="#6BB12C" vlink="#215e21">
+
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+
+
+<center><font color="#215e21"><h2>La Gamme des P&acirc;ra&icirc;sses</h2></font></center><p>
+&nbsp;<p>
+
+<Center>
+<table border=0   CELLspacING=3>
+
+<tr>
+<center>
+<IMG align=middle src="st_ouen.jpg" name="coin" width=66 height=86 > 
+
+
+
+<B><font color="blue" SIZE="4">Pouv'-ous trouver chutte p&acirc;ra&icirc;sse?</font></B>
+<IMG align=middle src="st_ouen.jpg" name="crest" width=66 height=86 ></center> <p>
+
+<h3>
+
+<form name="display_hits">
+
+Ous avez &ecirc;prouv&eacute;
+ 
+  <input type="int" name="total_number_of_hits" size="4"  value="0"> fais<br>
+
+Ous avez bein r&ecirc;ponnu 
+
+  <input type="int" name="correct_number_of_hits" size="4" value="0"> fais
+
+</form>
+
+</h3>
+
+
+
+
+
+</tr>
+
+<th colspan=3 align=center ><IMG align=middle src="jerri.gif" width="596" height="390" border=0 alt="J&egrave;rri et ses P&acirc;ra&icirc;sses" USEMAP="#mainmap"> </th></tr>
+
+</table>
+
+
+
+</CENTER>
+
+<MAP name="mainmap">
+
+<AREA SHAPE=POLY COORDS="177,109,149,131,153,163,111,191,102,175,76,183,38,97,19,85,8,64,13,37,25,29,60,37,73,36,70,18,182,109,177,109"  href="javascript:check(0)">
+
+<AREA SHAPE=POLY COORDS="139,69,185,95,202,148,222,151,243,144,253,102,248,91,228,106,221,92,238,62,204,44,181,64,139,65,139,69" href="javascript:check(7)">
+
+<AREA SHAPE=POLY COORDS="330,168,358,166,350,54,264,33,253,16,209,33,249,58,230,94,252,80,265,107,329,116,330,170,330,168"   href="javascript:check(2)">
+
+<AREA SHAPE=POLY COORDS="369,201,350,174,369,169,359,60,373,37,419,96,444,105,489,83,504,96,465,102,443,152,414,184,402,196,371,200,369,201" href="javascript:check(6)">
+
+<AREA SHAPE=POLY COORDS="559,231,504,205,475,213,488,194,464,129,471,108,535,110,550,116,557,143,538,172,568,229,559,231" href="javascript:check(4)">
+
+<AREA SHAPE=POLY COORDS="180,120,158,135,163,168,111,200,97,184,73,192,82,231,108,225,233,254,245,254,232,204,237,152,201,161,180,120" href="javascript:check(5)">
+
+<AREA SHAPE=POLY COORDS="251,249,250,222,238,209,255,109,319,120,326,179,292,254,290,255,251,249" href="javascript:check(3)">
+
+<AREA SHAPE=POLY COORDS="333,184,305,249,375,310,385,286,373,267,393,216,355,215,333,184" href="javascript:check(1)">
+
+<AREA SHAPE=POLY COORDS="389,263,426,217,419,195,457,165,461,199,458,218,508,220,451,231,455,253,439,266,446,297,399,311,406,273,389,263" href="javascript:check(8)">
+
+<AREA SHAPE=POLY COORDS="468,241,457,301,444,313,456,322,485,301,522,316,540,357,548,353,534,294,543,234,471,241,470,241,468,241" href="javascript:check(9)">
+
+<AREA SHAPE=POLY COORDS="81,240,106,232,227,262,211,300,224,355,215,362,188,342,171,356,167,332,178,321,159,299,135,298,125,321,80,332,30,310,67,289,82,242,81,240" href="javascript:check(10)">
+
+<AREA SHAPE=POLY COORDS="404,328,434,319,453,333,488,317,516,329,526,354,488,345,438,370,404,328" href="javascript:check(11)">
+
+</MAP>
+
+
+
+<script>
+
+ num_hits = 0;
+
+document.display_hits.total_number_of_hits.value  = num_hits;
+
+ update_counter();
+
+</script>
+&nbsp;<p>
+&nbsp;<p>
+
+<FONT SIZE=2>
+
+<I>Viyiz</I>: 
+<UL>
+<li><a href="paraisse.html">Les p&acirc;ra&icirc;sses d'J&egrave;rri</a><p>
+<li><a href="paraisse_carte.html">J&egrave;rri et ses P&acirc;ra&icirc;sses</a><p>
+<li><a href="paraiss2.html">L's &ecirc;tchussons des P&acirc;ra&icirc;sses d'J&egrave;rri</a><p>
+<li><a href="parqz.html">Pliaichiz les P&acirc;ra&icirc;sses!</a><p>
+<li><a href="parsilqz.html">Tch'est qu'est l'nom d'chutte P&acirc;ra&icirc;sse?</a><p>
+<li><a href="parsilqz2.html">Conna&icirc;ss'ous les P&acirc;ra&icirc;sses d'J&egrave;rri?</a><p>
+<li><a href="parcadqz.html">Conna&icirc;ss'ous les P&acirc;ra&icirc;sses d'J&egrave;rri?</a> - acouo un quiz<p>
+<li><a href="paretchq.html">Conna&icirc;ss'ous l's &Ecirc;tchussons d'J&egrave;rri?</a><p>
+<li><a href="parcad2qz.html">Conna&icirc;ss'ous l's &Ecirc;tchussons d'J&egrave;rri?</a> - acouo un quiz<p>
+<li><a href="etchqz.html">L's &Ecirc;tchussons des P&acirc;ra&icirc;sses</a> - et acouo un quiz<p>
+<li><A HREF="st_brelade.html">St Br&eacute;lade</A><p>
+<li><A HREF="st_cliement.html">St Cli&eacute;ment</A><p>
+<li><a href="st_helyi.html">St H&eacute;lyi</a><p>
+<li><A HREF="st_jean.html">St Jean</A><p>
+<li><A HREF="st_louothains.html">St Louothains</A><p>
+<li><A HREF="st_martin.html">St Mart&icirc;n</A><p>
+<li><A HREF="ste_mathie.html">Ste Mathie</A><p>
+<li><A HREF="st_ouen.html">St Ou&euml;n</A><p>
+<li><A HREF="st_pierre.html">St Pi&egrave;rre</A><p>
+<li><A HREF="st_sauveux.html">St Sa&ucirc;veux</A><p>
+<li><A HREF="grouville.html">Grouville</A><p>
+<li><A HREF="la_trinnete.html">La Trinnet&eacute;</A><p>
+<li><a href="pliaiches.html">Noms des Pliaiches en J&egrave;rri</a><p>
+<li><a href="geoqz.html">O&ugrave;'est qu'est.....?</a><p>
+<li><a href="geocad.html">O&ugrave;'est qu'est.....?</a><p>
+<li><a href="connetable.html">La Meunicipalit&eacute; en J&egrave;rri</a><p>
+</UL>
+</FONT>
+
+&nbsp;<p>
+<a href="../jerriais.html" target="_top"><img align=middle src="pagesjerriaises.jpg" width=600 height=60 border=0 alt="Les Pages J&egrave;rriaises"  title="D'&egrave;rtou &egrave;s Pages J&egrave;rriaises"></a><p>
+
+</BODY>
+
+<!-- Mirrored from members.societe-jersiaise.org/geraint/jerriais/gammepar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 14:08:39 GMT -->
+</HTML>
