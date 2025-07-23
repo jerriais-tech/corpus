@@ -1,5 +1,5 @@
-http://members.societe-jersiaise.org/geraint/jerriais.html -O /home/steve/src/jerriais/lespages http://members.societe-jersiaise.org/geraint/* -v
-File generated automatically on Tue, 15 Jul 2025 14:20:51, do NOT edit
+http://members.societe-jersiaise.org/geraint/jerriais.html -O /home/steve/src/jerriais/lespages http://members.societe-jersiaise.org/geraint/* -v -%F ""
+File generated automatically on Tue, 22 Jul 2025 11:56:04, do NOT edit
 
 To update a mirror, just launch httrack without any parameters
 The existing cache will be used (and modified)
