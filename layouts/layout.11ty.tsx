@@ -32,10 +32,7 @@ const Layout: React.FC<Props> = ({
             <h1 className="text-3xl font-bold">{title}</h1>
             {author && !authorPage && (
               <h2 className="text-xl italic">
-                <a
-                  href={`/corpus/lespages/jerriais/${authorSlug}`}
-                  rel="author"
-                >
+                <a href={`/corpus/jerriais/${authorSlug}`} rel="author">
                   {author}
                 </a>
               </h2>
@@ -45,7 +42,7 @@ const Layout: React.FC<Props> = ({
           <footer className="prose my-8">
             {related && (
               <>
-                <h3>Related</h3>
+                <h3>Viyiz étout</h3>
                 <ul>
                   {related.map(({ url, text }) => (
                     <li key={url}>

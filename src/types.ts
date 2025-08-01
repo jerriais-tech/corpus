@@ -9,7 +9,7 @@ export interface ProcessFileRequestMessage {
   id: number;
   infile: string;
   outdir: string;
-  options: LesPagePluginOptions;
+  indir: string;
 }
 
 export interface CopyFileResponseMessage {

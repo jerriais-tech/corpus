@@ -16,19 +16,14 @@ export default async function (eleventyConfig) {
   eleventyConfig.setLayoutsDirectory("../layouts");
 
   await eleventyConfig.addPlugin(eleventyLesPageJerriaisesPlugin, {
-    dir: "lespages/members.societe-jersiaise.org/geraint",
     ignore: [
-      "jerriais/0",
-      "jerriais/verbconj.html",
-      "jerriais/verbconj2.html",
-      "jerriais/verbconj3.html",
-      "jerriais/index.html",
-      "jerriais/assembliee.html",
-      "jerriais/noue.html",
-      "dolmens/dolmens.html",
-      "helier.html",
-      "statues/stones.html",
-      "jerriais.html",
+      "0",
+      "verbconj.html",
+      "verbconj2.html",
+      "verbconj3.html",
+      "index.html",
+      "assembliee.html",
+      "noue.html",
     ],
     layout: "layout.11ty.tsx",
   });

@@ -7,13 +7,14 @@ function processFile({
   id,
   infile,
   outdir,
-  options: { dir, outSubDir = "corpus/lespages" },
+  indir,
 }: ProcessFileRequestMessage): ResponseMessage {
   const outpath = path.parse(infile);
-  outpath.dir = path.join(outSubDir, path.relative(dir, outpath.dir));
+  outpath.dir = path.relative(indir, outpath.dir);
 
   if (outpath.ext === ".html") {
     // Create a virtual template for HTML files
+    outpath.dir = path.join("corpus/jerriais", outpath.dir);
     outpath.ext = ".md";
     outpath.base = `${outpath.name}${outpath.ext}`;
 
@@ -31,14 +32,14 @@ function processFile({
       content,
       authorPage: Object.keys(AUTHORS).includes(outpath.name),
       related: data.related.map(({ url, text }: Record<string, string>) => ({
-        url: `/${path.join(outpath.dir, url)}`,
+        url: `/${path.join(outpath.dir, outpath.name, url)}`,
         text,
       })),
       type: "process",
     };
   } else {
     // Copy non-html files to so the image plugin can work
-    outpath.dir = path.join(outdir, outpath.dir);
+    outpath.dir = path.join(outdir, "corpus", outpath.dir);
     fs.mkdirSync(outpath.dir, { recursive: true });
     const outfile = path.format(outpath);
     fs.copyFileSync(infile, outfile);
