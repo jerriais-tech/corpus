@@ -19,11 +19,10 @@ const Layout: React.FC<Props> = ({
   return (
     <html>
       <head>
-        <base href="https://jerriais.tech/corpus/" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
-        <link href="/index.css" rel="stylesheet" />
+        <link href="/corpus/index.css" rel="stylesheet" />
       </head>
       <main className="my-8 mx-8 max-w-2xl md:mx-auto">
         <article>
@@ -31,7 +30,10 @@ const Layout: React.FC<Props> = ({
             <h1 className="text-3xl font-bold">{title}</h1>
             {author && !authorPage && (
               <h2 className="text-xl italic">
-                <a href={`/lespages/jerriais/${authorSlug}`} rel="author">
+                <a
+                  href={`/corpus/lespages/jerriais/${authorSlug}`}
+                  rel="author"
+                >
                   {author}
                 </a>
               </h2>
