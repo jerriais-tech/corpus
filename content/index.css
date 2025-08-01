@@ -1,0 +1,2 @@
+@import "tailwindcss" source("../layouts");
+@plugin "@tailwindcss/typography";

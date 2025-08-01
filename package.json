@@ -1,0 +1,37 @@
+{
+  "name": "corpus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pages": "tsx src/import all 'lespages/members.societe-jersiaise.org/geraint' 'content'",
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@joplin/turndown-plugin-gfm": "^1.0.62",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.7",
+    "@types/turndown": "^5.0.5",
+    "cheerio": "^1.1.2",
+    "commander": "^14.0.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11",
+    "tsx": "^4.20.3",
+    "turndown": "^7.2.0",
+    "yaml": "^2.8.0"
+  }
+}
