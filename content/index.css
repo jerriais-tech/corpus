@@ -1,2 +1,5 @@
+---
+  permalink: /corpus/index.css
+---
 @import "tailwindcss" source("../layouts");
 @plugin "@tailwindcss/typography";

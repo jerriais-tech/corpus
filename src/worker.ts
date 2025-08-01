@@ -7,7 +7,7 @@ function processFile({
   id,
   infile,
   outdir,
-  options: { dir, outSubDir = "lespages" },
+  options: { dir, outSubDir = "corpus/lespages" },
 }: ProcessFileRequestMessage): ResponseMessage {
   const outpath = path.parse(infile);
   outpath.dir = path.join(outSubDir, path.relative(dir, outpath.dir));
@@ -30,6 +30,10 @@ function processFile({
       outfile,
       content,
       authorPage: Object.keys(AUTHORS).includes(outpath.name),
+      related: data.related.map(({ url, text }: Record<string, string>) => ({
+        url: `/${path.join(outpath.dir, url)}`,
+        text,
+      })),
       type: "process",
     };
   } else {
@@ -43,7 +47,6 @@ function processFile({
 }
 
 process.on("message", (message: ProcessFileRequestMessage) => {
-  console.log(`Processing ${message.infile}`);
   const result = processFile(message);
   if (result) {
     process.send?.(result); // Send a message back to the parent

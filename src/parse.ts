@@ -32,11 +32,14 @@ turndownService.addRule("bold", {
 });
 
 function getViyizEtout(element: cheerio.Cheerio<any>): cheerio.Cheerio<any> {
-  return element.find('font[size="2"] li a');
+  return element.find('font[size="2"]');
 }
 
-function parseLinks($: cheerio.CheerioAPI, rewriteRelativeUrls: boolean) {
-  const links = $("a");
+function parseLinks(
+  element: cheerio.Cheerio<any>,
+  rewriteRelativeUrls: boolean
+) {
+  const links = element.find("a");
   links.each((_i, el) => {
     let href = el.attribs.href ?? el.attribs.HREF;
     if (href) {
@@ -56,8 +59,8 @@ function parseLinks($: cheerio.CheerioAPI, rewriteRelativeUrls: boolean) {
   });
 }
 
-function parseImages($: cheerio.CheerioAPI) {
-  const images = $("img");
+function parseImages(element: cheerio.Cheerio<any>) {
+  const images = element.find("img");
   images.each((_i, el) => {
     let src = el.attribs.src ?? el.attribs.SRC;
     if (src) {
@@ -74,17 +77,35 @@ function parseImages($: cheerio.CheerioAPI) {
 }
 
 function parseContent($: cheerio.CheerioAPI, rewriteRelativeUrls: boolean) {
-  const back = $('a[href="../jerriais.html"]');
+  const body = $("body").clone();
+
+  const viyizEtout = getViyizEtout(body);
+  viyizEtout.remove();
+  const back = body.find('a[href="../jerriais.html"]');
   back.remove();
-  const title = $('font[color="#215e21"] h2');
+  const title = body.find('font[color="#215e21"] h2');
   title.remove();
 
-  parseLinks($, rewriteRelativeUrls);
+  parseLinks(body, rewriteRelativeUrls);
   if (rewriteRelativeUrls) {
-    parseImages($);
+    parseImages(body);
   }
 
-  return $("body").html() ?? "";
+  return body.html() ?? "";
+}
+
+function parseRelated($: cheerio.CheerioAPI, rewriteRelativeUrls: boolean) {
+  const body = $("body").clone();
+  const viyizEtout = getViyizEtout(body);
+  parseLinks(viyizEtout, rewriteRelativeUrls);
+  return viyizEtout
+    .find("a")
+    .toArray()
+    .map((el) => {
+      const $el = $(el);
+      return { url: $el.attr("href"), text: $el.text() };
+    })
+    .filter((link): link is { url: string; text: string } => Boolean(link.url));
 }
 
 function renderMarkdown(content: string) {
@@ -159,6 +180,7 @@ export function parseFile(
   const title = $("title").text();
   const [authorSlug, author] = findAuthor($) ?? [,];
   const content = parseContent($, options.rewriteRelativeUrls);
+  const related = parseRelated($, options.rewriteRelativeUrls);
 
   return {
     content: renderMarkdown(content),
@@ -166,6 +188,7 @@ export function parseFile(
       title,
       author,
       authorSlug,
+      related,
     },
   };
 }

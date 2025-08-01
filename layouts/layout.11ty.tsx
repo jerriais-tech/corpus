@@ -6,6 +6,7 @@ interface Props {
   author?: string;
   authorSlug?: string;
   authorPage?: boolean;
+  related: { url: string; text: string }[];
   content: string;
 }
 
@@ -14,6 +15,7 @@ const Layout: React.FC<Props> = ({
   author,
   authorSlug,
   authorPage,
+  related,
   content,
 }) => {
   return (
@@ -40,6 +42,20 @@ const Layout: React.FC<Props> = ({
             )}
           </header>
           <Content>{content}</Content>
+          <footer className="prose my-8">
+            {related && (
+              <>
+                <h3>Related</h3>
+                <ul>
+                  {related.map(({ url, text }) => (
+                    <li key={url}>
+                      <a href={url}>{text}</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </footer>
         </article>
       </main>
     </html>

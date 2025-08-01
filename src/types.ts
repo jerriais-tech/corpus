@@ -21,7 +21,7 @@ export interface ProcessFileResponseMessage {
   type: "process";
   outfile: string;
   content: string;
-  authorPage: boolean;
+  [key: string]: any;
 }
 export type ResponseMessage =
   | CopyFileResponseMessage

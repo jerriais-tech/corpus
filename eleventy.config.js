@@ -1,5 +1,4 @@
 import "tsx/esm";
-// import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { renderToStaticMarkup } from "react-dom/server";
 import postcss from "postcss";
 import tailwindcss from "@tailwindcss/postcss";
@@ -13,16 +12,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.setOutputDirectory("_site/corpus");
   eleventyConfig.setInputDirectory("content");
   eleventyConfig.setLayoutsDirectory("../layouts");
-
-  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-  //   failOnError: false,
-  //   formats: ["auto"],
-  //   widths: ["auto"],
-  //   urlPath: "/img",
-  // });
 
   await eleventyConfig.addPlugin(eleventyLesPageJerriaisesPlugin, {
     dir: "lespages/members.societe-jersiaise.org/geraint",

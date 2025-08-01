@@ -40,9 +40,9 @@ async function eleventyLesPagesJerriaisesPlugin(
     pages.map(async (infile) => {
       const message = await workerPool.processFile({ infile, outdir, options });
       if (message.type === "process") {
-        const { outfile, content, authorPage } = message;
+        const { outfile, content, id, type, ...data } = message;
         eleventyConfig.addTemplate(outfile, content, {
-          authorPage,
+          ...data,
           layout,
         });
       }
