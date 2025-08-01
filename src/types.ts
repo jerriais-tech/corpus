@@ -1,0 +1,28 @@
+export interface LesPagePluginOptions {
+  dir: string;
+  outSubDir?: string;
+  ignore: string[];
+  layout?: string;
+}
+
+export interface ProcessFileRequestMessage {
+  id: number;
+  infile: string;
+  outdir: string;
+  options: LesPagePluginOptions;
+}
+
+export interface CopyFileResponseMessage {
+  id: number;
+  type: "copy";
+}
+export interface ProcessFileResponseMessage {
+  id: number;
+  type: "process";
+  outfile: string;
+  content: string;
+  authorPage: boolean;
+}
+export type ResponseMessage =
+  | CopyFileResponseMessage
+  | ProcessFileResponseMessage;

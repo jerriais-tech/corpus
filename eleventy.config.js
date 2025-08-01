@@ -9,10 +9,11 @@ const eleventyLesPageJerriaisesPlugin = (
 ).default;
 
 /** @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig */
-export default function (eleventyConfig) {
+export default async function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
   eleventyConfig.setUseGitIgnore(false);
 
+  eleventyConfig.setOutputDirectory("_site/corpus");
   eleventyConfig.setInputDirectory("content");
   eleventyConfig.setLayoutsDirectory("../layouts");
 
@@ -23,7 +24,7 @@ export default function (eleventyConfig) {
   //   urlPath: "/img",
   // });
 
-  eleventyConfig.addPlugin(eleventyLesPageJerriaisesPlugin, {
+  await eleventyConfig.addPlugin(eleventyLesPageJerriaisesPlugin, {
     dir: "lespages/members.societe-jersiaise.org/geraint",
     ignore: [
       "jerriais/0",

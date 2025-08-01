@@ -17,7 +17,17 @@ turndownService.addRule("emphasis", {
   replacement: (content) =>
     content
       .split("\n")
-      .map((line) => line && `*${line.trim()}*`)
+      .map((line) => line.trim() && `*${line.trim()}*`)
+      .filter(Boolean)
+      .join("<br>"),
+});
+turndownService.addRule("bold", {
+  filter: ["b", "strong"],
+  replacement: (content) =>
+    content
+      .split("\n")
+      .map((line) => line.trim() && `**${line.trim()}**`)
+      .filter(Boolean)
       .join("<br>"),
 });
 

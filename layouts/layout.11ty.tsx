@@ -17,7 +17,7 @@ const Layout: React.FC<Props> = ({
   content,
 }) => {
   return (
-    <html>
+    <html translate="no">
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
